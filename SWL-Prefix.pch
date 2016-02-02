@@ -32,6 +32,7 @@
 //图片缓存
 //SDWebImage
 #import "UIImageView+LK.h"
+#import "UIImageView+WebCache.h"
 
 //网络
  

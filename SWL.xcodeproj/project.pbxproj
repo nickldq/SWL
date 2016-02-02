@@ -10,7 +10,6 @@
 		9A5D0A05ABA213689E58C914 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FA3B88DB9227316947E3A82 /* libPods.a */; };
 		DA66F0191C60477F00B1E0E1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DA66F0181C60477F00B1E0E1 /* main.m */; };
 		DA66F01C1C60477F00B1E0E1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DA66F01B1C60477F00B1E0E1 /* AppDelegate.m */; };
-		DA66F01F1C60477F00B1E0E1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA66F01E1C60477F00B1E0E1 /* ViewController.m */; };
 		DA66F0221C60477F00B1E0E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA66F0201C60477F00B1E0E1 /* Main.storyboard */; };
 		DA66F0241C60477F00B1E0E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA66F0231C60477F00B1E0E1 /* Assets.xcassets */; };
 		DA66F0271C60477F00B1E0E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA66F0251C60477F00B1E0E1 /* LaunchScreen.storyboard */; };
@@ -67,6 +66,12 @@
 		DA66F16A1C6053AA00B1E0E1 /* NSString+ZY.m in Sources */ = {isa = PBXBuildFile; fileRef = DA66F15F1C6053AA00B1E0E1 /* NSString+ZY.m */; };
 		DA66F16B1C6053AA00B1E0E1 /* SaveUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = DA66F1611C6053AA00B1E0E1 /* SaveUserInfo.m */; };
 		DA66F16C1C6053AA00B1E0E1 /* UIButton+Block.m in Sources */ = {isa = PBXBuildFile; fileRef = DA66F1631C6053AA00B1E0E1 /* UIButton+Block.m */; };
+		DA9150D91C608A56006C641D /* MainCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9150D81C608A56006C641D /* MainCollectionViewController.m */; };
+		DA9150E21C6091F1006C641D /* MainCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9150E01C6091F1006C641D /* MainCollectionViewCell.m */; };
+		DA9150E31C6091F1006C641D /* MainCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA9150E11C6091F1006C641D /* MainCollectionViewCell.xib */; };
+		DA9150E71C609443006C641D /* 首页_cell背景.png in Resources */ = {isa = PBXBuildFile; fileRef = DA9150E61C609443006C641D /* 首页_cell背景.png */; };
+		DA9150E91C6098E3006C641D /* 首页横幅.png in Resources */ = {isa = PBXBuildFile; fileRef = DA9150E81C6098E3006C641D /* 首页横幅.png */; };
+		DA9150EB1C60996B006C641D /* 首页点击.png in Resources */ = {isa = PBXBuildFile; fileRef = DA9150EA1C60996B006C641D /* 首页点击.png */; };
 		DAA99F251C60563C00700049 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA99F241C60563C00700049 /* BaseViewController.m */; };
 		DAA99F321C605A0100700049 /* remind_noimage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DAA99F2A1C605A0100700049 /* remind_noimage@2x.png */; };
 		DAA99F331C605A0100700049 /* SDWebImage-Category.textClipping in Resources */ = {isa = PBXBuildFile; fileRef = DAA99F2B1C605A0100700049 /* SDWebImage-Category.textClipping */; };
@@ -82,8 +87,6 @@
 		DA66F0181C60477F00B1E0E1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DA66F01A1C60477F00B1E0E1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DA66F01B1C60477F00B1E0E1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		DA66F01D1C60477F00B1E0E1 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		DA66F01E1C60477F00B1E0E1 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		DA66F0211C60477F00B1E0E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DA66F0231C60477F00B1E0E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DA66F0261C60477F00B1E0E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -203,6 +206,14 @@
 		DA66F1631C6053AA00B1E0E1 /* UIButton+Block.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Block.m"; sourceTree = "<group>"; };
 		DA9150AB1C6061A8006C641D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		DA9150AD1C6061B0006C641D /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		DA9150D71C608A56006C641D /* MainCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainCollectionViewController.h; sourceTree = "<group>"; };
+		DA9150D81C608A56006C641D /* MainCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainCollectionViewController.m; sourceTree = "<group>"; };
+		DA9150DF1C6091F1006C641D /* MainCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainCollectionViewCell.h; sourceTree = "<group>"; };
+		DA9150E01C6091F1006C641D /* MainCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainCollectionViewCell.m; sourceTree = "<group>"; };
+		DA9150E11C6091F1006C641D /* MainCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainCollectionViewCell.xib; sourceTree = "<group>"; };
+		DA9150E61C609443006C641D /* 首页_cell背景.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "首页_cell背景.png"; sourceTree = "<group>"; };
+		DA9150E81C6098E3006C641D /* 首页横幅.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "首页横幅.png"; sourceTree = "<group>"; };
+		DA9150EA1C60996B006C641D /* 首页点击.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "首页点击.png"; sourceTree = "<group>"; };
 		DAA99F231C60563C00700049 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		DAA99F241C60563C00700049 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		DAA99F261C6056A800700049 /* SWL-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SWL-Prefix.pch"; sourceTree = "<group>"; };
@@ -279,10 +290,9 @@
 				DA66F0321C604AFF00B1E0E1 /* Utils_Tools */,
 				DAA99F361C605AA200700049 /* Models */,
 				DAA99F221C60563C00700049 /* BaseViewController */,
+				DA9150D51C607F74006C641D /* ViewController */,
 				DA66F01A1C60477F00B1E0E1 /* AppDelegate.h */,
 				DA66F01B1C60477F00B1E0E1 /* AppDelegate.m */,
-				DA66F01D1C60477F00B1E0E1 /* ViewController.h */,
-				DA66F01E1C60477F00B1E0E1 /* ViewController.m */,
 				DA66F0201C60477F00B1E0E1 /* Main.storyboard */,
 				DA66F0231C60477F00B1E0E1 /* Assets.xcassets */,
 				DA66F0251C60477F00B1E0E1 /* LaunchScreen.storyboard */,
@@ -669,6 +679,9 @@
 		DA66F13E1C6051F200B1E0E1 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				DA9150E81C6098E3006C641D /* 首页横幅.png */,
+				DA9150EA1C60996B006C641D /* 首页点击.png */,
+				DA9150E61C609443006C641D /* 首页_cell背景.png */,
 				DAA99F271C60572A00700049 /* DEXProject_iphone_UIDefine.h */,
 				DA66F13F1C6051F200B1E0E1 /* kConstants.h */,
 			);
@@ -736,6 +749,34 @@
 				DA66F15D1C6053AA00B1E0E1 /* NSString+ZY.m */,
 			);
 			path = MD5;
+			sourceTree = "<group>";
+		};
+		DA9150D51C607F74006C641D /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				DA9150D61C608227006C641D /* MainViewController */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		DA9150D61C608227006C641D /* MainViewController */ = {
+			isa = PBXGroup;
+			children = (
+				DA9150DB1C60916E006C641D /* MainCollectionCell */,
+				DA9150D71C608A56006C641D /* MainCollectionViewController.h */,
+				DA9150D81C608A56006C641D /* MainCollectionViewController.m */,
+			);
+			path = MainViewController;
+			sourceTree = "<group>";
+		};
+		DA9150DB1C60916E006C641D /* MainCollectionCell */ = {
+			isa = PBXGroup;
+			children = (
+				DA9150DF1C6091F1006C641D /* MainCollectionViewCell.h */,
+				DA9150E01C6091F1006C641D /* MainCollectionViewCell.m */,
+				DA9150E11C6091F1006C641D /* MainCollectionViewCell.xib */,
+			);
+			path = MainCollectionCell;
 			sourceTree = "<group>";
 		};
 		DAA99F221C60563C00700049 /* BaseViewController */ = {
@@ -836,16 +877,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA9150E71C609443006C641D /* 首页_cell背景.png in Resources */,
 				DAA99F321C605A0100700049 /* remind_noimage@2x.png in Resources */,
 				DA66F0A21C604AFF00B1E0E1 /* pick_bg@2x.png in Resources */,
 				DA66F13C1C6051BD00B1E0E1 /* SVProgressHUD.bundle in Resources */,
 				DA66F0271C60477F00B1E0E1 /* LaunchScreen.storyboard in Resources */,
+				DA9150EB1C60996B006C641D /* 首页点击.png in Resources */,
 				DA66F1301C6051BD00B1E0E1 /* WebViewJavascriptBridge.js in Resources */,
+				DA9150E31C6091F1006C641D /* MainCollectionViewCell.xib in Resources */,
 				DA66F1311C6051BD00B1E0E1 /* WebViewJavascriptBridge.js.txt in Resources */,
 				DAA99F331C605A0100700049 /* SDWebImage-Category.textClipping in Resources */,
 				DA66F09F1C604AFF00B1E0E1 /* FMTCodeViewController.xib in Resources */,
 				DA66F02F1C604A5D00B1E0E1 /* SWL项目流程说明.docx in Resources */,
 				DA66F0241C60477F00B1E0E1 /* Assets.xcassets in Resources */,
+				DA9150E91C6098E3006C641D /* 首页横幅.png in Resources */,
 				DA66F13A1C6051BD00B1E0E1 /* ProgressHUD.bundle in Resources */,
 				DA66F0A11C604AFF00B1E0E1 /* line@2x.png in Resources */,
 				DA66F0221C60477F00B1E0E1 /* Main.storyboard in Resources */,
@@ -892,12 +937,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA9150E21C6091F1006C641D /* MainCollectionViewCell.m in Sources */,
 				DA66F1221C6051BD00B1E0E1 /* qrencode.c in Sources */,
 				DAA99F341C605A0100700049 /* THProgressView.m in Sources */,
 				DA66F1251C6051BD00B1E0E1 /* rscode.c in Sources */,
 				DA66F1211C6051BD00B1E0E1 /* QRCodeGenerator.m in Sources */,
 				DA66F08E1C604AFF00B1E0E1 /* CommonMethodUtils.m in Sources */,
-				DA66F01F1C60477F00B1E0E1 /* ViewController.m in Sources */,
 				DA66F09A1C604AFF00B1E0E1 /* ProgressHUDUtils.m in Sources */,
 				DA66F11F1C6051BD00B1E0E1 /* bitstream.c in Sources */,
 				DA66F14E1C60539C00B1E0E1 /* BMColor.m in Sources */,
@@ -910,6 +955,7 @@
 				DA66F1501C60539C00B1E0E1 /* BMImageLibrary.m in Sources */,
 				DA66F0981C604AFF00B1E0E1 /* UtilRequestService.m in Sources */,
 				DA66F09E1C604AFF00B1E0E1 /* FMTCodeViewController.m in Sources */,
+				DA9150D91C608A56006C641D /* MainCollectionViewController.m in Sources */,
 				DA66F1231C6051BD00B1E0E1 /* qrinput.c in Sources */,
 				DA66F1691C6053AA00B1E0E1 /* NSString+ZY.m in Sources */,
 				DA66F1671C6053AA00B1E0E1 /* Common.m in Sources */,
