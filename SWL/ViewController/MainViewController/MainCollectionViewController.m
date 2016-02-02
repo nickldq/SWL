@@ -8,6 +8,7 @@
 
 #import "MainCollectionViewController.h"
 #import "MainCollectionViewCell.h"
+#import "HomePageViewController.h"
 @interface MainCollectionViewController ()
 
 @end
@@ -28,14 +29,15 @@ static NSString * const reuseIdentifier = @"MainCollectionViewCell";
     // Do any additional setup after loading the view.
     [self.collectionView reloadData];
     
-    _mainClickIImage.onTouchTapBlock = ^(UIImageView *imageView){
-        
-    };
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (IBAction)backgroundTouchUpInside:(UIControl *)sender {
+    HomePageViewController *homePageViewController = [[HomePageViewController alloc]initWithNibName:@"HomePageViewController" bundle:nil];
+    [self.navigationController pushViewController:homePageViewController animated:YES];
 }
 
 /*

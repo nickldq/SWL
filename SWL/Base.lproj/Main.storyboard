@@ -31,11 +31,11 @@
                         <viewControllerLayoutGuide type="top" id="ZLh-bp-2Lk"/>
                         <viewControllerLayoutGuide type="bottom" id="9Ni-La-34P"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="xXt-Ip-A2n">
+                    <view key="view" contentMode="scaleToFill" id="xXt-Ip-A2n" customClass="UIControl">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="fig-RE-Im5">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="fig-RE-Im5">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="nVh-VP-G1i">
                                     <size key="itemSize" width="102.40000000000001" height="96"/>
@@ -49,14 +49,14 @@
                                     <outlet property="delegate" destination="cYk-qb-Zeh" id="AnT-T8-olN"/>
                                 </connections>
                             </collectionView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="首页横幅.png" translatesAutoresizingMaskIntoConstraints="NO" id="joC-8q-w93">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="首页横幅.png" translatesAutoresizingMaskIntoConstraints="NO" id="joC-8q-w93">
                                 <rect key="frame" x="204" y="223" width="616" height="95"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="95" id="KQ5-r3-WOy"/>
                                     <constraint firstAttribute="width" constant="616" id="fau-RC-85L"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="首页点击.png" translatesAutoresizingMaskIntoConstraints="NO" id="uDK-0v-mfl">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="首页点击.png" translatesAutoresizingMaskIntoConstraints="NO" id="uDK-0v-mfl">
                                 <rect key="frame" x="462" y="418" width="100" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="Aur-w4-Nc4"/>
@@ -75,6 +75,9 @@
                             <constraint firstItem="fig-RE-Im5" firstAttribute="leading" secondItem="xXt-Ip-A2n" secondAttribute="leadingMargin" constant="-20" id="gQm-AT-MUN"/>
                             <constraint firstItem="9Ni-La-34P" firstAttribute="top" secondItem="fig-RE-Im5" secondAttribute="bottom" id="ghB-CK-bxj"/>
                         </constraints>
+                        <connections>
+                            <action selector="backgroundTouchUpInside:" destination="cYk-qb-Zeh" eventType="touchUpInside" id="fzN-AO-K6E"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="uFO-0V-tTa"/>
                     <nil key="simulatedStatusBarMetrics"/>

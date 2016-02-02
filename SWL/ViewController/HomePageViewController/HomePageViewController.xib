@@ -23,19 +23,19 @@
                     <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Unn-WH-ePG">
-                    <rect key="frame" x="735" y="327" width="140" height="65"/>
+                    <rect key="frame" x="735" y="334" width="140" height="58"/>
                     <state key="normal" title="持续"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Q1-vp-dOX">
-                    <rect key="frame" x="735" y="398" width="140" height="65"/>
+                    <rect key="frame" x="735" y="400" width="140" height="63"/>
                     <state key="normal" title="集中"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MZf-RU-bDY">
-                    <rect key="frame" x="735" y="256" width="140" height="65"/>
+                    <rect key="frame" x="735" y="260" width="140" height="61"/>
                     <state key="normal" title="深彻"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6s4-3V-b3X">
-                    <rect key="frame" x="735" y="469" width="140" height="65"/>
+                    <rect key="frame" x="735" y="471" width="140" height="58"/>
                     <state key="normal" title="匀亮"/>
                 </button>
             </subviews>
