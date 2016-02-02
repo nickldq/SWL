@@ -83,6 +83,7 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
                         <outlet property="collectionView" destination="fig-RE-Im5" id="rIh-TO-0z0"/>
+                        <outlet property="mainClickIImage" destination="uDK-0v-mfl" id="I9O-af-oEu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ou8-lx-w1j" userLabel="First Responder" sceneMemberID="firstResponder"/>

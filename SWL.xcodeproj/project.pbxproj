@@ -72,6 +72,9 @@
 		DA9150E71C609443006C641D /* 首页_cell背景.png in Resources */ = {isa = PBXBuildFile; fileRef = DA9150E61C609443006C641D /* 首页_cell背景.png */; };
 		DA9150E91C6098E3006C641D /* 首页横幅.png in Resources */ = {isa = PBXBuildFile; fileRef = DA9150E81C6098E3006C641D /* 首页横幅.png */; };
 		DA9150EB1C60996B006C641D /* 首页点击.png in Resources */ = {isa = PBXBuildFile; fileRef = DA9150EA1C60996B006C641D /* 首页点击.png */; };
+		DA9150F01C60ACBA006C641D /* HomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9150EE1C60ACBA006C641D /* HomePageViewController.m */; };
+		DA9150F11C60ACBA006C641D /* HomePageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA9150EF1C60ACBA006C641D /* HomePageViewController.xib */; };
+		DA9150F31C60AD5C006C641D /* 主页底图.png in Resources */ = {isa = PBXBuildFile; fileRef = DA9150F21C60AD5C006C641D /* 主页底图.png */; };
 		DAA99F251C60563C00700049 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA99F241C60563C00700049 /* BaseViewController.m */; };
 		DAA99F321C605A0100700049 /* remind_noimage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DAA99F2A1C605A0100700049 /* remind_noimage@2x.png */; };
 		DAA99F331C605A0100700049 /* SDWebImage-Category.textClipping in Resources */ = {isa = PBXBuildFile; fileRef = DAA99F2B1C605A0100700049 /* SDWebImage-Category.textClipping */; };
@@ -214,6 +217,10 @@
 		DA9150E61C609443006C641D /* 首页_cell背景.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "首页_cell背景.png"; sourceTree = "<group>"; };
 		DA9150E81C6098E3006C641D /* 首页横幅.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "首页横幅.png"; sourceTree = "<group>"; };
 		DA9150EA1C60996B006C641D /* 首页点击.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "首页点击.png"; sourceTree = "<group>"; };
+		DA9150ED1C60ACBA006C641D /* HomePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePageViewController.h; sourceTree = "<group>"; };
+		DA9150EE1C60ACBA006C641D /* HomePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePageViewController.m; sourceTree = "<group>"; };
+		DA9150EF1C60ACBA006C641D /* HomePageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomePageViewController.xib; sourceTree = "<group>"; };
+		DA9150F21C60AD5C006C641D /* 主页底图.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "主页底图.png"; sourceTree = "<group>"; };
 		DAA99F231C60563C00700049 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		DAA99F241C60563C00700049 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		DAA99F261C6056A800700049 /* SWL-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SWL-Prefix.pch"; sourceTree = "<group>"; };
@@ -679,6 +686,7 @@
 		DA66F13E1C6051F200B1E0E1 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				DA9150F21C60AD5C006C641D /* 主页底图.png */,
 				DA9150E81C6098E3006C641D /* 首页横幅.png */,
 				DA9150EA1C60996B006C641D /* 首页点击.png */,
 				DA9150E61C609443006C641D /* 首页_cell背景.png */,
@@ -755,6 +763,7 @@
 			isa = PBXGroup;
 			children = (
 				DA9150D61C608227006C641D /* MainViewController */,
+				DA9150EC1C60AC74006C641D /* HomePageViewController */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -777,6 +786,16 @@
 				DA9150E11C6091F1006C641D /* MainCollectionViewCell.xib */,
 			);
 			path = MainCollectionCell;
+			sourceTree = "<group>";
+		};
+		DA9150EC1C60AC74006C641D /* HomePageViewController */ = {
+			isa = PBXGroup;
+			children = (
+				DA9150ED1C60ACBA006C641D /* HomePageViewController.h */,
+				DA9150EE1C60ACBA006C641D /* HomePageViewController.m */,
+				DA9150EF1C60ACBA006C641D /* HomePageViewController.xib */,
+			);
+			path = HomePageViewController;
 			sourceTree = "<group>";
 		};
 		DAA99F221C60563C00700049 /* BaseViewController */ = {
@@ -893,6 +912,8 @@
 				DA9150E91C6098E3006C641D /* 首页横幅.png in Resources */,
 				DA66F13A1C6051BD00B1E0E1 /* ProgressHUD.bundle in Resources */,
 				DA66F0A11C604AFF00B1E0E1 /* line@2x.png in Resources */,
+				DA9150F31C60AD5C006C641D /* 主页底图.png in Resources */,
+				DA9150F11C60ACBA006C641D /* HomePageViewController.xib in Resources */,
 				DA66F0221C60477F00B1E0E1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -975,6 +996,7 @@
 				DA66F16B1C6053AA00B1E0E1 /* SaveUserInfo.m in Sources */,
 				DA66F1261C6051BD00B1E0E1 /* split.c in Sources */,
 				DA66F16A1C6053AA00B1E0E1 /* NSString+ZY.m in Sources */,
+				DA9150F01C60ACBA006C641D /* HomePageViewController.m in Sources */,
 				DA66F08B1C604AFF00B1E0E1 /* NSJSONSerialization+NSJSONSerializationCategory.m in Sources */,
 				DA66F1201C6051BD00B1E0E1 /* mask.c in Sources */,
 				DA66F0951C604AFF00B1E0E1 /* RequestHeader.m in Sources */,

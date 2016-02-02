@@ -10,5 +10,6 @@
 
 @interface MainCollectionViewController : BaseViewController<UICollectionViewDelegate, UICollectionViewDataSource>
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+@property (weak, nonatomic) IBOutlet UIImageView *mainClickIImage;
 
 @end

@@ -27,6 +27,10 @@ static NSString * const reuseIdentifier = @"MainCollectionViewCell";
     
     // Do any additional setup after loading the view.
     [self.collectionView reloadData];
+    
+    _mainClickIImage.onTouchTapBlock = ^(UIImageView *imageView){
+        
+    };
 }
 
 - (void)didReceiveMemoryWarning {
