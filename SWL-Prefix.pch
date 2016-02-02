@@ -1,0 +1,139 @@
+//
+//  CleanPai-Prefix.pch
+//  CleanPai-Prefix
+//
+//  Created by sam.l on 15-01-12.
+//  Copyright (c) 2014年 bluemobi. All rights reserved.
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_5_0
+#warning "This project uses features only available in iOS SDK 5.0 and later."
+#endif
+
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+
+//公共类
+#import "Common.h"
+#import "kConstants.h"
+
+//头文件 宏定义
+#import "BMDefine.h"
+
+//用户实体
+//#import "UserInfoModel.h"
+
+//归档用户
+//#import "SaveUserInfo.h"
+
+//图片缓存
+//SDWebImage
+#import "UIImageView+LK.h"
+
+//网络
+ 
+/*----- tools  -----*/
+#import "ColorUtils.h"
+#import "CommonMethodUtils.h"
+#import "ColorHelper.h"
+
+/*----- libs  -----*/
+#import "SDImageCache.h"
+#import "UIImageView+WebCache.h"
+#import "PPObject.h"
+#import "AFNetworking.h"
+
+
+/*----- Category  -----*/
+#import "NSJSONSerialization+NSJSONSerializationCategory.h"
+//#import "XSNetworkStatus.h"
+#import <SystemConfiguration/SystemConfiguration.h>
+#import <MobileCoreServices/MobileCoreServices.h>
+#import "UIProgressView+AFNetworking.h"
+
+//全局颜色设置
+#import "BMColor.h"
+
+//全局字体设置
+#import "BMFontLibrary.h"
+
+//表单验证
+#import "Check.h"
+
+//上下拉刷新
+//#import "MJRefresh.h"
+//#import "UIScrollView+MJRefresh.h"
+//#import "MJRefreshHeaderView.h"
+//#import "MJRefreshFooterView.h"
+
+//视图基类
+#import "BaseViewController.h"
+
+//指示层
+#import "ProgressHUDUtils.h"
+//菊花
+//#import "UIViewController+HUD.h"
+
+#import "BMDefine.h"
+   
+#import "NSString+ZY.h"
+
+#import "UIButton+Block.h"
+//#import "IQKeyboardManager.h"
+
+//设定rgb
+#define DEF_COLOR(r,g,b) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:1]
+
+//判断设备型号
+#define isIos7  ([[[UIDevice currentDevice] systemVersion] floatValue]>=7.0&& [[[UIDevice currentDevice] systemVersion] floatValue]<8.0)
+#define isIos8  ([[[UIDevice currentDevice] systemVersion] floatValue]>=8.0)
+#define CGRECT_HAVE_NAV(x,y,w,h) CGRectMake((x), (y+(isIos7?44:44)), (w), (h))
+#define UIColorFromRGB(rgbValue) \
+[UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 \
+green:((float)((rgbValue & 0xFF00) >> 8))/255.0 \
+blue:((float)(rgbValue & 0xFF))/255.0 \
+alpha:1.0]
+
+/**
+ *  定义是否第一次访问的key
+ */
+#define KEY_HAS_LAUNCHED_ONCE   @"HasLaunchedOnce"
+
+//获取除了状态栏怎么屏幕的大小
+#define mainScreenBounds [UIScreen mainScreen].applicationFrame
+
+//用户对象的key
+#define userinfokey @"userinfokey"
+
+#define alertcount @"alertcount"
+
+#define bananrPic @"bananrPic"
+#define selectBananrPic @"selectBananrPic"
+#define kTabBarHeight 49
+
+#define downPullToRefreshText @"下拉刷新"
+#define ReleaseToRefreshText @"松开后刷新"
+#define RefreshingText @"刷新中..."
+#define upPullToRefreshText @"上拉加载更多"
+
+//#define DEF_BASE_URL   @"http://121.40.132.219:8090"// 阿里云
+//#define DEF_BASE_URL   @"http://10.58.174.140:8080"// 后台
+//#define DEF_BASE_URL   @"http://112.124.5.197:8080"// 测试服务器
+#define BaseURL @"/dearxi" //用 后台和阿里云开启
+
+//#define DEF_BASE_URL   @"http://cluxta.d2c-china.cn"// 客户服务器
+//#define BaseURL @""// 用 客户服务器时开启
+
+#define DEF_BASE_URL   @"http://112.124.102.65:8080"//shilei电脑
+
+#define iscopyright 1//1显示，0不显示
+
+//NSString *pageControlMarker;
+//NSString *loginReturn;
+
+//UI相关常量
+#import "DEXProject_iphone_UIDefine.h"
+#endif
