@@ -7,6 +7,7 @@
 //
 
 #import "HomePageViewController.h"
+#import "FlowViewController.h"
 
 @interface HomePageViewController ()
 
@@ -22,6 +23,11 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (IBAction)buttonAction:(UIButton *)sender {
+    
+    FlowViewController *flowViewController = [[FlowViewController alloc]init];
+    [self.navigationController pushViewController:flowViewController animated:YES];
 }
 
 /*

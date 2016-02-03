@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		9A5D0A05ABA213689E58C914 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FA3B88DB9227316947E3A82 /* libPods.a */; };
+		DA5595971C61A563006E3E5D /* DCPicScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA5595941C61A563006E3E5D /* DCPicScrollView.m */; };
+		DA5595981C61A563006E3E5D /* DCWebImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DA5595961C61A563006E3E5D /* DCWebImageManager.m */; };
 		DA66F0191C60477F00B1E0E1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DA66F0181C60477F00B1E0E1 /* main.m */; };
 		DA66F01C1C60477F00B1E0E1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DA66F01B1C60477F00B1E0E1 /* AppDelegate.m */; };
 		DA66F0221C60477F00B1E0E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA66F0201C60477F00B1E0E1 /* Main.storyboard */; };
@@ -75,6 +77,13 @@
 		DA9150F01C60ACBA006C641D /* HomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9150EE1C60ACBA006C641D /* HomePageViewController.m */; };
 		DA9150F11C60ACBA006C641D /* HomePageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA9150EF1C60ACBA006C641D /* HomePageViewController.xib */; };
 		DA9150F31C60AD5C006C641D /* 主页底图.png in Resources */ = {isa = PBXBuildFile; fileRef = DA9150F21C60AD5C006C641D /* 主页底图.png */; };
+		DA9150FD1C60DBAF006C641D /* FlowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9150FB1C60DBAF006C641D /* FlowViewController.m */; };
+		DA9150FE1C60DBAF006C641D /* FlowViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA9150FC1C60DBAF006C641D /* FlowViewController.xib */; };
+		DA9151031C60E610006C641D /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = DA9150FF1C60E610006C641D /* 1.png */; };
+		DA9151041C60E610006C641D /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = DA9151001C60E610006C641D /* 2.png */; };
+		DA9151051C60E610006C641D /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = DA9151011C60E610006C641D /* 3.png */; };
+		DA9151061C60E610006C641D /* 4.png in Resources */ = {isa = PBXBuildFile; fileRef = DA9151021C60E610006C641D /* 4.png */; };
+		DAA48C7B1C61DED4008D5510 /* FlowCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAA48C7A1C61DED4008D5510 /* FlowCell.xib */; };
 		DAA99F251C60563C00700049 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA99F241C60563C00700049 /* BaseViewController.m */; };
 		DAA99F321C605A0100700049 /* remind_noimage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DAA99F2A1C605A0100700049 /* remind_noimage@2x.png */; };
 		DAA99F331C605A0100700049 /* SDWebImage-Category.textClipping in Resources */ = {isa = PBXBuildFile; fileRef = DAA99F2B1C605A0100700049 /* SDWebImage-Category.textClipping */; };
@@ -86,6 +95,10 @@
 /* Begin PBXFileReference section */
 		3498578DEC9100F686787A7D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		7FA3B88DB9227316947E3A82 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA5595931C61A563006E3E5D /* DCPicScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCPicScrollView.h; sourceTree = "<group>"; };
+		DA5595941C61A563006E3E5D /* DCPicScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCPicScrollView.m; sourceTree = "<group>"; };
+		DA5595951C61A563006E3E5D /* DCWebImageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCWebImageManager.h; sourceTree = "<group>"; };
+		DA5595961C61A563006E3E5D /* DCWebImageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCWebImageManager.m; sourceTree = "<group>"; };
 		DA66F0141C60477F00B1E0E1 /* SWL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SWL.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA66F0181C60477F00B1E0E1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DA66F01A1C60477F00B1E0E1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -111,8 +124,6 @@
 		DA66F0481C604AFF00B1E0E1 /* DataFileUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataFileUtils.m; sourceTree = "<group>"; };
 		DA66F04A1C604AFF00B1E0E1 /* DocumentUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DocumentUtils.h; sourceTree = "<group>"; };
 		DA66F04B1C604AFF00B1E0E1 /* DocumentUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DocumentUtils.m; sourceTree = "<group>"; };
-		DA66F04D1C604AFF00B1E0E1 /* iCarouselExampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarouselExampleViewController.h; sourceTree = "<group>"; };
-		DA66F04E1C604AFF00B1E0E1 /* iCarouselExampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarouselExampleViewController.m; sourceTree = "<group>"; };
 		DA66F0501C604AFF00B1E0E1 /* ImageUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageUtils.h; sourceTree = "<group>"; };
 		DA66F0511C604AFF00B1E0E1 /* ImageUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageUtils.m; sourceTree = "<group>"; };
 		DA66F0531C604AFF00B1E0E1 /* NetworkUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkUtils.h; sourceTree = "<group>"; };
@@ -221,6 +232,14 @@
 		DA9150EE1C60ACBA006C641D /* HomePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePageViewController.m; sourceTree = "<group>"; };
 		DA9150EF1C60ACBA006C641D /* HomePageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomePageViewController.xib; sourceTree = "<group>"; };
 		DA9150F21C60AD5C006C641D /* 主页底图.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "主页底图.png"; sourceTree = "<group>"; };
+		DA9150FA1C60DBAF006C641D /* FlowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlowViewController.h; sourceTree = "<group>"; };
+		DA9150FB1C60DBAF006C641D /* FlowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlowViewController.m; sourceTree = "<group>"; };
+		DA9150FC1C60DBAF006C641D /* FlowViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FlowViewController.xib; sourceTree = "<group>"; };
+		DA9150FF1C60E610006C641D /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
+		DA9151001C60E610006C641D /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
+		DA9151011C60E610006C641D /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
+		DA9151021C60E610006C641D /* 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4.png; sourceTree = "<group>"; };
+		DAA48C7A1C61DED4008D5510 /* FlowCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FlowCell.xib; sourceTree = "<group>"; };
 		DAA99F231C60563C00700049 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		DAA99F241C60563C00700049 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		DAA99F261C6056A800700049 /* SWL-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SWL-Prefix.pch"; sourceTree = "<group>"; };
@@ -266,6 +285,17 @@
 				E0DFDD203F796AA6037365C8 /* Pods.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		DA5595921C61A563006E3E5D /* DCPicscrollView */ = {
+			isa = PBXGroup;
+			children = (
+				DA5595931C61A563006E3E5D /* DCPicScrollView.h */,
+				DA5595941C61A563006E3E5D /* DCPicScrollView.m */,
+				DA5595951C61A563006E3E5D /* DCWebImageManager.h */,
+				DA5595961C61A563006E3E5D /* DCWebImageManager.m */,
+			);
+			path = DCPicscrollView;
 			sourceTree = "<group>";
 		};
 		DA66F00B1C60477E00B1E0E1 = {
@@ -331,7 +361,6 @@
 				DA66F0431C604AFF00B1E0E1 /* CoreDataService */,
 				DA66F0461C604AFF00B1E0E1 /* DataFileUtils */,
 				DA66F0491C604AFF00B1E0E1 /* DocumentUtils */,
-				DA66F04C1C604AFF00B1E0E1 /* iCarouselUtils */,
 				DA66F04F1C604AFF00B1E0E1 /* ImageUtils */,
 				DA66F0651C604AFF00B1E0E1 /* ProgressHUDUtils */,
 				DA66F0681C604AFF00B1E0E1 /* ProgressViewUtils */,
@@ -405,15 +434,6 @@
 				DA66F04B1C604AFF00B1E0E1 /* DocumentUtils.m */,
 			);
 			path = DocumentUtils;
-			sourceTree = "<group>";
-		};
-		DA66F04C1C604AFF00B1E0E1 /* iCarouselUtils */ = {
-			isa = PBXGroup;
-			children = (
-				DA66F04D1C604AFF00B1E0E1 /* iCarouselExampleViewController.h */,
-				DA66F04E1C604AFF00B1E0E1 /* iCarouselExampleViewController.m */,
-			);
-			path = iCarouselUtils;
 			sourceTree = "<group>";
 		};
 		DA66F04F1C604AFF00B1E0E1 /* ImageUtils */ = {
@@ -646,6 +666,7 @@
 		DA66F10F1C6051BD00B1E0E1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				DA5595921C61A563006E3E5D /* DCPicscrollView */,
 				DAA99F281C605A0100700049 /* SDWebImage-Category */,
 				DA66F1101C6051BD00B1E0E1 /* OCJSplashView */,
 				DA66F1131C6051BD00B1E0E1 /* ProgressHUD */,
@@ -686,6 +707,10 @@
 		DA66F13E1C6051F200B1E0E1 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				DA9150FF1C60E610006C641D /* 1.png */,
+				DA9151001C60E610006C641D /* 2.png */,
+				DA9151011C60E610006C641D /* 3.png */,
+				DA9151021C60E610006C641D /* 4.png */,
 				DA9150F21C60AD5C006C641D /* 主页底图.png */,
 				DA9150E81C6098E3006C641D /* 首页横幅.png */,
 				DA9150EA1C60996B006C641D /* 首页点击.png */,
@@ -764,6 +789,7 @@
 			children = (
 				DA9150D61C608227006C641D /* MainViewController */,
 				DA9150EC1C60AC74006C641D /* HomePageViewController */,
+				DA9150F91C60DB35006C641D /* FlowViewController */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -796,6 +822,17 @@
 				DA9150EF1C60ACBA006C641D /* HomePageViewController.xib */,
 			);
 			path = HomePageViewController;
+			sourceTree = "<group>";
+		};
+		DA9150F91C60DB35006C641D /* FlowViewController */ = {
+			isa = PBXGroup;
+			children = (
+				DA9150FA1C60DBAF006C641D /* FlowViewController.h */,
+				DA9150FB1C60DBAF006C641D /* FlowViewController.m */,
+				DA9150FC1C60DBAF006C641D /* FlowViewController.xib */,
+				DAA48C7A1C61DED4008D5510 /* FlowCell.xib */,
+			);
+			path = FlowViewController;
 			sourceTree = "<group>";
 		};
 		DAA99F221C60563C00700049 /* BaseViewController */ = {
@@ -896,16 +933,22 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA9151041C60E610006C641D /* 2.png in Resources */,
 				DA9150E71C609443006C641D /* 首页_cell背景.png in Resources */,
 				DAA99F321C605A0100700049 /* remind_noimage@2x.png in Resources */,
 				DA66F0A21C604AFF00B1E0E1 /* pick_bg@2x.png in Resources */,
+				DAA48C7B1C61DED4008D5510 /* FlowCell.xib in Resources */,
 				DA66F13C1C6051BD00B1E0E1 /* SVProgressHUD.bundle in Resources */,
 				DA66F0271C60477F00B1E0E1 /* LaunchScreen.storyboard in Resources */,
 				DA9150EB1C60996B006C641D /* 首页点击.png in Resources */,
+				DA9151031C60E610006C641D /* 1.png in Resources */,
 				DA66F1301C6051BD00B1E0E1 /* WebViewJavascriptBridge.js in Resources */,
 				DA9150E31C6091F1006C641D /* MainCollectionViewCell.xib in Resources */,
 				DA66F1311C6051BD00B1E0E1 /* WebViewJavascriptBridge.js.txt in Resources */,
+				DA9151051C60E610006C641D /* 3.png in Resources */,
+				DA9151061C60E610006C641D /* 4.png in Resources */,
 				DAA99F331C605A0100700049 /* SDWebImage-Category.textClipping in Resources */,
+				DA9150FE1C60DBAF006C641D /* FlowViewController.xib in Resources */,
 				DA66F09F1C604AFF00B1E0E1 /* FMTCodeViewController.xib in Resources */,
 				DA66F02F1C604A5D00B1E0E1 /* SWL项目流程说明.docx in Resources */,
 				DA66F0241C60477F00B1E0E1 /* Assets.xcassets in Resources */,
@@ -959,6 +1002,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA9150E21C6091F1006C641D /* MainCollectionViewCell.m in Sources */,
+				DA5595981C61A563006E3E5D /* DCWebImageManager.m in Sources */,
 				DA66F1221C6051BD00B1E0E1 /* qrencode.c in Sources */,
 				DAA99F341C605A0100700049 /* THProgressView.m in Sources */,
 				DA66F1251C6051BD00B1E0E1 /* rscode.c in Sources */,
@@ -975,6 +1019,7 @@
 				DA66F0A41C604AFF00B1E0E1 /* ScreenShotUtils.m in Sources */,
 				DA66F1501C60539C00B1E0E1 /* BMImageLibrary.m in Sources */,
 				DA66F0981C604AFF00B1E0E1 /* UtilRequestService.m in Sources */,
+				DA5595971C61A563006E3E5D /* DCPicScrollView.m in Sources */,
 				DA66F09E1C604AFF00B1E0E1 /* FMTCodeViewController.m in Sources */,
 				DA9150D91C608A56006C641D /* MainCollectionViewController.m in Sources */,
 				DA66F1231C6051BD00B1E0E1 /* qrinput.c in Sources */,
@@ -1012,6 +1057,7 @@
 				DA66F1511C60539C00B1E0E1 /* BMParseError.m in Sources */,
 				DA66F0A71C604AFF00B1E0E1 /* TimeDateUtils.m in Sources */,
 				DA66F0931C604AFF00B1E0E1 /* ImageUtils.m in Sources */,
+				DA9150FD1C60DBAF006C641D /* FlowViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
