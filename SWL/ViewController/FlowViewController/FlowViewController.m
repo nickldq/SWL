@@ -27,17 +27,36 @@
     NSMutableArray *urlStringArray = [NSMutableArray array];
     
     for (int i = 1; i < 5; i++) {
-        
-        UIView *view = [[[NSBundle mainBundle]loadNibNamed:@"FlowCell" owner:self options:nil]firstObject];
-        view.frame = self.view.frame;
-        UIImageView *imageview = [view viewWithTag:10];
-        [imageview setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%d", i]]];
-        
+        UIView *view;
+        switch (i) {
+            case 1:
+                view = [[[NSBundle mainBundle]loadNibNamed:@"FlowPageType1" owner:self options:nil]firstObject];
+                break;
+            case 2:
+                view = [[[NSBundle mainBundle]loadNibNamed:@"FlowPageType2" owner:self options:nil]firstObject];
+                
+                break;
+            case 3:
+                view = [[[NSBundle mainBundle]loadNibNamed:@"FlowPageType3" owner:self options:nil]firstObject];
+                break;
+            case 4:
+                view = [[[NSBundle mainBundle]loadNibNamed:@"FlowPageType4" owner:self options:nil]firstObject];
+                
+                break;
+                
+            default:
+                break;
+        } 
         __weak __typeof(self)weakSelf = self;
         UIButton *backButton = [view viewWithTag:20];
         [backButton handleControlEvent:UIControlEventTouchUpInside withBlock:^(){
             [weakSelf.navigationController popViewControllerAnimated:YES];
-        }];
+        }];//返回
+        UIButton *commentButton = [view viewWithTag:30];
+        [commentButton handleControlEvent:UIControlEventTouchUpInside withBlock:^(){
+            
+        }];//评论
+        
         [urlStringArray addObject:view];
     }
  
@@ -49,6 +68,7 @@
     
     _picScrollView.AutoScrollDelay = 3.0f;
     _picScrollView.delegate = self;
+    [_picScrollView setCurrentPageIndicatorTintColor:DEF_COLOR(187, 91, 140)];
     
     [self.view addSubview:_picScrollView];
     

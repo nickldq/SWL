@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" tag="10" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flow_bg" translatesAutoresizingMaskIntoConstraints="NO" id="feZ-9s-2gR">
+                    <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="flow3-1.png" translatesAutoresizingMaskIntoConstraints="NO" id="Da0-2X-IJr">
+                    <rect key="frame" x="414" y="33" width="381.5" height="282.5"/>
+                </imageView>
+                <button hidden="YES" opaque="NO" tag="30" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ydA-so-9Yl">
+                    <rect key="frame" x="740" y="698" width="121" height="43"/>
+                    <state key="normal" image="comment.png"/>
+                    <state key="highlighted" image="comment_press.png"/>
+                </button>
+                <button opaque="NO" tag="20" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X4n-Cx-Q3h">
+                    <rect key="frame" x="876" y="698" width="121" height="43"/>
+                    <state key="normal" image="back.png"/>
+                    <state key="highlighted" image="back_press.png"/>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="flow3-2.png" translatesAutoresizingMaskIntoConstraints="NO" id="c7Q-6H-j7c">
+                    <rect key="frame" x="125" y="257" width="531" height="192"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="product3.png" translatesAutoresizingMaskIntoConstraints="NO" id="0H6-vo-mkF">
+                    <rect key="frame" x="881" y="447" width="110" height="208"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="flow3-3.png" translatesAutoresizingMaskIntoConstraints="NO" id="tqQ-Ur-RwE">
+                    <rect key="frame" x="247" y="479" width="476" height="192.5"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="feZ-9s-2gR" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="HQp-Zo-e3c"/>
+                <constraint firstAttribute="trailing" secondItem="feZ-9s-2gR" secondAttribute="trailing" id="O3s-6Q-eiL"/>
+                <constraint firstAttribute="bottom" secondItem="feZ-9s-2gR" secondAttribute="bottom" id="axA-rH-dBY"/>
+                <constraint firstItem="feZ-9s-2gR" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="qTt-Oi-Otf"/>
+            </constraints>
+            <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+            <point key="canvasLocation" x="307" y="386"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="back.png" width="242" height="87"/>
+        <image name="back_press.png" width="242" height="87"/>
+        <image name="comment.png" width="242" height="87"/>
+        <image name="comment_press.png" width="242" height="87"/>
+        <image name="flow3-1.png" width="763" height="565"/>
+        <image name="flow3-2.png" width="1063" height="385"/>
+        <image name="flow3-3.png" width="952" height="385"/>
+        <image name="flow_bg" width="1024" height="768"/>
+        <image name="product3.png" width="220" height="424"/>
+    </resources>
+</document>

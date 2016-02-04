@@ -19,35 +19,42 @@
             <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="主页底图.png" translatesAutoresizingMaskIntoConstraints="NO" id="UjZ-Go-5bw">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="homePage_bg" translatesAutoresizingMaskIntoConstraints="NO" id="UjZ-Go-5bw">
                     <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                 </imageView>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Unn-WH-ePG">
-                    <rect key="frame" x="735" y="334" width="140" height="58"/>
-                    <state key="normal" title="持续"/>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Unn-WH-ePG">
+                    <rect key="frame" x="738" y="349" width="145" height="44"/>
+                    <state key="normal" image="homePage_bt2"/>
+                    <state key="highlighted" image="homePage_bt2_press"/>
                     <connections>
                         <action selector="buttonAction:" destination="-1" eventType="touchUpInside" id="2wW-Oi-ku6"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Q1-vp-dOX">
-                    <rect key="frame" x="735" y="400" width="140" height="63"/>
-                    <state key="normal" title="集中"/>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Q1-vp-dOX">
+                    <rect key="frame" x="738" y="418" width="145" height="44"/>
+                    <state key="normal" image="homePage_bt3"/>
+                    <state key="selected" image="homePage_bt3_press"/>
+                    <state key="highlighted" image="homePage_bt3_press"/>
                     <connections>
                         <action selector="buttonAction:" destination="-1" eventType="touchUpInside" id="bZ4-uJ-a1r"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MZf-RU-bDY">
-                    <rect key="frame" x="735" y="260" width="140" height="61"/>
-                    <state key="normal" title="深彻"/>
-                    <connections>
-                        <action selector="buttonAction:" destination="-1" eventType="touchUpInside" id="XUa-9h-cfM"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6s4-3V-b3X">
-                    <rect key="frame" x="735" y="471" width="140" height="58"/>
-                    <state key="normal" title="匀亮"/>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6s4-3V-b3X">
+                    <rect key="frame" x="738" y="489" width="145" height="44"/>
+                    <state key="normal" image="homePage_bt4"/>
+                    <state key="selected" image="homePage_bt4_press"/>
+                    <state key="highlighted" image="homePage_bt4_press"/>
                     <connections>
                         <action selector="buttonAction:" destination="-1" eventType="touchUpInside" id="veQ-a6-Aqz"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MZf-RU-bDY">
+                    <rect key="frame" x="738" y="278" width="145" height="44"/>
+                    <state key="normal" image="homePage_bt1"/>
+                    <state key="selected" image="homePage_bt1_press"/>
+                    <state key="highlighted" image="homePage_bt1_press"/>
+                    <connections>
+                        <action selector="buttonAction:" destination="-1" eventType="touchUpInside" id="XUa-9h-cfM"/>
                     </connections>
                 </button>
             </subviews>
@@ -63,6 +70,14 @@
         </view>
     </objects>
     <resources>
-        <image name="主页底图.png" width="448" height="333"/>
+        <image name="homePage_bg" width="1024" height="768"/>
+        <image name="homePage_bt1" width="145" height="44"/>
+        <image name="homePage_bt1_press" width="145" height="44"/>
+        <image name="homePage_bt2" width="145" height="44"/>
+        <image name="homePage_bt2_press" width="145" height="44"/>
+        <image name="homePage_bt3" width="145" height="44"/>
+        <image name="homePage_bt3_press" width="145" height="44"/>
+        <image name="homePage_bt4" width="145" height="44"/>
+        <image name="homePage_bt4_press" width="145" height="44"/>
     </resources>
 </document>

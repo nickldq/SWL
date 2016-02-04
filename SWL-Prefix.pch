@@ -85,18 +85,11 @@
 #import "UIButton+Block.h"
 //#import "IQKeyboardManager.h"
 
-//设定rgb
-#define DEF_COLOR(r,g,b) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:1]
 
 //判断设备型号
 #define isIos7  ([[[UIDevice currentDevice] systemVersion] floatValue]>=7.0&& [[[UIDevice currentDevice] systemVersion] floatValue]<8.0)
 #define isIos8  ([[[UIDevice currentDevice] systemVersion] floatValue]>=8.0)
 #define CGRECT_HAVE_NAV(x,y,w,h) CGRectMake((x), (y+(isIos7?44:44)), (w), (h))
-#define UIColorFromRGB(rgbValue) \
-[UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 \
-green:((float)((rgbValue & 0xFF00) >> 8))/255.0 \
-blue:((float)(rgbValue & 0xFF))/255.0 \
-alpha:1.0]
 
 /**
  *  定义是否第一次访问的key
