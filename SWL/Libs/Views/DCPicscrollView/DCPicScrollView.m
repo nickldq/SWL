@@ -86,7 +86,7 @@
     _scrollView.showsHorizontalScrollIndicator = NO;
     _scrollView.delegate = self;
     
-    _scrollView.contentSize = CGSizeMake(myWidth * 3,0);
+    _scrollView.contentSize = CGSizeMake(myWidth * 2,0);
     
     _AutoScrollDelay = 2.0f;
     _currentIndex = 0;
@@ -224,45 +224,91 @@
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     [self changeImageWithOffset:scrollView.contentOffset.x];
-    
-    if (_delegate && [_delegate respondsToSelector:@selector(picScrollViewDidScroll:)]) {
-        [_delegate performSelector:@selector(picScrollViewDidScroll:)withObject:scrollView];
-    }
 }
 
 
 - (void)changeImageWithOffset:(CGFloat)offsetX {
-    
-    if (offsetX >= myWidth * 2) {
-        _currentIndex++;
-        
-        if (_currentIndex == _MaxImageCount-1) {
+    if (_currentIndex==0) {
+        if (offsetX >= myWidth * 1) {
+            _currentIndex++;
             
-            [self changeLeft:_currentIndex-1 center:_currentIndex right:0];
+            if (_currentIndex == _MaxImageCount-1) {
+                [self changeLeft:_currentIndex-1 center:_currentIndex right:0];
+                
+                
+            }else if (_currentIndex == _MaxImageCount) {
+                if (_isCycleScroll) {
+                    _currentIndex = 0;
+                    [self changeLeft:_MaxImageCount-1 center:0 right:1];
+                }else{
+                    _currentIndex--;
+                }
+                
+            }else {
+                [self changeLeft:_currentIndex-1 center:_currentIndex right:_currentIndex+1];
+            }
+            _PageControl.currentPage = _currentIndex;
             
-        }else if (_currentIndex == _MaxImageCount) {
-            
-            _currentIndex = 0;
-            [self changeLeft:_MaxImageCount-1 center:0 right:1];
-            
-        }else {
-            [self changeLeft:_currentIndex-1 center:_currentIndex right:_currentIndex+1];
         }
-        _PageControl.currentPage = _currentIndex;
-        
+    }else if (_currentIndex==1) {
+        if (offsetX >= myWidth * 2) {
+            _currentIndex++;
+            
+            if (_currentIndex == _MaxImageCount-1) {
+                [self changeLeft:_currentIndex-1 center:_currentIndex right:0];
+                
+                
+            }else if (_currentIndex == _MaxImageCount) {
+                if (_isCycleScroll) {
+                    _currentIndex = 0;
+                    [self changeLeft:_MaxImageCount-1 center:0 right:1];
+                }else{
+                    _currentIndex--;
+                }
+                
+            }else {
+                [self changeLeft:_currentIndex-1 center:_currentIndex right:_currentIndex+1];
+            }
+            _PageControl.currentPage = _currentIndex;
+            
+        }
+    }else if (_currentIndex==2) {
+        if (offsetX >= myWidth * 2) {
+            _currentIndex++;
+            
+            if (_currentIndex == _MaxImageCount-1) {
+                [self changeLeft:_currentIndex-1 center:_currentIndex right:0];
+                
+                
+            }else if (_currentIndex == _MaxImageCount) {
+                if (_isCycleScroll) {
+                    _currentIndex = 0;
+                    [self changeLeft:_MaxImageCount-1 center:0 right:1];
+                }else{
+                    _currentIndex--;
+                }
+                
+            }else {
+                [self changeLeft:_currentIndex-1 center:_currentIndex right:_currentIndex+1];
+            }
+            _PageControl.currentPage = _currentIndex;
+            
+        }
     }
     
     if (offsetX <= 0) {
         _currentIndex--;
         
         if (_currentIndex == 0) {
-            
-            [self changeLeft:_MaxImageCount-1 center:0 right:1];
-            
+                [self changeLeft:_MaxImageCount-1 center:0 right:1];
+
         }else if (_currentIndex == -1) {
-            
-            _currentIndex = _MaxImageCount-1;
-            [self changeLeft:_currentIndex-1 center:_currentIndex right:0];
+            if (_isCycleScroll) {
+                _currentIndex = _MaxImageCount-1;
+                [self changeLeft:_currentIndex-1 center:_currentIndex right:0];
+            }else{
+                _currentIndex++;
+            }
             
         }else {
             [self changeLeft:_currentIndex-1 center:_currentIndex right:_currentIndex+1];
@@ -293,9 +339,44 @@
         for (UIView *v in _rightView.subviews) {
             [v removeFromSuperview];
         }
-        [_leftView addSubview:_viewData[LeftIndex]];
-        [_centerView addSubview:_viewData[centerIndex]];
-        [_rightView addSubview:_viewData[rightIndex]];
+        for (UIView *v in _scrollView.subviews) {
+            [v removeFromSuperview];
+        }
+        if (_isCycleScroll) {
+            [_scrollView addSubview:_leftView];
+            [_scrollView addSubview:_centerView];
+            [_scrollView addSubview:_rightView];
+            [_leftView addSubview:_viewData[LeftIndex]];
+            [_centerView addSubview:_viewData[centerIndex]];
+            [_rightView addSubview:_viewData[rightIndex]];
+            _scrollView.contentSize = CGSizeMake(myWidth * 3,0);
+            
+        }else{
+            if (centerIndex == _viewData.count-1) {
+                [_scrollView addSubview:_leftView];
+                [_scrollView addSubview:_centerView];
+                [_leftView addSubview:_viewData[LeftIndex]];
+                [_centerView addSubview:_viewData[centerIndex]];
+                _scrollView.contentSize = CGSizeMake(myWidth * 2,0);
+                [_scrollView setContentOffset:CGPointMake(myWidth, 0)];
+            }else if (centerIndex == 0){
+                [_scrollView addSubview:_leftView];
+                [_scrollView addSubview:_centerView];
+                [_leftView addSubview:_viewData[centerIndex]];
+                [_centerView addSubview:_viewData[rightIndex]];
+                _scrollView.contentSize = CGSizeMake(myWidth * 2,0);
+                [_scrollView setContentOffset:CGPointMake(0, 0)];
+            }else{
+                [_scrollView addSubview:_leftView];
+                [_scrollView addSubview:_centerView];
+                [_scrollView addSubview:_rightView];
+                [_leftView addSubview:_viewData[LeftIndex]];
+                [_centerView addSubview:_viewData[centerIndex]];
+                [_rightView addSubview:_viewData[rightIndex]];
+                _scrollView.contentSize = CGSizeMake(myWidth * 3,0);
+                [_scrollView setContentOffset:CGPointMake(myWidth, 0)];
+            }
+        }
          
     }
     
@@ -307,7 +388,9 @@
         
     }
     
-    [_scrollView setContentOffset:CGPointMake(myWidth, 0)];
+    if (_delegate && [_delegate respondsToSelector:@selector(picScrollViewDidScroll:)]) {
+        [_delegate performSelector:@selector(picScrollViewDidScroll:)withObject:_scrollView];
+    }
 }
 
 -(void)setPlaceImage:(UIImage *)placeImage {

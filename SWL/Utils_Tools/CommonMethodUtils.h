@@ -176,4 +176,7 @@
  *  @return NSString
  */
 +(NSString*)convertChineseinterpunctionToEnglishinterpunction:(NSString*)str;
+
+//验证数字
++(BOOL) validateNumber:(NSString *)number textString:(NSString*)textString;
 @end

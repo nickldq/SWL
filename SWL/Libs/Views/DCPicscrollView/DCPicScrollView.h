@@ -26,6 +26,7 @@ typedef NS_ENUM(NSUInteger, PageControlStyle) {
 @property (nonatomic,strong) UIImage *placeImage;
 
 @property (nonatomic,assign) BOOL isAutoScroll; //是否自动滚动
+@property (nonatomic,assign) BOOL isCycleScroll; //是否循环滚动
 
 @property (nonatomic,assign) NSTimeInterval AutoScrollDelay; //default is 2.0f,如果小于0.5不自动播放
 

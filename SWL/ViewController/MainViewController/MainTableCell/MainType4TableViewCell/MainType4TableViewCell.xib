@@ -14,43 +14,43 @@
                 <rect key="frame" x="0.0" y="0.0" width="1024" height="95.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Axg-eX-Q4v">
+                    <imageView userInteractionEnabled="NO" alpha="0.23999999999999999" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Axg-eX-Q4v">
                         <rect key="frame" x="0.0" y="0.0" width="79" height="96"/>
                     </imageView>
-                    <imageView userInteractionEnabled="NO" alpha="0.5" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="l6d-rT-sr6">
+                    <imageView userInteractionEnabled="NO" alpha="0.23999999999999999" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="l6d-rT-sr6">
                         <rect key="frame" x="79" y="0.0" width="79" height="96"/>
                     </imageView>
-                    <imageView userInteractionEnabled="NO" alpha="0.5" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fsI-gA-8EZ">
+                    <imageView userInteractionEnabled="NO" alpha="0.23999999999999999" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fsI-gA-8EZ">
                         <rect key="frame" x="158" y="0.0" width="79" height="96"/>
                     </imageView>
-                    <imageView userInteractionEnabled="NO" alpha="0.5" tag="3" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MZf-3g-aHi">
+                    <imageView userInteractionEnabled="NO" alpha="0.23999999999999999" tag="3" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MZf-3g-aHi">
                         <rect key="frame" x="237" y="0.0" width="79" height="96"/>
                     </imageView>
-                    <imageView userInteractionEnabled="NO" alpha="0.5" tag="4" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TSk-xS-oAS">
+                    <imageView userInteractionEnabled="NO" alpha="0.23999999999999999" tag="4" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TSk-xS-oAS">
                         <rect key="frame" x="316" y="0.0" width="79" height="96"/>
                     </imageView>
-                    <imageView userInteractionEnabled="NO" alpha="0.5" tag="5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NmK-Xs-Rh0">
+                    <imageView userInteractionEnabled="NO" alpha="0.23999999999999999" tag="5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NmK-Xs-Rh0">
                         <rect key="frame" x="395" y="0.0" width="79" height="96"/>
                     </imageView>
-                    <imageView userInteractionEnabled="NO" alpha="0.5" tag="6" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Aa-pk-jxE">
+                    <imageView userInteractionEnabled="NO" alpha="0.23999999999999999" tag="6" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Aa-pk-jxE">
                         <rect key="frame" x="474" y="0.0" width="79" height="96"/>
                     </imageView>
-                    <imageView userInteractionEnabled="NO" alpha="0.5" tag="7" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VYQ-T2-QPV">
+                    <imageView userInteractionEnabled="NO" alpha="0.23999999999999999" tag="7" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VYQ-T2-QPV">
                         <rect key="frame" x="553" y="0.0" width="79" height="96"/>
                     </imageView>
-                    <imageView userInteractionEnabled="NO" alpha="0.5" tag="8" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tDr-oZ-QZp">
+                    <imageView userInteractionEnabled="NO" alpha="0.23999999999999999" tag="8" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tDr-oZ-QZp">
                         <rect key="frame" x="632" y="0.0" width="79" height="96"/>
                     </imageView>
-                    <imageView userInteractionEnabled="NO" alpha="0.5" tag="9" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TXx-5W-8Mv">
+                    <imageView userInteractionEnabled="NO" alpha="0.23999999999999999" tag="9" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TXx-5W-8Mv">
                         <rect key="frame" x="711" y="0.0" width="79" height="96"/>
                     </imageView>
-                    <imageView userInteractionEnabled="NO" alpha="0.5" tag="10" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="62j-ay-yj0">
+                    <imageView userInteractionEnabled="NO" alpha="0.23999999999999999" tag="10" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="62j-ay-yj0">
                         <rect key="frame" x="790" y="0.0" width="79" height="96"/>
                     </imageView>
-                    <imageView userInteractionEnabled="NO" alpha="0.5" tag="11" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C5f-nk-nTD">
+                    <imageView userInteractionEnabled="NO" alpha="0.23999999999999999" tag="11" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C5f-nk-nTD">
                         <rect key="frame" x="869" y="0.0" width="79" height="96"/>
                     </imageView>
-                    <imageView userInteractionEnabled="NO" alpha="0.5" tag="12" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pSH-I4-2Wz">
+                    <imageView userInteractionEnabled="NO" alpha="0.23999999999999999" tag="12" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pSH-I4-2Wz">
                         <rect key="frame" x="948" y="0.0" width="79" height="96"/>
                     </imageView>
                 </subviews>

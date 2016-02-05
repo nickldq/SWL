@@ -384,4 +384,14 @@
     
     return rlt;
 }
+
++(BOOL) validateNumber:(NSString *)number textString:(NSString*)textString{
+    BOOL res = true;
+    NSString *charStr = @"0123456789\n";
+    NSCharacterSet *tmpSet = [[NSCharacterSet characterSetWithCharactersInString:charStr] invertedSet];
+    NSArray *filteredArr = [number componentsSeparatedByCharactersInSet:tmpSet];
+    NSString *filtered = [filteredArr componentsJoinedByString:@""];
+    res = [number isEqualToString:filtered];
+    return res;
+}
 @end

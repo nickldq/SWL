@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "InformationStepOne.h"
 
-@interface InformationStepTwo : UIControl
+@interface InformationStepTwo : UIControl<UITextFieldDelegate, UITextViewDelegate>
 @property(strong ,nonatomic)JCAlertView *alert;
+@property(strong ,nonatomic)InformationStepOne *infoStepOne;
 @end

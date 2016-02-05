@@ -122,7 +122,7 @@
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WDP-UQ-p88">
-                                <rect key="frame" x="424" y="388" width="176" height="220"/>
+                                <rect key="frame" x="424" y="485.5" width="176" height="220"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="220" id="4st-iD-StY"/>
                                     <constraint firstAttribute="width" constant="176" id="u5o-oG-jIg"/>
@@ -132,13 +132,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="pFz-oy-qVW" firstAttribute="centerX" secondItem="yx4-OC-xLT" secondAttribute="centerX" id="2BL-Gl-u8h"/>
+                            <constraint firstItem="pFz-oy-qVW" firstAttribute="top" secondItem="792-zZ-RDq" secondAttribute="bottom" constant="178" id="3Vg-CE-6Wq"/>
                             <constraint firstAttribute="trailing" secondItem="ZyS-1C-Ty9" secondAttribute="trailing" id="ECd-cv-gwz"/>
                             <constraint firstItem="SQ2-e1-nBC" firstAttribute="top" secondItem="ZyS-1C-Ty9" secondAttribute="bottom" id="GUt-NN-kjV"/>
+                            <constraint firstItem="WDP-UQ-p88" firstAttribute="top" secondItem="792-zZ-RDq" secondAttribute="bottom" constant="485.5" id="HLQ-Hu-QF6"/>
                             <constraint firstItem="ZyS-1C-Ty9" firstAttribute="top" secondItem="792-zZ-RDq" secondAttribute="bottom" id="Jjb-7F-kNk"/>
                             <constraint firstItem="WDP-UQ-p88" firstAttribute="centerX" secondItem="yx4-OC-xLT" secondAttribute="centerX" id="b7Z-FL-s53"/>
-                            <constraint firstItem="WDP-UQ-p88" firstAttribute="top" secondItem="pFz-oy-qVW" secondAttribute="bottom" constant="90" id="iGB-37-VrJ"/>
                             <constraint firstItem="ZyS-1C-Ty9" firstAttribute="leading" secondItem="yx4-OC-xLT" secondAttribute="leading" id="lin-Ou-IvF"/>
-                            <constraint firstItem="SQ2-e1-nBC" firstAttribute="top" secondItem="WDP-UQ-p88" secondAttribute="bottom" constant="160" id="okp-Uy-goK"/>
                         </constraints>
                         <connections>
                             <action selector="backgroundTouchUpInside:" destination="Urm-rC-1TB" eventType="touchUpInside" id="1DZ-aT-R5W"/>

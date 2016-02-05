@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface ShareAlertView : UIView
+@property(strong ,nonatomic)JCAlertView *alert;
 
 @end

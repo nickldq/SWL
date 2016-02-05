@@ -9,6 +9,8 @@
 #import "FlowViewController.h" 
 #import "UIButton+Block.h"
 #import "InformationStepOne.h"
+#import "BasicAnimationUtils.h"
+#import "FlowPage.h"
 
 @interface FlowViewController ()
 
@@ -86,10 +88,11 @@
 #pragma mark ScrollView methods
 -(void)picScrollViewDidScroll:(UIScrollView *)scrollView{
 //    if (_picScrollView.currentIndex == _picScrollView.viewData.count-1) {
-//        [_picScrollView.viewData[_picScrollView.currentIndex] viewWithTag:30].hidden = NO; 
+//        [_picScrollView.viewData[_picScrollView.currentIndex] viewWithTag:30].hidden = NO;
 //    }else{
 //        [_picScrollView.viewData[_picScrollView.currentIndex] viewWithTag:30].hidden = YES;
 //    }
+    [_picScrollView.viewData[_picScrollView.currentIndex] performSelector:@selector(playAnimation)];
 }
 
 - (IBAction)backAction:(UIButton *)sender {

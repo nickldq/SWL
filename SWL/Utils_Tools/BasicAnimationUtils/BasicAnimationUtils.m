@@ -30,7 +30,7 @@
 
 +(CABasicAnimation *)scale:(NSNumber *)Multiple orgin:(NSNumber *)orginMultiple durTimes:(float)time RepeatTimes:(float)repeatTimes{//缩放
     CABasicAnimation *theAnimation;
-    theAnimation=[CABasicAnimation animationWithKeyPath:@"transform.scale.x"];
+    theAnimation=[CABasicAnimation animationWithKeyPath:@"transform.scale"];
     theAnimation.duration = time;
     theAnimation.repeatCount = repeatTimes;
     theAnimation.removedOnCompletion = FALSE;

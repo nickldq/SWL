@@ -203,6 +203,7 @@
 		DA7597E81C64711C00B77542 /* DaiDodgeKeyboardObjects.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7597E21C64711C00B77542 /* DaiDodgeKeyboardObjects.m */; };
 		DA7597E91C64711C00B77542 /* UIView+FirstResponderNotify.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7597E41C64711C00B77542 /* UIView+FirstResponderNotify.m */; };
 		DA7597ED1C64751000B77542 /* UIView+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7597EC1C64751000B77542 /* UIView+Category.m */; };
+		DA7597F01C65140100B77542 /* FlowPage.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7597EF1C65140100B77542 /* FlowPage.m */; };
 		DA9150F01C60ACBA006C641D /* HomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9150EE1C60ACBA006C641D /* HomePageViewController.m */; };
 		DA9150F11C60ACBA006C641D /* HomePageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA9150EF1C60ACBA006C641D /* HomePageViewController.xib */; };
 		DA9150FD1C60DBAF006C641D /* FlowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9150FB1C60DBAF006C641D /* FlowViewController.m */; };
@@ -493,6 +494,8 @@
 		DA7597E41C64711C00B77542 /* UIView+FirstResponderNotify.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FirstResponderNotify.m"; sourceTree = "<group>"; };
 		DA7597EB1C64751000B77542 /* UIView+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Category.h"; sourceTree = "<group>"; };
 		DA7597EC1C64751000B77542 /* UIView+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Category.m"; sourceTree = "<group>"; };
+		DA7597EE1C65140100B77542 /* FlowPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlowPage.h; sourceTree = "<group>"; };
+		DA7597EF1C65140100B77542 /* FlowPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlowPage.m; sourceTree = "<group>"; };
 		DA9150AB1C6061A8006C641D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		DA9150AD1C6061B0006C641D /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		DA9150ED1C60ACBA006C641D /* HomePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePageViewController.h; sourceTree = "<group>"; };
@@ -1206,6 +1209,8 @@
 			isa = PBXGroup;
 			children = (
 				DA75976A1C639AF800B77542 /* FlowPageType1.xib */,
+				DA7597EE1C65140100B77542 /* FlowPage.h */,
+				DA7597EF1C65140100B77542 /* FlowPage.m */,
 			);
 			path = FlowPageType1;
 			sourceTree = "<group>";
@@ -1332,9 +1337,9 @@
 		DA9150D51C607F74006C641D /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				DA75979F1C63AA4400B77542 /* AlertView */,
 				DA9150D61C608227006C641D /* MainViewController */,
 				DA9150EC1C60AC74006C641D /* HomePageViewController */,
+				DA75979F1C63AA4400B77542 /* AlertView */,
 				DA9150F91C60DB35006C641D /* FlowViewController */,
 			);
 			path = ViewController;
@@ -1755,6 +1760,7 @@
 				DAA99F391C605AB300700049 /* UserInfoModel.m in Sources */,
 				DA66F0A01C604AFF00B1E0E1 /* FMTImageSet.m in Sources */,
 				DA66F0991C604AFF00B1E0E1 /* RequestSeviceCommon.m in Sources */,
+				DA7597F01C65140100B77542 /* FlowPage.m in Sources */,
 				DA66F0901C604AFF00B1E0E1 /* DataFileUtils.m in Sources */,
 				DA66F0961C604AFF00B1E0E1 /* RequestHelper.m in Sources */,
 				DA66F09D1C604AFF00B1E0E1 /* AVCaptureViewController.m in Sources */,

@@ -44,15 +44,15 @@
 -(void)randomAnimation{
     
     __block UIImageView *v = [self viewWithTag:_x];
-    [UIView animateWithDuration:0.3 animations:^{
-        v.alpha=0.5;
+    [UIView animateWithDuration:1 animations:^{
+        v.alpha=0.24;
     }completion:^(BOOL finished){
         _x = arc4random() % (_imageNameArray.count-1);
         v = [self viewWithTag:_x];
-        [UIView animateWithDuration:1 animations:^{
+        [UIView animateWithDuration:1.5 animations:^{
             v.alpha=1;
         }completion:^(BOOL finished){
-            double delayInSeconds = 5.0;
+            double delayInSeconds = 3.0;
             dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
             dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
                 //执行事件

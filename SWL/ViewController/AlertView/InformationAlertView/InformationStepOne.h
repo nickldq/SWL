@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface InformationStepOne : UIControl
+@interface InformationStepOne : UIControl<UITextFieldDelegate, UITextViewDelegate>
 @property(strong, nonatomic)JCAlertView *alert;
 - (IBAction)submitAction:(UIButton *)sender;
 - (IBAction)clearAction:(UIButton *)sender;
