@@ -46,6 +46,10 @@
 #import "UIImageView+WebCache.h"
 #import "PPObject.h"
 #import "AFNetworking.h"
+#import "JCAlertView.h"
+#import "UIView+Category.h"
+#import "UIView+FirstResponderNotify.h"
+
 
 
 /*----- Category  -----*/

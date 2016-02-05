@@ -7,10 +7,7 @@
 //
 
 #import "MainViewController.h"
-#import "MainType1TableViewCell.h"
-#import "MainType2TableViewCell.h"
-#import "MainType3TableViewCell.h"
-#import "MainType4TableViewCell.h"
+#import "MainTableViewCell.h"
 #import "UIImage+GIF.h"
 #import "HomePageViewController.h"
 
@@ -67,7 +64,7 @@ static NSString * const reuseMainType4CellIdentifier = @"MainType4TableViewCell"
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    UITableViewCell *cell;
+    MainTableViewCell *cell;
     NSMutableArray * imageArray = [NSMutableArray array];
     switch (indexPath.row) {
         case 0: case 6: {
@@ -104,8 +101,8 @@ static NSString * const reuseMainType4CellIdentifier = @"MainType4TableViewCell"
         default:
             break;
     }
-    [cell performSelector:@selector(setImageNameArray:) withObject:imageArray];
-    
+    [cell setImageNameArray:imageArray];
+    [cell maskingViewTweenedAnimation];
     return cell;
     
 }

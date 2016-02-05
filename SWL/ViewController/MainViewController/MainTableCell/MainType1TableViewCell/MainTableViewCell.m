@@ -1,14 +1,14 @@
 //
-//  MainType2TableViewCell.m
+//  MainType1TableViewCell.m
 //  SWL
 //
 //  Created by Liudq on 16/2/4.
 //
 //
 
-#import "MainType2TableViewCell.h"
+#import "MainTableViewCell.h"
 
-@implementation MainType2TableViewCell
+@implementation MainTableViewCell
 
 - (void)awakeFromNib {
     // Initialization code
@@ -27,4 +27,15 @@
         [v setImage:[UIImage imageNamed:imageNameArray[i]]];
     }
 }
+
+-(void)maskingViewTweenedAnimation{
+    for (int i = 0; i<_imageNameArray.count; i++) {
+        UIImageView *v = [self viewWithTag:i];
+        [UIView animateWithDuration:1 animations:^(){
+            v.alpha=1;
+        }];
+    }
+    
+}
+
 @end

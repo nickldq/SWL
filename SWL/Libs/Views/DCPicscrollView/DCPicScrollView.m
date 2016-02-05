@@ -335,10 +335,12 @@
 }
 
 - (void)setUpTimer {
-    if (_AutoScrollDelay < 0.5) return;
-
-    _timer = [NSTimer timerWithTimeInterval:_AutoScrollDelay target:self selector:@selector(scorll) userInfo:nil repeats:YES];
-    [[NSRunLoop currentRunLoop] addTimer:_timer forMode:NSRunLoopCommonModes];
+    if(_isAutoScroll){
+        if (_AutoScrollDelay < 0.5) return;
+        
+        _timer = [NSTimer timerWithTimeInterval:_AutoScrollDelay target:self selector:@selector(scorll) userInfo:nil repeats:YES];
+        [[NSRunLoop currentRunLoop] addTimer:_timer forMode:NSRunLoopCommonModes];
+    }
 }
 
 - (void)removeTimer {

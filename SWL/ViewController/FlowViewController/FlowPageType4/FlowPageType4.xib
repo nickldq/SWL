@@ -20,7 +20,7 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="flow4-1.png" translatesAutoresizingMaskIntoConstraints="NO" id="Hmn-9M-RRu">
                     <rect key="frame" x="79" y="120" width="381.5" height="282.5"/>
                 </imageView>
-                <button hidden="YES" opaque="NO" tag="30" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ct-da-PuC">
+                <button opaque="NO" tag="30" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ct-da-PuC">
                     <rect key="frame" x="740" y="698" width="121" height="43"/>
                     <state key="normal" image="comment.png"/>
                     <state key="highlighted" image="comment_press.png"/>

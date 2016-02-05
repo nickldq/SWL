@@ -108,19 +108,20 @@
                             <tableView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZyS-1C-Ty9">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="Urm-rC-1TB" id="vns-Di-KJY"/>
                                     <outlet property="delegate" destination="Urm-rC-1TB" id="vb0-me-liS"/>
                                 </connections>
                             </tableView>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="首页横幅" translatesAutoresizingMaskIntoConstraints="NO" id="pFz-oy-qVW">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="首页横幅" translatesAutoresizingMaskIntoConstraints="NO" id="pFz-oy-qVW">
                                 <rect key="frame" x="189" y="178" width="646" height="120"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="120" id="qYI-xh-ZrP"/>
                                     <constraint firstAttribute="width" constant="646" id="yoh-Ms-mbw"/>
                                 </constraints>
                             </imageView>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WDP-UQ-p88">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WDP-UQ-p88">
                                 <rect key="frame" x="424" y="388" width="176" height="220"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="220" id="4st-iD-StY"/>

@@ -8,6 +8,7 @@
 
 #import "FlowViewController.h" 
 #import "UIButton+Block.h"
+#import "InformationStepOne.h"
 
 @interface FlowViewController ()
 
@@ -54,7 +55,10 @@
         }];//返回
         UIButton *commentButton = [view viewWithTag:30];
         [commentButton handleControlEvent:UIControlEventTouchUpInside withBlock:^(){
-            
+            InformationStepOne *step1View = (InformationStepOne *)[[[NSBundle mainBundle]loadNibNamed:@"InformationStepOne" owner:self options:nil]firstObject];
+            JCAlertView *customAlert = [[JCAlertView alloc] initWithCustomView:step1View dismissWhenTouchedBackground:NO];
+            step1View.alert = customAlert;
+            [customAlert show];
         }];//评论
         
         [urlStringArray addObject:view];
@@ -66,7 +70,6 @@
         printf("你点到我了😳index:%zd\n",index);
     }];
     
-    _picScrollView.AutoScrollDelay = 3.0f;
     _picScrollView.delegate = self;
     [_picScrollView setCurrentPageIndicatorTintColor:DEF_COLOR(187, 91, 140)];
     
@@ -82,11 +85,11 @@
 #pragma mark -
 #pragma mark ScrollView methods
 -(void)picScrollViewDidScroll:(UIScrollView *)scrollView{
-    if (_picScrollView.currentIndex == _picScrollView.viewData.count-1) {
-        [_picScrollView.viewData[_picScrollView.currentIndex] viewWithTag:30].hidden = NO; 
-    }else{
-        [_picScrollView.viewData[_picScrollView.currentIndex] viewWithTag:30].hidden = YES;
-    }
+//    if (_picScrollView.currentIndex == _picScrollView.viewData.count-1) {
+//        [_picScrollView.viewData[_picScrollView.currentIndex] viewWithTag:30].hidden = NO; 
+//    }else{
+//        [_picScrollView.viewData[_picScrollView.currentIndex] viewWithTag:30].hidden = YES;
+//    }
 }
 
 - (IBAction)backAction:(UIButton *)sender {

@@ -189,18 +189,29 @@
 		DA75979A1C63A0E900B77542 /* flow4-3.png in Resources */ = {isa = PBXBuildFile; fileRef = DA7597961C63A0E900B77542 /* flow4-3.png */; };
 		DA75979B1C63A0E900B77542 /* product4.png in Resources */ = {isa = PBXBuildFile; fileRef = DA7597971C63A0E900B77542 /* product4.png */; };
 		DA75979E1C63A2FC00B77542 /* FlowPageType4.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA75979D1C63A2FC00B77542 /* FlowPageType4.xib */; };
+		DA7597A61C6455A700B77542 /* JCAlertView.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DA7597A31C6455A700B77542 /* JCAlertView.bundle */; };
+		DA7597A71C6455A700B77542 /* JCAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7597A51C6455A700B77542 /* JCAlertView.m */; };
+		DA7597AA1C645BFA00B77542 /* InformationStepOne.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7597A91C645BFA00B77542 /* InformationStepOne.m */; };
+		DA7597AC1C64605700B77542 /* InformationStepOne.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA7597AB1C64605700B77542 /* InformationStepOne.xib */; };
+		DA7597B01C64647D00B77542 /* InformationStepTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7597AE1C64647D00B77542 /* InformationStepTwo.m */; };
+		DA7597B11C64647D00B77542 /* InformationStepTwo.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA7597AF1C64647D00B77542 /* InformationStepTwo.xib */; };
+		DA7597B51C64661B00B77542 /* ShareAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7597B31C64661B00B77542 /* ShareAlertView.m */; };
+		DA7597B61C64661B00B77542 /* ShareAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA7597B41C64661B00B77542 /* ShareAlertView.xib */; };
+		DA7597E51C64711C00B77542 /* DaiDodgeKeyboard+AccessObject.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7597DC1C64711C00B77542 /* DaiDodgeKeyboard+AccessObject.m */; };
+		DA7597E61C64711C00B77542 /* DaiDodgeKeyboard+Animation.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7597DE1C64711C00B77542 /* DaiDodgeKeyboard+Animation.m */; };
+		DA7597E71C64711C00B77542 /* DaiDodgeKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7597E01C64711C00B77542 /* DaiDodgeKeyboard.m */; };
+		DA7597E81C64711C00B77542 /* DaiDodgeKeyboardObjects.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7597E21C64711C00B77542 /* DaiDodgeKeyboardObjects.m */; };
+		DA7597E91C64711C00B77542 /* UIView+FirstResponderNotify.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7597E41C64711C00B77542 /* UIView+FirstResponderNotify.m */; };
+		DA7597ED1C64751000B77542 /* UIView+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7597EC1C64751000B77542 /* UIView+Category.m */; };
 		DA9150F01C60ACBA006C641D /* HomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9150EE1C60ACBA006C641D /* HomePageViewController.m */; };
 		DA9150F11C60ACBA006C641D /* HomePageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA9150EF1C60ACBA006C641D /* HomePageViewController.xib */; };
 		DA9150FD1C60DBAF006C641D /* FlowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9150FB1C60DBAF006C641D /* FlowViewController.m */; };
 		DA9150FE1C60DBAF006C641D /* FlowViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA9150FC1C60DBAF006C641D /* FlowViewController.xib */; };
 		DAA48C7E1C635D45008D5510 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA48C7D1C635D45008D5510 /* MainViewController.m */; };
-		DAA48C891C6370BB008D5510 /* MainType1TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA48C871C6370BB008D5510 /* MainType1TableViewCell.m */; };
+		DAA48C891C6370BB008D5510 /* MainTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA48C871C6370BB008D5510 /* MainTableViewCell.m */; };
 		DAA48C8A1C6370BB008D5510 /* MainType1TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAA48C881C6370BB008D5510 /* MainType1TableViewCell.xib */; };
-		DAA48C9F1C637927008D5510 /* MainType2TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA48C991C637927008D5510 /* MainType2TableViewCell.m */; };
 		DAA48CA01C637927008D5510 /* MainType2TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAA48C9A1C637927008D5510 /* MainType2TableViewCell.xib */; };
-		DAA48CA11C637927008D5510 /* MainType3TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA48C9D1C637927008D5510 /* MainType3TableViewCell.m */; };
 		DAA48CA21C637927008D5510 /* MainType3TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAA48C9E1C637927008D5510 /* MainType3TableViewCell.xib */; };
-		DAA48CA71C637945008D5510 /* MainType4TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA48CA51C637945008D5510 /* MainType4TableViewCell.m */; };
 		DAA48CA81C637945008D5510 /* MainType4TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAA48CA61C637945008D5510 /* MainType4TableViewCell.xib */; };
 		DAA99F251C60563C00700049 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA99F241C60563C00700049 /* BaseViewController.m */; };
 		DAA99F321C605A0100700049 /* remind_noimage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DAA99F2A1C605A0100700049 /* remind_noimage@2x.png */; };
@@ -458,6 +469,30 @@
 		DA7597961C63A0E900B77542 /* flow4-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flow4-3.png"; sourceTree = "<group>"; };
 		DA7597971C63A0E900B77542 /* product4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = product4.png; sourceTree = "<group>"; };
 		DA75979D1C63A2FC00B77542 /* FlowPageType4.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FlowPageType4.xib; sourceTree = "<group>"; };
+		DA7597A31C6455A700B77542 /* JCAlertView.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = JCAlertView.bundle; sourceTree = "<group>"; };
+		DA7597A41C6455A700B77542 /* JCAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCAlertView.h; sourceTree = "<group>"; };
+		DA7597A51C6455A700B77542 /* JCAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCAlertView.m; sourceTree = "<group>"; };
+		DA7597A81C645BFA00B77542 /* InformationStepOne.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InformationStepOne.h; sourceTree = "<group>"; };
+		DA7597A91C645BFA00B77542 /* InformationStepOne.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InformationStepOne.m; sourceTree = "<group>"; };
+		DA7597AB1C64605700B77542 /* InformationStepOne.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InformationStepOne.xib; sourceTree = "<group>"; };
+		DA7597AD1C64647D00B77542 /* InformationStepTwo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InformationStepTwo.h; sourceTree = "<group>"; };
+		DA7597AE1C64647D00B77542 /* InformationStepTwo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InformationStepTwo.m; sourceTree = "<group>"; };
+		DA7597AF1C64647D00B77542 /* InformationStepTwo.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InformationStepTwo.xib; sourceTree = "<group>"; };
+		DA7597B21C64661B00B77542 /* ShareAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareAlertView.h; sourceTree = "<group>"; };
+		DA7597B31C64661B00B77542 /* ShareAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareAlertView.m; sourceTree = "<group>"; };
+		DA7597B41C64661B00B77542 /* ShareAlertView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShareAlertView.xib; sourceTree = "<group>"; };
+		DA7597DB1C64711C00B77542 /* DaiDodgeKeyboard+AccessObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DaiDodgeKeyboard+AccessObject.h"; sourceTree = "<group>"; };
+		DA7597DC1C64711C00B77542 /* DaiDodgeKeyboard+AccessObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DaiDodgeKeyboard+AccessObject.m"; sourceTree = "<group>"; };
+		DA7597DD1C64711C00B77542 /* DaiDodgeKeyboard+Animation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DaiDodgeKeyboard+Animation.h"; sourceTree = "<group>"; };
+		DA7597DE1C64711C00B77542 /* DaiDodgeKeyboard+Animation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DaiDodgeKeyboard+Animation.m"; sourceTree = "<group>"; };
+		DA7597DF1C64711C00B77542 /* DaiDodgeKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DaiDodgeKeyboard.h; sourceTree = "<group>"; };
+		DA7597E01C64711C00B77542 /* DaiDodgeKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DaiDodgeKeyboard.m; sourceTree = "<group>"; };
+		DA7597E11C64711C00B77542 /* DaiDodgeKeyboardObjects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DaiDodgeKeyboardObjects.h; sourceTree = "<group>"; };
+		DA7597E21C64711C00B77542 /* DaiDodgeKeyboardObjects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DaiDodgeKeyboardObjects.m; sourceTree = "<group>"; };
+		DA7597E31C64711C00B77542 /* UIView+FirstResponderNotify.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FirstResponderNotify.h"; sourceTree = "<group>"; };
+		DA7597E41C64711C00B77542 /* UIView+FirstResponderNotify.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FirstResponderNotify.m"; sourceTree = "<group>"; };
+		DA7597EB1C64751000B77542 /* UIView+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Category.h"; sourceTree = "<group>"; };
+		DA7597EC1C64751000B77542 /* UIView+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Category.m"; sourceTree = "<group>"; };
 		DA9150AB1C6061A8006C641D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		DA9150AD1C6061B0006C641D /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		DA9150ED1C60ACBA006C641D /* HomePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePageViewController.h; sourceTree = "<group>"; };
@@ -468,17 +503,11 @@
 		DA9150FC1C60DBAF006C641D /* FlowViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FlowViewController.xib; sourceTree = "<group>"; };
 		DAA48C7C1C635D45008D5510 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		DAA48C7D1C635D45008D5510 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
-		DAA48C861C6370BB008D5510 /* MainType1TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainType1TableViewCell.h; sourceTree = "<group>"; };
-		DAA48C871C6370BB008D5510 /* MainType1TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainType1TableViewCell.m; sourceTree = "<group>"; };
+		DAA48C861C6370BB008D5510 /* MainTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTableViewCell.h; sourceTree = "<group>"; };
+		DAA48C871C6370BB008D5510 /* MainTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTableViewCell.m; sourceTree = "<group>"; };
 		DAA48C881C6370BB008D5510 /* MainType1TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainType1TableViewCell.xib; sourceTree = "<group>"; };
-		DAA48C981C637927008D5510 /* MainType2TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainType2TableViewCell.h; sourceTree = "<group>"; };
-		DAA48C991C637927008D5510 /* MainType2TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainType2TableViewCell.m; sourceTree = "<group>"; };
 		DAA48C9A1C637927008D5510 /* MainType2TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainType2TableViewCell.xib; sourceTree = "<group>"; };
-		DAA48C9C1C637927008D5510 /* MainType3TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainType3TableViewCell.h; sourceTree = "<group>"; };
-		DAA48C9D1C637927008D5510 /* MainType3TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainType3TableViewCell.m; sourceTree = "<group>"; };
 		DAA48C9E1C637927008D5510 /* MainType3TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainType3TableViewCell.xib; sourceTree = "<group>"; };
-		DAA48CA41C637945008D5510 /* MainType4TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainType4TableViewCell.h; sourceTree = "<group>"; };
-		DAA48CA51C637945008D5510 /* MainType4TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainType4TableViewCell.m; sourceTree = "<group>"; };
 		DAA48CA61C637945008D5510 /* MainType4TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainType4TableViewCell.xib; sourceTree = "<group>"; };
 		DAA99F231C60563C00700049 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		DAA99F241C60563C00700049 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
@@ -906,6 +935,9 @@
 		DA66F10F1C6051BD00B1E0E1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				DA7597EA1C6474E800B77542 /* UIVIew+Category */,
+				DA7597DA1C64711C00B77542 /* DaiDodgeKeyboard */,
+				DA7597A21C6455A700B77542 /* JCAlertView */,
 				DA5595921C61A563006E3E5D /* DCPicscrollView */,
 				DAA99F281C605A0100700049 /* SDWebImage-Category */,
 				DA66F1101C6051BD00B1E0E1 /* OCJSplashView */,
@@ -1229,9 +1261,78 @@
 			path = FlowPageType4;
 			sourceTree = "<group>";
 		};
+		DA75979F1C63AA4400B77542 /* AlertView */ = {
+			isa = PBXGroup;
+			children = (
+				DA7597A01C63AAB700B77542 /* InformationAlertView */,
+				DA7597A11C63AAB700B77542 /* ShareAlertView */,
+			);
+			path = AlertView;
+			sourceTree = "<group>";
+		};
+		DA7597A01C63AAB700B77542 /* InformationAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				DA7597A81C645BFA00B77542 /* InformationStepOne.h */,
+				DA7597A91C645BFA00B77542 /* InformationStepOne.m */,
+				DA7597AB1C64605700B77542 /* InformationStepOne.xib */,
+				DA7597AD1C64647D00B77542 /* InformationStepTwo.h */,
+				DA7597AE1C64647D00B77542 /* InformationStepTwo.m */,
+				DA7597AF1C64647D00B77542 /* InformationStepTwo.xib */,
+			);
+			path = InformationAlertView;
+			sourceTree = "<group>";
+		};
+		DA7597A11C63AAB700B77542 /* ShareAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				DA7597B21C64661B00B77542 /* ShareAlertView.h */,
+				DA7597B31C64661B00B77542 /* ShareAlertView.m */,
+				DA7597B41C64661B00B77542 /* ShareAlertView.xib */,
+			);
+			path = ShareAlertView;
+			sourceTree = "<group>";
+		};
+		DA7597A21C6455A700B77542 /* JCAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				DA7597A31C6455A700B77542 /* JCAlertView.bundle */,
+				DA7597A41C6455A700B77542 /* JCAlertView.h */,
+				DA7597A51C6455A700B77542 /* JCAlertView.m */,
+			);
+			path = JCAlertView;
+			sourceTree = "<group>";
+		};
+		DA7597DA1C64711C00B77542 /* DaiDodgeKeyboard */ = {
+			isa = PBXGroup;
+			children = (
+				DA7597DB1C64711C00B77542 /* DaiDodgeKeyboard+AccessObject.h */,
+				DA7597DC1C64711C00B77542 /* DaiDodgeKeyboard+AccessObject.m */,
+				DA7597DD1C64711C00B77542 /* DaiDodgeKeyboard+Animation.h */,
+				DA7597DE1C64711C00B77542 /* DaiDodgeKeyboard+Animation.m */,
+				DA7597DF1C64711C00B77542 /* DaiDodgeKeyboard.h */,
+				DA7597E01C64711C00B77542 /* DaiDodgeKeyboard.m */,
+				DA7597E11C64711C00B77542 /* DaiDodgeKeyboardObjects.h */,
+				DA7597E21C64711C00B77542 /* DaiDodgeKeyboardObjects.m */,
+				DA7597E31C64711C00B77542 /* UIView+FirstResponderNotify.h */,
+				DA7597E41C64711C00B77542 /* UIView+FirstResponderNotify.m */,
+			);
+			path = DaiDodgeKeyboard;
+			sourceTree = "<group>";
+		};
+		DA7597EA1C6474E800B77542 /* UIVIew+Category */ = {
+			isa = PBXGroup;
+			children = (
+				DA7597EB1C64751000B77542 /* UIView+Category.h */,
+				DA7597EC1C64751000B77542 /* UIView+Category.m */,
+			);
+			path = "UIVIew+Category";
+			sourceTree = "<group>";
+		};
 		DA9150D51C607F74006C641D /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				DA75979F1C63AA4400B77542 /* AlertView */,
 				DA9150D61C608227006C641D /* MainViewController */,
 				DA9150EC1C60AC74006C641D /* HomePageViewController */,
 				DA9150F91C60DB35006C641D /* FlowViewController */,
@@ -1287,8 +1388,8 @@
 		DAA48C851C6370AA008D5510 /* MainType1TableViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				DAA48C861C6370BB008D5510 /* MainType1TableViewCell.h */,
-				DAA48C871C6370BB008D5510 /* MainType1TableViewCell.m */,
+				DAA48C861C6370BB008D5510 /* MainTableViewCell.h */,
+				DAA48C871C6370BB008D5510 /* MainTableViewCell.m */,
 				DAA48C881C6370BB008D5510 /* MainType1TableViewCell.xib */,
 			);
 			path = MainType1TableViewCell;
@@ -1297,8 +1398,6 @@
 		DAA48C971C637927008D5510 /* MainType2TableViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				DAA48C981C637927008D5510 /* MainType2TableViewCell.h */,
-				DAA48C991C637927008D5510 /* MainType2TableViewCell.m */,
 				DAA48C9A1C637927008D5510 /* MainType2TableViewCell.xib */,
 			);
 			path = MainType2TableViewCell;
@@ -1307,8 +1406,6 @@
 		DAA48C9B1C637927008D5510 /* MainType3TableViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				DAA48C9C1C637927008D5510 /* MainType3TableViewCell.h */,
-				DAA48C9D1C637927008D5510 /* MainType3TableViewCell.m */,
 				DAA48C9E1C637927008D5510 /* MainType3TableViewCell.xib */,
 			);
 			path = MainType3TableViewCell;
@@ -1317,8 +1414,6 @@
 		DAA48CA31C637945008D5510 /* MainType4TableViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				DAA48CA41C637945008D5510 /* MainType4TableViewCell.h */,
-				DAA48CA51C637945008D5510 /* MainType4TableViewCell.m */,
 				DAA48CA61C637945008D5510 /* MainType4TableViewCell.xib */,
 			);
 			path = MainType4TableViewCell;
@@ -1480,6 +1575,7 @@
 				DA75971F1C638FB200B77542 /* 3-5.png in Resources */,
 				DA7597801C639BF700B77542 /* comment.png in Resources */,
 				DA7597981C63A0E900B77542 /* flow4-1.png in Resources */,
+				DA7597B61C64661B00B77542 /* ShareAlertView.xib in Resources */,
 				DA7597431C638FB200B77542 /* 6-2.png in Resources */,
 				DA7597471C638FB200B77542 /* 6-6.png in Resources */,
 				DA7597171C638FB200B77542 /* 2-9.png in Resources */,
@@ -1498,6 +1594,7 @@
 				DA75977C1C639BA300B77542 /* product1.png in Resources */,
 				DA66F0271C60477F00B1E0E1 /* LaunchScreen.storyboard in Resources */,
 				DA7597161C638FB200B77542 /* 2-8.png in Resources */,
+				DA7597AC1C64605700B77542 /* InformationStepOne.xib in Resources */,
 				DA75970F1C638FB200B77542 /* 2-14.png in Resources */,
 				DA7597571C638FB200B77542 /* 8-11.png in Resources */,
 				DA7597081C638FB200B77542 /* 1-8.png in Resources */,
@@ -1541,9 +1638,11 @@
 				DA7597491C638FB200B77542 /* 6-8.png in Resources */,
 				DA7597231C638FB200B77542 /* 3-9.png in Resources */,
 				DA7597191C638FB200B77542 /* 3-10.png in Resources */,
+				DA7597A61C6455A700B77542 /* JCAlertView.bundle in Resources */,
 				DA7597131C638FB200B77542 /* 2-5.png in Resources */,
 				DA75972C1C638FB200B77542 /* 4-5.png in Resources */,
 				DA7597331C638FB200B77542 /* 5-11.png in Resources */,
+				DA7597B11C64647D00B77542 /* InformationStepTwo.xib in Resources */,
 				DA75970B1C638FB200B77542 /* 2-10.png in Resources */,
 				DA7597581C638FB200B77542 /* 8-12.png in Resources */,
 				DA7597111C638FB200B77542 /* 2-3.png in Resources */,
@@ -1627,21 +1726,23 @@
 				DAA99F341C605A0100700049 /* THProgressView.m in Sources */,
 				DA66F1251C6051BD00B1E0E1 /* rscode.c in Sources */,
 				DA66F1211C6051BD00B1E0E1 /* QRCodeGenerator.m in Sources */,
-				DAA48C9F1C637927008D5510 /* MainType2TableViewCell.m in Sources */,
 				DA66F08E1C604AFF00B1E0E1 /* CommonMethodUtils.m in Sources */,
 				DA66F09A1C604AFF00B1E0E1 /* ProgressHUDUtils.m in Sources */,
+				DA7597ED1C64751000B77542 /* UIView+Category.m in Sources */,
 				DA66F11F1C6051BD00B1E0E1 /* bitstream.c in Sources */,
-				DAA48CA71C637945008D5510 /* MainType4TableViewCell.m in Sources */,
 				DA66F14E1C60539C00B1E0E1 /* BMColor.m in Sources */,
 				DAA99F351C605A0100700049 /* UIImageView+LK.m in Sources */,
 				DA66F1391C6051BD00B1E0E1 /* OCJSplashView.m in Sources */,
-				DAA48C891C6370BB008D5510 /* MainType1TableViewCell.m in Sources */,
+				DAA48C891C6370BB008D5510 /* MainTableViewCell.m in Sources */,
+				DA7597B01C64647D00B77542 /* InformationStepTwo.m in Sources */,
 				DA66F0941C604AFF00B1E0E1 /* NetworkUtils.m in Sources */,
+				DA7597E81C64711C00B77542 /* DaiDodgeKeyboardObjects.m in Sources */,
 				DA66F13D1C6051BD00B1E0E1 /* SVProgressHUD.m in Sources */,
 				DA66F13B1C6051BD00B1E0E1 /* ProgressHUD.m in Sources */,
 				DA66F0A41C604AFF00B1E0E1 /* ScreenShotUtils.m in Sources */,
 				DA66F1501C60539C00B1E0E1 /* BMImageLibrary.m in Sources */,
 				DA66F0981C604AFF00B1E0E1 /* UtilRequestService.m in Sources */,
+				DA7597E91C64711C00B77542 /* UIView+FirstResponderNotify.m in Sources */,
 				DA5595971C61A563006E3E5D /* DCPicScrollView.m in Sources */,
 				DA66F09E1C604AFF00B1E0E1 /* FMTCodeViewController.m in Sources */,
 				DA66F1231C6051BD00B1E0E1 /* qrinput.c in Sources */,
@@ -1651,7 +1752,6 @@
 				DA66F1321C6051BD00B1E0E1 /* WebViewJavascriptBridge.m in Sources */,
 				DAA48C7E1C635D45008D5510 /* MainViewController.m in Sources */,
 				DA66F14F1C60539C00B1E0E1 /* BMFontLibrary.m in Sources */,
-				DAA48CA11C637927008D5510 /* MainType3TableViewCell.m in Sources */,
 				DAA99F391C605AB300700049 /* UserInfoModel.m in Sources */,
 				DA66F0A01C604AFF00B1E0E1 /* FMTImageSet.m in Sources */,
 				DA66F0991C604AFF00B1E0E1 /* RequestSeviceCommon.m in Sources */,
@@ -1668,12 +1768,18 @@
 				DA9150F01C60ACBA006C641D /* HomePageViewController.m in Sources */,
 				DA66F08B1C604AFF00B1E0E1 /* NSJSONSerialization+NSJSONSerializationCategory.m in Sources */,
 				DA66F1201C6051BD00B1E0E1 /* mask.c in Sources */,
+				DA7597E51C64711C00B77542 /* DaiDodgeKeyboard+AccessObject.m in Sources */,
 				DA66F0951C604AFF00B1E0E1 /* RequestHeader.m in Sources */,
 				DA66F0971C604AFF00B1E0E1 /* MainRequestService.m in Sources */,
+				DA7597E61C64711C00B77542 /* DaiDodgeKeyboard+Animation.m in Sources */,
+				DA7597B51C64661B00B77542 /* ShareAlertView.m in Sources */,
+				DA7597E71C64711C00B77542 /* DaiDodgeKeyboard.m in Sources */,
 				DAA99F251C60563C00700049 /* BaseViewController.m in Sources */,
 				DA66F0911C604AFF00B1E0E1 /* DocumentUtils.m in Sources */,
 				DA66F16C1C6053AA00B1E0E1 /* UIButton+Block.m in Sources */,
 				DA66F09C1C604AFF00B1E0E1 /* QRCodeUtils.m in Sources */,
+				DA7597A71C6455A700B77542 /* JCAlertView.m in Sources */,
+				DA7597AA1C645BFA00B77542 /* InformationStepOne.m in Sources */,
 				DA66F11E1C6051BD00B1E0E1 /* PPObject.m in Sources */,
 				DA66F08D1C604AFF00B1E0E1 /* ColorUtils.m in Sources */,
 				DA66F1241C6051BD00B1E0E1 /* qrspec.c in Sources */,
