@@ -21,4 +21,7 @@
     }];
 }
 
+-(void)randomAnimation{
+    int x = arc4random() % 100
+}
 @end

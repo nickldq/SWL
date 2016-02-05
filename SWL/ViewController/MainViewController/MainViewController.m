@@ -102,7 +102,7 @@ static NSString * const reuseMainType4CellIdentifier = @"MainType4TableViewCell"
             break;
     }
     [cell setImageNameArray:imageArray];
-    [cell maskingViewTweenedAnimation];
+    [cell randomAnimation];
     return cell;
     
 }

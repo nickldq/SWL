@@ -12,4 +12,6 @@
 @property (strong, nonatomic)NSArray *imageNameArray;
 
 -(void)maskingViewTweenedAnimation;
+
+-(void)randomAnimation;
 @end
