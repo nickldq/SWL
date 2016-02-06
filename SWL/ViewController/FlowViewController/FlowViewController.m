@@ -77,6 +77,8 @@
     
     [self.view addSubview:_picScrollView];
     
+    [_picScrollView.viewData[_picScrollView.currentIndex] performSelector:@selector(playAnimation)];
+    
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -92,6 +94,9 @@
 //    }else{
 //        [_picScrollView.viewData[_picScrollView.currentIndex] viewWithTag:30].hidden = YES;
 //    }
+    for (FlowPage *v in _picScrollView.viewData) {
+        [v clearView];
+    }
     [_picScrollView.viewData[_picScrollView.currentIndex] performSelector:@selector(playAnimation)];
 }
 

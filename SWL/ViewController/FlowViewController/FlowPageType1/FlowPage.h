@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FlowPage : UIView
 
+@interface FlowPage : UIView 
+
+-(void)clearView;
 -(void)playAnimation;
 @end

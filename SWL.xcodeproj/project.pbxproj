@@ -204,6 +204,7 @@
 		DA7597E91C64711C00B77542 /* UIView+FirstResponderNotify.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7597E41C64711C00B77542 /* UIView+FirstResponderNotify.m */; };
 		DA7597ED1C64751000B77542 /* UIView+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7597EC1C64751000B77542 /* UIView+Category.m */; };
 		DA7597F01C65140100B77542 /* FlowPage.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7597EF1C65140100B77542 /* FlowPage.m */; };
+		DA7597F21C65942200B77542 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA7597F11C65942200B77542 /* QuartzCore.framework */; };
 		DA9150F01C60ACBA006C641D /* HomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9150EE1C60ACBA006C641D /* HomePageViewController.m */; };
 		DA9150F11C60ACBA006C641D /* HomePageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA9150EF1C60ACBA006C641D /* HomePageViewController.xib */; };
 		DA9150FD1C60DBAF006C641D /* FlowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9150FB1C60DBAF006C641D /* FlowViewController.m */; };
@@ -496,6 +497,7 @@
 		DA7597EC1C64751000B77542 /* UIView+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Category.m"; sourceTree = "<group>"; };
 		DA7597EE1C65140100B77542 /* FlowPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlowPage.h; sourceTree = "<group>"; };
 		DA7597EF1C65140100B77542 /* FlowPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlowPage.m; sourceTree = "<group>"; };
+		DA7597F11C65942200B77542 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		DA9150AB1C6061A8006C641D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		DA9150AD1C6061B0006C641D /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		DA9150ED1C60ACBA006C641D /* HomePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePageViewController.h; sourceTree = "<group>"; };
@@ -533,6 +535,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA7597F21C65942200B77542 /* QuartzCore.framework in Frameworks */,
 				9A5D0A05ABA213689E58C914 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -543,6 +546,7 @@
 		056614EB2CBB0194C429C748 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DA7597F11C65942200B77542 /* QuartzCore.framework */,
 				DA9150AD1C6061B0006C641D /* MobileCoreServices.framework */,
 				DA9150AB1C6061A8006C641D /* SystemConfiguration.framework */,
 				7FA3B88DB9227316947E3A82 /* libPods.a */,
