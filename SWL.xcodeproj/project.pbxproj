@@ -227,6 +227,8 @@
 		DAA99F341C605A0100700049 /* THProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA99F2E1C605A0100700049 /* THProgressView.m */; };
 		DAA99F351C605A0100700049 /* UIImageView+LK.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA99F301C605A0100700049 /* UIImageView+LK.m */; };
 		DAA99F391C605AB300700049 /* UserInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA99F381C605AB300700049 /* UserInfoModel.m */; };
+		DAED97AE1C74B57200E04E77 /* ShareUserUploadModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DAED97AD1C74B57200E04E77 /* ShareUserUploadModel.m */; };
+		DAED97B11C74B66000E04E77 /* ShareUserResultModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DAED97B01C74B66000E04E77 /* ShareUserResultModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -546,6 +548,10 @@
 		DAA99F301C605A0100700049 /* UIImageView+LK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+LK.m"; sourceTree = "<group>"; };
 		DAA99F371C605AB300700049 /* UserInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoModel.h; sourceTree = "<group>"; };
 		DAA99F381C605AB300700049 /* UserInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoModel.m; sourceTree = "<group>"; };
+		DAED97AC1C74B57200E04E77 /* ShareUserUploadModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareUserUploadModel.h; sourceTree = "<group>"; };
+		DAED97AD1C74B57200E04E77 /* ShareUserUploadModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareUserUploadModel.m; sourceTree = "<group>"; };
+		DAED97AF1C74B66000E04E77 /* ShareUserResultModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareUserResultModel.h; sourceTree = "<group>"; };
+		DAED97B01C74B66000E04E77 /* ShareUserResultModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareUserResultModel.m; sourceTree = "<group>"; };
 		E0DFDD203F796AA6037365C8 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -1527,6 +1533,10 @@
 			children = (
 				DAA99F371C605AB300700049 /* UserInfoModel.h */,
 				DAA99F381C605AB300700049 /* UserInfoModel.m */,
+				DAED97AC1C74B57200E04E77 /* ShareUserUploadModel.h */,
+				DAED97AD1C74B57200E04E77 /* ShareUserUploadModel.m */,
+				DAED97AF1C74B66000E04E77 /* ShareUserResultModel.h */,
+				DAED97B01C74B66000E04E77 /* ShareUserResultModel.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1779,6 +1789,7 @@
 			files = (
 				DA5595981C61A563006E3E5D /* DCWebImageManager.m in Sources */,
 				DA66F1221C6051BD00B1E0E1 /* qrencode.c in Sources */,
+				DAED97B11C74B66000E04E77 /* ShareUserResultModel.m in Sources */,
 				DAA99F341C605A0100700049 /* THProgressView.m in Sources */,
 				DA66F1251C6051BD00B1E0E1 /* rscode.c in Sources */,
 				DA66F1211C6051BD00B1E0E1 /* QRCodeGenerator.m in Sources */,
@@ -1815,6 +1826,7 @@
 				DA66F0A01C604AFF00B1E0E1 /* FMTImageSet.m in Sources */,
 				DA66F0991C604AFF00B1E0E1 /* RequestSeviceCommon.m in Sources */,
 				DA7597F01C65140100B77542 /* FlowPage.m in Sources */,
+				DAED97AE1C74B57200E04E77 /* ShareUserUploadModel.m in Sources */,
 				DA66F0901C604AFF00B1E0E1 /* DataFileUtils.m in Sources */,
 				DA66F0961C604AFF00B1E0E1 /* RequestHelper.m in Sources */,
 				DA66F09D1C604AFF00B1E0E1 /* AVCaptureViewController.m in Sources */,

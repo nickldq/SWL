@@ -10,12 +10,18 @@
 #import "InformationStepTwo.h"
 #import "DaiDodgeKeyboard.h"
 #import "PECropViewController.h"
+#import "ShareUserUploadModel.h"
 
-@interface InformationStepOne()<UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIActionSheetDelegate, PECropViewControllerDelegate>
+#define NickNameTag 100
+#define CommentTag 200
+
+
+@interface InformationStepOne()<UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIActionSheetDelegate, PECropViewControllerDelegate, UITextFieldDelegate, UITextViewDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *nickNameTextField;
 @property (weak, nonatomic) IBOutlet UIButton *headerButton;
 @property (weak, nonatomic) IBOutlet UITextView *evaluationTextView;
 
+@property (strong, nonatomic) ShareUserUploadModel *shareModel;
 @end
 
 @implementation InformationStepOne
@@ -31,12 +37,13 @@
     [self addTarget:self action:@selector(backgroundTouchUpInside:) forControlEvents:UIControlEventTouchUpInside];
     _nickNameTextField.delegate = self;
     _evaluationTextView.delegate = self;
-    
+    _shareModel = [ShareUserUploadModel new];
 }
 
 -(void)backgroundTouchUpInside:(UIView *)view{
     [[self findFirstResponder] resignFirstResponder];
 }
+
 - (IBAction)headerImageAction:(id)sender {
     
     if (_headerButton.imageView.image) {
@@ -56,24 +63,41 @@
 }
 
 - (IBAction)submitAction:(UIButton *)sender {
-    
+    if ([self checkShareUserInfo]) {
         InformationStepTwo *step2View = (InformationStepTwo *)[[[NSBundle mainBundle]loadNibNamed:@"InformationStepTwo" owner:self options:nil]firstObject];
-    step2View.flowVC = _flowVC;
-    [self addSubview:step2View];
-    step2View.alert = _alert;
-    step2View.infoStepOne = self;
+        step2View.flowVC = _flowVC;
+        [self addSubview:step2View];
+        step2View.alert = _alert;
+        step2View.infoStepOne = self;
+    }
+}
+
+-(BOOL)checkShareUserInfo{
+    BOOL flag = YES;
+    //检查昵称
+    if ([[Common checkNSNull:_shareModel.nickname] isEqualToString:@""]) {
+        [ProgressHUDUtils dismissProgressHUDErrorWithStatus:@"请填写昵称,10个字以内"];
+        flag = NO;
+    }else if ([[Common checkNSNull:_shareModel.comment] isEqualToString:@""]){
+        [ProgressHUDUtils dismissProgressHUDErrorWithStatus:@"请填写评论,20个字以内"];
+        flag = NO;
+    }
+    return flag;
 }
 
 - (IBAction)clearAction:(UIButton *)sender {
-    [_alert dismissWithCompletion:^{
-        
-    }];
-
+//    [_alert dismissWithCompletion:^{
+//        
+    //    }];
+    [self removeFromSuperview];
+    _flowVC.maskingView.hidden = YES;
 }
 - (IBAction)closeAction:(id)sender {
-    [_alert dismissWithCompletion:^{
-        
-    }];
+//    [_alert dismissWithCompletion:^{
+//        
+//    }];
+    [self removeFromSuperview];
+    _flowVC.maskingView.hidden = YES;
 }
 
 #pragma mark--TextFieldDelegate
@@ -82,21 +106,21 @@
         if (textField.text.length>10) {
             return NO;
         }
+        _shareModel.nickname = textField.text;
     }
     return YES;
 }
 
 #pragma mark--TextViewDelegate
 -(BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text{
-    
     if(textView == _evaluationTextView){
-        if (textView.text.length>10) {
+        if (textView.text.length>20) {
             return NO;
         }
+        _shareModel.comment = textView.text;
     }
     return YES;
 }
-
 
 #pragma mark - PECropViewControllerDelegate methods
 
@@ -148,6 +172,10 @@
 
 - (void)showCamera
 {
+    
+#if TARGET_OS_SIMULATOR//模拟器
+    [ProgressHUDUtils dismissProgressHUDErrorWithStatus:@"请在真机上使用拍照功能!"];
+#elif TARGET_OS_IPHONE//真机
     UIImagePickerController *controller = [[UIImagePickerController alloc] init];
     controller.delegate = self;
     controller.sourceType = UIImagePickerControllerSourceTypeCamera;
@@ -166,6 +194,9 @@
     [_flowVC presentViewController:controller animated:NO completion:nil];
     //    [self presentViewController:controller animated:YES completion:NULL];
     //    }
+
+#endif
+    
 }
 
 - (void)openPhotoAlbum
@@ -227,5 +258,4 @@
     }];
     //    }
 }
-
 @end
