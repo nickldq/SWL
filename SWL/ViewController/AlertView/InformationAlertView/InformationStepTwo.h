@@ -12,4 +12,5 @@
 @interface InformationStepTwo : UIControl<UITextFieldDelegate, UITextViewDelegate>
 @property(strong ,nonatomic)JCAlertView *alert;
 @property(strong ,nonatomic)InformationStepOne *infoStepOne;
+@property(strong, nonatomic)FlowViewController *flowVC;
 @end

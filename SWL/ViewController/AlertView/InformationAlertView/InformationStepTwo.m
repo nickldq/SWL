@@ -8,7 +8,7 @@
 
 #import "InformationStepTwo.h"
 #import "DaiDodgeKeyboard.h"
-#import "ShareAlertView.h"
+#import "ShareAlertViewController.h"
 
 @interface InformationStepTwo(){
     
@@ -37,9 +37,10 @@
 }
 - (IBAction)commitAction:(UIButton *)sender {
     [_alert dismissWithCompletion:^{
-        ShareAlertView *shareAlertView = (ShareAlertView *)[[[NSBundle mainBundle]loadNibNamed:@"ShareAlertView" owner:self options:nil]firstObject];
-        JCAlertView *customAlert = [[JCAlertView alloc] initWithCustomView:shareAlertView dismissWhenTouchedBackground:NO];
+        ShareAlertViewController *shareAlertView = [[ShareAlertViewController alloc]initWithNibName:@"ShareAlertViewController" bundle:nil];
+        JCAlertView *customAlert = [[JCAlertView alloc] initWithCustomView:shareAlertView.view dismissWhenTouchedBackground:NO];
         shareAlertView.alert = customAlert;
+        shareAlertView.flowVC = _flowVC;
         [customAlert show];
     }];
 }

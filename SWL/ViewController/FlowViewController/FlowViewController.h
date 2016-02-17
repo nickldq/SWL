@@ -12,5 +12,6 @@
 @interface FlowViewController : BaseViewController<DCPicScrollViewDelegate>
 
 @property (nonatomic, strong) DCPicScrollView *picScrollView;  
+@property (weak, nonatomic) IBOutlet UIView *maskingView;
 
 @end

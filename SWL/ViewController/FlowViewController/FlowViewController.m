@@ -58,12 +58,15 @@
         UIButton *commentButton = [view viewWithTag:30];
         [commentButton handleControlEvent:UIControlEventTouchUpInside withBlock:^(){
             InformationStepOne *step1View = (InformationStepOne *)[[[NSBundle mainBundle]loadNibNamed:@"InformationStepOne" owner:self options:nil]firstObject];
-            JCAlertView *customAlert = [[JCAlertView alloc] initWithCustomView:step1View dismissWhenTouchedBackground:NO];
-            step1View.alert = customAlert;
-            [customAlert show];
+            step1View.flowVC = self;
+            [self.view addSubview:step1View];
+//            JCAlertView *customAlert = [[JCAlertView alloc] initWithCustomView:step1View dismissWhenTouchedBackground:NO];
+//            step1View.alert = customAlert;
+//            [customAlert show];
         }];//评论
         
         [urlStringArray addObject:view];
+        [self.view bringSubviewToFront:_maskingView];
     }
  
     _picScrollView = [DCPicScrollView picScrollViewWithFrame:self.view.frame WithView:urlStringArray isWebImage:NO];
@@ -79,11 +82,6 @@
     
     [_picScrollView.viewData[_picScrollView.currentIndex] performSelector:@selector(playAnimation)];
     
-}
-
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    return YES;
 }
 
 #pragma mark -
@@ -107,4 +105,5 @@
 - (IBAction)commentAction:(UIButton *)sender {
     
 }
+
 @end

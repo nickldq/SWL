@@ -8,7 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		9A5D0A05ABA213689E58C914 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FA3B88DB9227316947E3A82 /* libPods.a */; };
-		DA3E62B01C740CD200042D64 /* 弹窗图.png in Resources */ = {isa = PBXBuildFile; fileRef = DA3E62AF1C740CD200042D64 /* 弹窗图.png */; };
+		DA3E62BC1C741EB600042D64 /* PECropRectView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3E62B31C741EB600042D64 /* PECropRectView.m */; };
+		DA3E62BD1C741EB600042D64 /* PECropView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3E62B51C741EB600042D64 /* PECropView.m */; };
+		DA3E62BE1C741EB600042D64 /* PECropViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3E62B71C741EB600042D64 /* PECropViewController.m */; };
+		DA3E62BF1C741EB600042D64 /* PEResizeControl.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3E62B91C741EB600042D64 /* PEResizeControl.m */; };
+		DA3E62C01C741EB600042D64 /* UIImage+PECrop.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3E62BB1C741EB600042D64 /* UIImage+PECrop.m */; };
+		DA3E62C31C741EE800042D64 /* PEPhotoCropEditor.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DA3E62C21C741EE700042D64 /* PEPhotoCropEditor.bundle */; };
+		DA3E62C91C745A2100042D64 /* ShareAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3E62C71C745A2100042D64 /* ShareAlertViewController.m */; };
+		DA3E62CA1C745A2100042D64 /* ShareAlertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA3E62C81C745A2100042D64 /* ShareAlertViewController.xib */; };
 		DA5595971C61A563006E3E5D /* DCPicScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA5595941C61A563006E3E5D /* DCPicScrollView.m */; };
 		DA5595981C61A563006E3E5D /* DCWebImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DA5595961C61A563006E3E5D /* DCWebImageManager.m */; };
 		DA66F0191C60477F00B1E0E1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DA66F0181C60477F00B1E0E1 /* main.m */; };
@@ -196,8 +203,6 @@
 		DA7597AC1C64605700B77542 /* InformationStepOne.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA7597AB1C64605700B77542 /* InformationStepOne.xib */; };
 		DA7597B01C64647D00B77542 /* InformationStepTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7597AE1C64647D00B77542 /* InformationStepTwo.m */; };
 		DA7597B11C64647D00B77542 /* InformationStepTwo.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA7597AF1C64647D00B77542 /* InformationStepTwo.xib */; };
-		DA7597B51C64661B00B77542 /* ShareAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7597B31C64661B00B77542 /* ShareAlertView.m */; };
-		DA7597B61C64661B00B77542 /* ShareAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA7597B41C64661B00B77542 /* ShareAlertView.xib */; };
 		DA7597E51C64711C00B77542 /* DaiDodgeKeyboard+AccessObject.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7597DC1C64711C00B77542 /* DaiDodgeKeyboard+AccessObject.m */; };
 		DA7597E61C64711C00B77542 /* DaiDodgeKeyboard+Animation.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7597DE1C64711C00B77542 /* DaiDodgeKeyboard+Animation.m */; };
 		DA7597E71C64711C00B77542 /* DaiDodgeKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7597E01C64711C00B77542 /* DaiDodgeKeyboard.m */; };
@@ -227,7 +232,22 @@
 /* Begin PBXFileReference section */
 		3498578DEC9100F686787A7D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		7FA3B88DB9227316947E3A82 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		DA3E62AF1C740CD200042D64 /* 弹窗图.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "弹窗图.png"; sourceTree = "<group>"; };
+		DA3E62B21C741EB600042D64 /* PECropRectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PECropRectView.h; sourceTree = "<group>"; };
+		DA3E62B31C741EB600042D64 /* PECropRectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PECropRectView.m; sourceTree = "<group>"; };
+		DA3E62B41C741EB600042D64 /* PECropView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PECropView.h; sourceTree = "<group>"; };
+		DA3E62B51C741EB600042D64 /* PECropView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PECropView.m; sourceTree = "<group>"; };
+		DA3E62B61C741EB600042D64 /* PECropViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PECropViewController.h; sourceTree = "<group>"; };
+		DA3E62B71C741EB600042D64 /* PECropViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PECropViewController.m; sourceTree = "<group>"; };
+		DA3E62B81C741EB600042D64 /* PEResizeControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PEResizeControl.h; sourceTree = "<group>"; };
+		DA3E62B91C741EB600042D64 /* PEResizeControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PEResizeControl.m; sourceTree = "<group>"; };
+		DA3E62BA1C741EB600042D64 /* UIImage+PECrop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+PECrop.h"; sourceTree = "<group>"; };
+		DA3E62BB1C741EB600042D64 /* UIImage+PECrop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+PECrop.m"; sourceTree = "<group>"; };
+		DA3E62C21C741EE700042D64 /* PEPhotoCropEditor.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = PEPhotoCropEditor.bundle; sourceTree = "<group>"; };
+		DA3E62C41C7457ED00042D64 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		DA3E62C51C7457ED00042D64 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		DA3E62C61C745A2100042D64 /* ShareAlertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareAlertViewController.h; sourceTree = "<group>"; };
+		DA3E62C71C745A2100042D64 /* ShareAlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareAlertViewController.m; sourceTree = "<group>"; };
+		DA3E62C81C745A2100042D64 /* ShareAlertViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShareAlertViewController.xib; sourceTree = "<group>"; };
 		DA5595931C61A563006E3E5D /* DCPicScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCPicScrollView.h; sourceTree = "<group>"; };
 		DA5595941C61A563006E3E5D /* DCPicScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCPicScrollView.m; sourceTree = "<group>"; };
 		DA5595951C61A563006E3E5D /* DCWebImageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCWebImageManager.h; sourceTree = "<group>"; };
@@ -482,9 +502,6 @@
 		DA7597AD1C64647D00B77542 /* InformationStepTwo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InformationStepTwo.h; sourceTree = "<group>"; };
 		DA7597AE1C64647D00B77542 /* InformationStepTwo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InformationStepTwo.m; sourceTree = "<group>"; };
 		DA7597AF1C64647D00B77542 /* InformationStepTwo.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InformationStepTwo.xib; sourceTree = "<group>"; };
-		DA7597B21C64661B00B77542 /* ShareAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareAlertView.h; sourceTree = "<group>"; };
-		DA7597B31C64661B00B77542 /* ShareAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareAlertView.m; sourceTree = "<group>"; };
-		DA7597B41C64661B00B77542 /* ShareAlertView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShareAlertView.xib; sourceTree = "<group>"; };
 		DA7597DB1C64711C00B77542 /* DaiDodgeKeyboard+AccessObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DaiDodgeKeyboard+AccessObject.h"; sourceTree = "<group>"; };
 		DA7597DC1C64711C00B77542 /* DaiDodgeKeyboard+AccessObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DaiDodgeKeyboard+AccessObject.m"; sourceTree = "<group>"; };
 		DA7597DD1C64711C00B77542 /* DaiDodgeKeyboard+Animation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DaiDodgeKeyboard+Animation.h"; sourceTree = "<group>"; };
@@ -563,6 +580,32 @@
 				E0DFDD203F796AA6037365C8 /* Pods.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		DA3E62B11C741E7A00042D64 /* PEPhotoCropEditor-master */ = {
+			isa = PBXGroup;
+			children = (
+				DA3E62C11C741EE700042D64 /* Resources */,
+				DA3E62B21C741EB600042D64 /* PECropRectView.h */,
+				DA3E62B31C741EB600042D64 /* PECropRectView.m */,
+				DA3E62B41C741EB600042D64 /* PECropView.h */,
+				DA3E62B51C741EB600042D64 /* PECropView.m */,
+				DA3E62B61C741EB600042D64 /* PECropViewController.h */,
+				DA3E62B71C741EB600042D64 /* PECropViewController.m */,
+				DA3E62B81C741EB600042D64 /* PEResizeControl.h */,
+				DA3E62B91C741EB600042D64 /* PEResizeControl.m */,
+				DA3E62BA1C741EB600042D64 /* UIImage+PECrop.h */,
+				DA3E62BB1C741EB600042D64 /* UIImage+PECrop.m */,
+			);
+			path = "PEPhotoCropEditor-master";
+			sourceTree = "<group>";
+		};
+		DA3E62C11C741EE700042D64 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DA3E62C21C741EE700042D64 /* PEPhotoCropEditor.bundle */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		DA5595921C61A563006E3E5D /* DCPicscrollView */ = {
@@ -883,6 +926,7 @@
 		DA66F0B91C6051BD00B1E0E1 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				DA3E62B11C741E7A00042D64 /* PEPhotoCropEditor-master */,
 				DA66F0BA1C6051BD00B1E0E1 /* PPObject */,
 				DA66F0BD1C6051BD00B1E0E1 /* QRCode */,
 				DA66F0FC1C6051BD00B1E0E1 /* WebViewJavascriptBridge */,
@@ -1252,7 +1296,6 @@
 				DA7597951C63A0E900B77542 /* flow4-2.png */,
 				DA7597961C63A0E900B77542 /* flow4-3.png */,
 				DA7597971C63A0E900B77542 /* product4.png */,
-				DA3E62AF1C740CD200042D64 /* 弹窗图.png */,
 			);
 			path = FlowImage;
 			sourceTree = "<group>";
@@ -1298,9 +1341,9 @@
 		DA7597A11C63AAB700B77542 /* ShareAlertView */ = {
 			isa = PBXGroup;
 			children = (
-				DA7597B21C64661B00B77542 /* ShareAlertView.h */,
-				DA7597B31C64661B00B77542 /* ShareAlertView.m */,
-				DA7597B41C64661B00B77542 /* ShareAlertView.xib */,
+				DA3E62C61C745A2100042D64 /* ShareAlertViewController.h */,
+				DA3E62C71C745A2100042D64 /* ShareAlertViewController.m */,
+				DA3E62C81C745A2100042D64 /* ShareAlertViewController.xib */,
 			);
 			path = ShareAlertView;
 			sourceTree = "<group>";
@@ -1551,6 +1594,7 @@
 				DA75971B1C638FB200B77542 /* 3-12.png in Resources */,
 				DA75976E1C639AF800B77542 /* FlowPageType2.xib in Resources */,
 				DA7597321C638FB200B77542 /* 5-10.png in Resources */,
+				DA3E62CA1C745A2100042D64 /* ShareAlertViewController.xib in Resources */,
 				DA7597221C638FB200B77542 /* 3-8.png in Resources */,
 				DA7597151C638FB200B77542 /* 2-7.png in Resources */,
 				DA7597101C638FB200B77542 /* 2-2.png in Resources */,
@@ -1571,7 +1615,6 @@
 				DA75978B1C63A0AA00B77542 /* product2.png in Resources */,
 				DA7597351C638FB200B77542 /* 5-13.png in Resources */,
 				DA7597381C638FB200B77542 /* 5-3.png in Resources */,
-				DA3E62B01C740CD200042D64 /* 弹窗图.png in Resources */,
 				DA7597421C638FB200B77542 /* 6-12.png in Resources */,
 				DA7597061C638FB200B77542 /* 1-6.png in Resources */,
 				DA66F13C1C6051BD00B1E0E1 /* SVProgressHUD.bundle in Resources */,
@@ -1588,7 +1631,6 @@
 				DA75971F1C638FB200B77542 /* 3-5.png in Resources */,
 				DA7597801C639BF700B77542 /* comment.png in Resources */,
 				DA7597981C63A0E900B77542 /* flow4-1.png in Resources */,
-				DA7597B61C64661B00B77542 /* ShareAlertView.xib in Resources */,
 				DA7597431C638FB200B77542 /* 6-2.png in Resources */,
 				DA7597471C638FB200B77542 /* 6-6.png in Resources */,
 				DA7597171C638FB200B77542 /* 2-9.png in Resources */,
@@ -1670,6 +1712,7 @@
 				DA75975E1C638FB200B77542 /* 8-7.png in Resources */,
 				DA7597141C638FB200B77542 /* 2-6.png in Resources */,
 				DA7597501C638FB200B77542 /* 7-5.png in Resources */,
+				DA3E62C31C741EE800042D64 /* PEPhotoCropEditor.bundle in Resources */,
 				DA75970E1C638FB200B77542 /* 2-13.png in Resources */,
 				DA75979A1C63A0E900B77542 /* flow4-3.png in Resources */,
 				DA7597451C638FB200B77542 /* 6-4.png in Resources */,
@@ -1748,6 +1791,8 @@
 				DA66F1391C6051BD00B1E0E1 /* OCJSplashView.m in Sources */,
 				DAA48C891C6370BB008D5510 /* MainTableViewCell.m in Sources */,
 				DA7597B01C64647D00B77542 /* InformationStepTwo.m in Sources */,
+				DA3E62C01C741EB600042D64 /* UIImage+PECrop.m in Sources */,
+				DA3E62C91C745A2100042D64 /* ShareAlertViewController.m in Sources */,
 				DA66F0941C604AFF00B1E0E1 /* NetworkUtils.m in Sources */,
 				DA7597E81C64711C00B77542 /* DaiDodgeKeyboardObjects.m in Sources */,
 				DA66F13D1C6051BD00B1E0E1 /* SVProgressHUD.m in Sources */,
@@ -1757,6 +1802,7 @@
 				DA66F0981C604AFF00B1E0E1 /* UtilRequestService.m in Sources */,
 				DA7597E91C64711C00B77542 /* UIView+FirstResponderNotify.m in Sources */,
 				DA5595971C61A563006E3E5D /* DCPicScrollView.m in Sources */,
+				DA3E62BE1C741EB600042D64 /* PECropViewController.m in Sources */,
 				DA66F09E1C604AFF00B1E0E1 /* FMTCodeViewController.m in Sources */,
 				DA66F1231C6051BD00B1E0E1 /* qrinput.c in Sources */,
 				DA66F1691C6053AA00B1E0E1 /* NSString+ZY.m in Sources */,
@@ -1785,17 +1831,19 @@
 				DA7597E51C64711C00B77542 /* DaiDodgeKeyboard+AccessObject.m in Sources */,
 				DA66F0951C604AFF00B1E0E1 /* RequestHeader.m in Sources */,
 				DA66F0971C604AFF00B1E0E1 /* MainRequestService.m in Sources */,
+				DA3E62BF1C741EB600042D64 /* PEResizeControl.m in Sources */,
 				DA7597E61C64711C00B77542 /* DaiDodgeKeyboard+Animation.m in Sources */,
-				DA7597B51C64661B00B77542 /* ShareAlertView.m in Sources */,
 				DA7597E71C64711C00B77542 /* DaiDodgeKeyboard.m in Sources */,
 				DAA99F251C60563C00700049 /* BaseViewController.m in Sources */,
 				DA66F0911C604AFF00B1E0E1 /* DocumentUtils.m in Sources */,
 				DA66F16C1C6053AA00B1E0E1 /* UIButton+Block.m in Sources */,
+				DA3E62BD1C741EB600042D64 /* PECropView.m in Sources */,
 				DA66F09C1C604AFF00B1E0E1 /* QRCodeUtils.m in Sources */,
 				DA7597A71C6455A700B77542 /* JCAlertView.m in Sources */,
 				DA7597AA1C645BFA00B77542 /* InformationStepOne.m in Sources */,
 				DA66F11E1C6051BD00B1E0E1 /* PPObject.m in Sources */,
 				DA66F08D1C604AFF00B1E0E1 /* ColorUtils.m in Sources */,
+				DA3E62BC1C741EB600042D64 /* PECropRectView.m in Sources */,
 				DA66F1241C6051BD00B1E0E1 /* qrspec.c in Sources */,
 				DA66F1521C60539C00B1E0E1 /* BMUtil.m in Sources */,
 				DA66F1511C60539C00B1E0E1 /* BMParseError.m in Sources */,
@@ -1812,6 +1860,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				DA66F0211C60477F00B1E0E1 /* Base */,
+				DA3E62C41C7457ED00042D64 /* zh-Hans */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -1820,6 +1869,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				DA66F0261C60477F00B1E0E1 /* Base */,
+				DA3E62C51C7457ED00042D64 /* zh-Hans */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
