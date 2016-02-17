@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -13,9 +13,6 @@
             <subviews>
                 <imageView userInteractionEnabled="NO" tag="10" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flow_bg" translatesAutoresizingMaskIntoConstraints="NO" id="feZ-9s-2gR">
                     <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
-                </imageView>
-                <imageView userInteractionEnabled="NO" tag="300" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="flow1-3.png" translatesAutoresizingMaskIntoConstraints="NO" id="tqQ-Ur-RwE">
-                    <rect key="frame" x="299" y="507" width="531.5" height="192.5"/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" tag="200" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="flow1-2.png" translatesAutoresizingMaskIntoConstraints="NO" id="Da0-2X-IJr">
                     <rect key="frame" x="150" y="287" width="381.5" height="282.5"/>
@@ -36,6 +33,9 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="product1.png" translatesAutoresizingMaskIntoConstraints="NO" id="0H6-vo-mkF">
                     <rect key="frame" x="881" y="472" width="110" height="208"/>
                 </imageView>
+                <imageView userInteractionEnabled="NO" tag="300" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="flow1-3.png" translatesAutoresizingMaskIntoConstraints="NO" id="tqQ-Ur-RwE">
+                    <rect key="frame" x="299" y="507" width="531.5" height="191"/>
+                </imageView>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
@@ -55,7 +55,7 @@
         <image name="comment_press.png" width="242" height="87"/>
         <image name="flow1-1.png" width="1212" height="384"/>
         <image name="flow1-2.png" width="763" height="565"/>
-        <image name="flow1-3.png" width="1063" height="385"/>
+        <image name="flow1-3.png" width="1063" height="382"/>
         <image name="flow_bg" width="1024" height="768"/>
         <image name="product1.png" width="220" height="419"/>
     </resources>

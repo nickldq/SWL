@@ -10,5 +10,6 @@
 
 @interface ShareAlertView : UIView
 @property(strong ,nonatomic)JCAlertView *alert;
+@property (weak, nonatomic) IBOutlet UIImageView *qrcodeImageVIew;
 
 @end

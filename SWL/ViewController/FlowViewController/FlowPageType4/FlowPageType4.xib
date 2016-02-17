@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -18,7 +18,7 @@
                     <rect key="frame" x="881" y="489" width="110" height="208"/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" tag="100" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="flow4-1.png" translatesAutoresizingMaskIntoConstraints="NO" id="Hmn-9M-RRu">
-                    <rect key="frame" x="79" y="166" width="381.5" height="282.5"/>
+                    <rect key="frame" x="33.5" y="150.5" width="402" height="298"/>
                 </imageView>
                 <button opaque="NO" tag="30" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ct-da-PuC">
                     <rect key="frame" x="740" y="698" width="121" height="43"/>
@@ -31,10 +31,10 @@
                     <state key="highlighted" image="back_press.png"/>
                 </button>
                 <imageView userInteractionEnabled="NO" tag="200" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="flow4-2.png" translatesAutoresizingMaskIntoConstraints="NO" id="1f5-AP-GDy">
-                    <rect key="frame" x="468" y="166" width="475.5" height="192"/>
+                    <rect key="frame" x="465.5" y="151" width="526" height="212"/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" tag="300" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="flow4-3.png" translatesAutoresizingMaskIntoConstraints="NO" id="Jg2-69-bsG">
-                    <rect key="frame" x="247" y="400" width="531.5" height="192.5"/>
+                    <rect key="frame" x="225" y="400" width="570" height="206"/>
                 </imageView>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -53,9 +53,9 @@
         <image name="back_press.png" width="242" height="87"/>
         <image name="comment.png" width="242" height="87"/>
         <image name="comment_press.png" width="242" height="87"/>
-        <image name="flow4-1.png" width="789" height="554"/>
-        <image name="flow4-2.png" width="948" height="384"/>
-        <image name="flow4-3.png" width="1158" height="385"/>
+        <image name="flow4-1.png" width="966" height="684"/>
+        <image name="flow4-2.png" width="1096" height="487"/>
+        <image name="flow4-3.png" width="1187" height="416"/>
         <image name="flow_bg" width="1024" height="768"/>
         <image name="product4.png" width="245" height="333"/>
     </resources>
