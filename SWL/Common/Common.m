@@ -57,6 +57,22 @@
     width=sizeName.width;
     return width;
 }
++  (int)convertToInt:(NSString*)strtemp {
+    
+    int strlength = 0;
+    char* p = (char*)[strtemp cStringUsingEncoding:NSUnicodeStringEncoding];
+    for (int i=0 ; i<[strtemp lengthOfBytesUsingEncoding:NSUnicodeStringEncoding] ;i++) {
+        if (*p) {
+            p++;
+            strlength++;
+        }
+        else {
+            p++;
+        }
+    }
+    return (strlength+1)/2;
+    
+}
 
 //MD5加密，用于登录和服务器同步加密
 +(NSString*)encodeMD5:(NSString*)stringmd5

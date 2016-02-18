@@ -30,4 +30,8 @@
 #pragma mark -
 #pragma mark 图片旋转
 + (UIImage *)image:(UIImage *)image rotation:(UIImageOrientation)orientation;
+
+#pragma mark -
+#pragma mark 两张图合成一张
++ (UIImage *)addImage:(UIImage *)image1 addRect:(CGRect)addRect toImage:(UIImage *)image2 toRect:(CGRect)toRect;
 @end

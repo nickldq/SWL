@@ -2,12 +2,12 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "share-bg-1.png",
+      "filename" : "share_bg_left.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "share-bg.png",
+      "filename" : "share_bg_left@2x.png",
       "scale" : "2x"
     },
     {

@@ -11,4 +11,15 @@
 
 @implementation ShareUserResultModel
 
+-(void)fromDic:(NSDictionary *)dic{
+    if ([dic objectForKey:@"result"]) {
+        _result = [dic objectForKey:@"result"];
+    }
+    if ([dic objectForKey:@"makeUpImgUrl"]) {
+        self.makeUpImgUrl = [dic objectForKey:@"makeUpImgUrl"];
+    }
+    if ([dic objectForKey:@"tdCodeUrl"]) {
+        self.tdCodeUrl = [dic objectForKey:@"tdCodeUrl"];
+    }
+}
 @end

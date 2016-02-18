@@ -20,4 +20,8 @@
 @property (nonatomic, strong) NSString *location;// 地区，必xuan
 @property (nonatomic, strong) NSString *shopName;// 门店，必xuan
 @property (nonatomic, strong) NSString *VIPPhone;// 会员手机，跳出数字键盘，不是必填
+
+-(NSMutableDictionary *)toDictionary;
+
+-(NSString *)toURLParamString;
 @end

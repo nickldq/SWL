@@ -43,7 +43,7 @@
                     </connections>
                 </textView>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WOY-wZ-PO5">
-                    <rect key="frame" x="67" y="370" width="81" height="80"/>
+                    <rect key="frame" x="66" y="369" width="93" height="82"/>
                     <connections>
                         <action selector="headerImageAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="soJ-P6-cHc"/>
                     </connections>
@@ -63,6 +63,9 @@
                         <action selector="closeAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="1bo-38-771"/>
                     </connections>
                 </button>
+                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Sj-zT-tbY">
+                    <rect key="frame" x="32" y="31" width="418" height="217"/>
+                </imageView>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
@@ -76,6 +79,7 @@
                 <outlet property="evaluationTextView" destination="g1B-f1-TxS" id="PD3-i4-nrF"/>
                 <outlet property="headerButton" destination="WOY-wZ-PO5" id="i6A-cY-0xG"/>
                 <outlet property="nickNameTextField" destination="mqb-28-TrI" id="QNs-yC-dcH"/>
+                <outlet property="showImage" destination="6Sj-zT-tbY" id="E9A-03-nfI"/>
             </connections>
         </view>
     </objects>

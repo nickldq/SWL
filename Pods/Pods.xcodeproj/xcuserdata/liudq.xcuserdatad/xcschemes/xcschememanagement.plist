@@ -4,11 +4,6 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>AFNetworking.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>MBProgressHUD.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -27,22 +22,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>5FC6A81851E4FEDCC925827D24095F98</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>7941848CB53EDB0CD05978A72CCBB248</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A585A1651B070C5953657369FDA47223</key>
+		<key>98C3A4331CBF76AAEF6397EBD988D8EB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>DB28D2F988BA90B34BEB01D46E79974A</key>
+		<key>D919A35C35C0C3FB785BF87CC9BAD8D7</key>
 		<dict>
 			<key>primary</key>
 			<true/>

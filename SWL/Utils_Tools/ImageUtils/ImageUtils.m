@@ -133,5 +133,19 @@
     return newPic;
 }
 
-
++ (UIImage *)addImage:(UIImage *)image1 addRect:(CGRect)addRect toImage:(UIImage *)image2 toRect:(CGRect)toRect{
+    UIGraphicsBeginImageContext(image1.size);
+    
+    // Draw image1
+    [image1 drawInRect:CGRectMake(addRect.origin.x, addRect.origin.y, addRect.size.width, addRect.size.height)];
+    
+    // Draw image2
+    [image2 drawInRect:CGRectMake(toRect.origin.x, toRect.origin.y, toRect.size.width, toRect.size.height)];
+    
+    UIImage *resultingImage = UIGraphicsGetImageFromCurrentImageContext();
+    
+    UIGraphicsEndImageContext();
+    
+    return resultingImage;
+}
 @end

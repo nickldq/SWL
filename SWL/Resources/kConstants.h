@@ -170,21 +170,15 @@
 #define kUrlPicker_UserDefault [[NSUserDefaults standardUserDefaults] objectForKey:kUrlPicker_object]
 
 
-/*------------服务器地址(IP)-------------*/ 
-//#define REQUEST_PATH @"http://192.168.40.194:8080/kaiying" //李章磊
-//#define REQUEST_PATH @"http://192.168.40.219:8080/kaiying" //凤舞
-//#define REQUEST_PATH @"http://192.168.41.219:8080/kaiying" //沈高云
-//#define REQUEST_PATH @"http://192.168.41.185" //家荣
+/*------------服务器地址(IP)-------------*/
+#define REQUEST_PATH_Test @"http://swl.d2c-china.cn/php/upload.php" //测试服务
 
-//#define REQUEST_PATH @"http://192.168.102.19:8080/kaiying" //测试服务1
+#define REQUEST_PATH @"http://swl.d2c-china.cn" //正式服务
 
-//#define REQUEST_PATH @"http://192.168.102.7/kaiying" //测试服务2
 
-#define REQUEST_PATH_Test1 @"http://192.168.102.19:8080/kaiying" //测试服务1
-#define REQUEST_PATH_Test2 @"http://192.168.102.7/kaiying" //测试服务2
-#define REQUEST_PATH_Test3 @"http://58.211.121.116:9000/kaiying" //测试服务3
-
-#define REQUEST_PATH @"http://nfmedia.appandora.net/kaiying" //正式服务
+#define PHP_UPLOAD @"php/upload.php" //上传接口
+#define PHP_GetAllCity @"php/getAllCity.php" //获取地区接口
+#define PHP_GetAllShopByCity @"php/getAllShopByCity.php?cityName=" //上传接口
 
 
 /*----- appStoreUrl  -----*/

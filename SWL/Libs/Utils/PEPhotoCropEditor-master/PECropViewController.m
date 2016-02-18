@@ -60,7 +60,7 @@ static inline NSString *PELocalizedString(NSString *key, NSString *comment)
 }
 
 - (void)commonInit {
-    self.rotationEnabled = YES;
+    self.rotationEnabled = NO;
 }
 
 #pragma mark -
@@ -101,7 +101,7 @@ static inline NSString *PELocalizedString(NSString *key, NSString *comment)
         self.toolbarItems = @[flexibleSpace, constrainButton, flexibleSpace];
     }
     self.navigationController.toolbarHidden = self.toolbarHidden;
-    
+    self.navigationController.toolbarHidden = YES;
     self.cropView.image = self.image;
     
     self.cropView.rotationGestureRecognizer.enabled = _rotationEnabled;
@@ -122,6 +122,14 @@ static inline NSString *PELocalizedString(NSString *key, NSString *comment)
     }
     
     self.keepingCropAspectRatio = self.keepingCropAspectRatio;
+    
+    
+    CGFloat ratio = 247.0f / 217.0f;
+    CGRect cropRect = self.cropView.cropRect;
+    CGFloat width = CGRectGetWidth(cropRect);
+    cropRect.size = CGSizeMake(width, width / ratio);
+    self.cropView.cropRect = cropRect;
+
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
@@ -236,7 +244,8 @@ static inline NSString *PELocalizedString(NSString *key, NSString *comment)
                         PELocalizedString(@"4 x 6", nil),
                         PELocalizedString(@"5 x 7", nil),
                         PELocalizedString(@"8 x 10", nil),
-                        PELocalizedString(@"16 x 9", nil), nil];
+                        PELocalizedString(@"16 x 9", nil),
+                        PELocalizedString(@"4.55 x 4", nil),nil];
     [self.actionSheet showFromToolbar:self.navigationController.toolbar];
 }
 
@@ -281,6 +290,12 @@ static inline NSString *PELocalizedString(NSString *key, NSString *comment)
         CGRect cropRect = self.cropView.cropRect;
         CGFloat width = CGRectGetWidth(cropRect);
         cropRect.size = CGSizeMake(width, width * ratio);
+        self.cropView.cropRect = cropRect;
+    }else if (buttonIndex == 9) {
+        CGFloat ratio = 4.55f / 4.0f;
+        CGRect cropRect = self.cropView.cropRect;
+        CGFloat width = CGRectGetWidth(cropRect);
+        cropRect.size = CGSizeMake(width, width / ratio);
         self.cropView.cropRect = cropRect;
     }
 }

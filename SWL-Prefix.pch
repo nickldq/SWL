@@ -49,6 +49,7 @@
 #import "JCAlertView.h"
 #import "UIView+Category.h"
 #import "UIView+FirstResponderNotify.h"
+#import "MBProgressHUD.h"
 
 
 
@@ -57,8 +58,8 @@
 //#import "XSNetworkStatus.h"
 #import <SystemConfiguration/SystemConfiguration.h>
 #import <MobileCoreServices/MobileCoreServices.h>
-#import "UIProgressView+AFNetworking.h"
-
+#import "UIImage+Watermark.h"
+#import "ImageUtils.h"
 //全局颜色设置
 #import "BMColor.h"
 

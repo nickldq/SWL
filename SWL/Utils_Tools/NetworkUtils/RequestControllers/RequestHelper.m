@@ -8,7 +8,7 @@
 
 #import "RequestHelper.h"
 
-@interface RequestHeader(){
+@interface RequestHelper(){
     
 }
 
@@ -75,19 +75,17 @@ static RequestHelper *sharedInstance=nil;
     NSURL *url = [NSURL URLWithString:urlString];
     DLog(@"====Asi url : %@",url);
     
-    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     // 网络访问是异步的,回调是主线程的,因此程序员不用管在主线程更新UI的事情
-    [manager POST:urlString parameters:dictionary success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    [manager POST:urlString parameters:dictionary success:^(NSURLSessionDataTask *task, id responseObject) {
         DLog(@"%@", responseObject);
         // 提问:NSURLConnection异步方法回调,是在子线程
         // 得到回调之后,通常更新UI,是在主线程
         DLog(@"%@", [NSThread currentThread]);
         
-        DLog(@"%@", [operation responseString]);
+        DLog(@"%@", responseObject);
         
-        NSData *responseData = [operation responseData];
-        
-        NSString *dataStr = [[NSString alloc]initWithData:responseData encoding:NSUTF8StringEncoding];
+        NSString *dataStr = [NSString stringWithFormat:@"%@", responseObject];
         
         NSString *responseStr = dataStr;
         //            if ([operation.url.description rangeOfString:kMainPageZipDownload(@"0", 2, kMainPageZipDownloadNum)].length>0) {
@@ -100,25 +98,14 @@ static RequestHelper *sharedInstance=nil;
             [delegate performSelector:requestFinishedSelector withObject:responseObj];
         }
         
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
         DLog(@"%@", [error localizedDescription]);
         
-        [operation cancel];
         DLog(@"请求失败，可能是连接失败: %@",error);
         //	[LoadingView showLoadingView:@"服务器正忙请稍后再试！"];
         
-        NSData *responseData = [operation responseData];
-        
-        NSString *responseStr = [[NSString alloc]initWithData:responseData encoding:NSUTF8StringEncoding];
-        DLog(@"requestFailed:=======%@",responseStr);
-        
-        //            if ([operation.response.url.description rangeOfString:kMainPageZipDownload(@"0", 2, kMainPageZipDownloadNum)].length>0) {
-        //                responseStr = [[ZipService getInstance]loadBackupFile];
-        //            }
-        id responseObj = [NSJSONSerialization toArrayOrNSDictionaryWithJsonstring:responseStr];
-        
         if (delegate && [delegate respondsToSelector:requestFailedSelector]) {
-            [delegate performSelector:requestFailedSelector withObject:responseObj];
+            [delegate performSelector:requestFailedSelector withObject:error];
         }
         
     }];
@@ -165,19 +152,15 @@ static RequestHelper *sharedInstance=nil;
     NSURL *url = [NSURL URLWithString:urlString];
     DLog(@"==== url : %@",url);
     
-    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     // 网络访问是异步的,回调是主线程的,因此程序员不用管在主线程更新UI的事情
-    [manager GET:urlString parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    [manager GET:urlString parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
         DLog(@"%@", responseObject);
         // 提问:NSURLConnection异步方法回调,是在子线程
         // 得到回调之后,通常更新UI,是在主线程
         DLog(@"%@", [NSThread currentThread]);
         
-        DLog(@"%@", [operation responseString]);
-        
-        NSData *responseData = [operation responseData];
-        
-        NSString *dataStr = [[NSString alloc]initWithData:responseData encoding:NSUTF8StringEncoding];
+        NSString *dataStr = [NSString stringWithFormat:@"%@", responseObject];
         
         NSString *responseStr = dataStr; 
         
@@ -195,26 +178,26 @@ static RequestHelper *sharedInstance=nil;
         
         //Data
         
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
         
         DLog(@"%@", [error localizedDescription]);
         
-        [operation cancel];
-        DLog(@"请求失败，可能是连接失败: %@",error);
-        //	[LoadingView showLoadingView:@"服务器正忙请稍后再试！"];
-        
-        NSData *responseData = [operation responseData];
-        
-        NSString *responseStr = [[NSString alloc]initWithData:responseData encoding:NSUTF8StringEncoding];
-        DLog(@"requestFailed:=======%@",responseStr);
-        
+//        [operation cancel];
+//        DLog(@"请求失败，可能是连接失败: %@",error);
+//        //	[LoadingView showLoadingView:@"服务器正忙请稍后再试！"];
+//        
+//        NSData *responseData = [operation responseData];
+//        
+//        NSString *responseStr = [[NSString alloc]initWithData:responseData encoding:NSUTF8StringEncoding];
+//        DLog(@"requestFailed:=======%@",responseStr);
+//        
         //            if ([operation.response.url.description rangeOfString:kMainPageZipDownload(@"0", 2, kMainPageZipDownloadNum)].length>0) {
         //                responseStr = [[ZipService getInstance]loadBackupFile];
         //            }
-        id responseObj = [NSJSONSerialization toArrayOrNSDictionaryWithJsonstring:responseStr];
+//        id responseObj = [NSJSONSerialization toArrayOrNSDictionaryWithJsonstring:responseStr];
         
         if (delegate && [delegate respondsToSelector:requestFailedSelector]) {
-            [delegate performSelector:requestFailedSelector withObject:responseObj];
+            [delegate performSelector:requestFailedSelector withObject:error];
         }
         
     }];
@@ -242,7 +225,7 @@ static RequestHelper *sharedInstance=nil;
     
     // 检测网络连接的单例,网络变化时的回调方法
     [[AFNetworkReachabilityManager sharedManager] setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
-        DLog(@"%d", status);
+        DLog(@"%ld", (long)status);
     }];
 }
 
@@ -277,10 +260,10 @@ static RequestHelper *sharedInstance=nil;
     
     
     //下载时的UIProgressView
-    UIProgressView *progressView = [[UIProgressView alloc] initWithProgressViewStyle:UIProgressViewStyleDefault];
-    [progressView setProgressWithDownloadProgressOfTask:task animated:YES];
-    progressView.center = [UIApplication sharedApplication].keyWindow.center;
-    [[UIApplication sharedApplication].keyWindow addSubview:progressView];
+//    UIProgressView *progressView = [[UIProgressView alloc] initWithProgressViewStyle:UIProgressViewStyleDefault];
+//    [progressView setProgressWithDownloadProgressOfTask:task animated:YES];
+//    progressView.center = [UIApplication sharedApplication].keyWindow.center;
+//    [[UIApplication sharedApplication].keyWindow addSubview:progressView];
     
     [task resume];
 }
@@ -288,7 +271,7 @@ static RequestHelper *sharedInstance=nil;
 #pragma mark - POST上传
 - (void)postUpload:(NSString *)urlString filename:(NSString *)filename
 {
-    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     // AFHTTPResponseSerializer就是正常的HTTP请求响应结果:NSData
     // 当请求的返回数据不是JSON,XML,PList,UIImage之外,使用AFHTTPResponseSerializer
     // 例如返回一个html,text...
@@ -297,37 +280,38 @@ static RequestHelper *sharedInstance=nil;
     manager.responseSerializer = [AFHTTPResponseSerializer serializer];
     
     // formData是遵守了AFMultipartFormData的对象
-    AFHTTPRequestOperation *operation = [manager POST:urlString parameters:nil constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
+    NSURLSessionDataTask *task = [manager POST:urlString parameters:nil constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
         
         // 将本地的文件上传至服务器
         NSURL *fileURL = [[NSBundle mainBundle] URLForResource:filename withExtension:nil];
         
         [formData appendPartWithFileURL:fileURL name:@"uploadFile" error:NULL];
-    } success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    } success:^(NSURLSessionDataTask *task, id responseObject) {
         NSString *result = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
         
         DLog(@"完成 %@", result);
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
         DLog(@"错误 %@", error.localizedDescription);
     }];
-    [operation setDownloadProgressBlock:^(NSUInteger bytesRead, long long totalBytesRead, long long totalBytesExpectedToRead) {
-        NSLog(@"bytesRead:%lu",(unsigned long)bytesRead);
-        //bytesRead,上次读取的数据  //totalBytesRead,目前为止总共读取的数据 //totalBytesExpectedToRead,预测的文件大小
-        NSLog(@"totalBytesRead:%lld",totalBytesRead);
-        NSLog(@"totalBytesExpectedToRead:%lld",totalBytesExpectedToRead);
-    }];
     
-    //上传时的UIProgressView
-    UIProgressView *progressView = [[UIProgressView alloc] initWithProgressViewStyle:UIProgressViewStyleDefault];
-    [progressView setProgressWithUploadProgressOfOperation:operation animated:YES];
-    progressView.center = [UIApplication sharedApplication].keyWindow.center;
-    [[UIApplication sharedApplication].keyWindow addSubview:progressView];
+//    [task setDownloadProgressBlock:^(NSUInteger bytesRead, long long totalBytesRead, long long totalBytesExpectedToRead) {
+//        NSLog(@"bytesRead:%lu",(unsigned long)bytesRead);
+//        //bytesRead,上次读取的数据  //totalBytesRead,目前为止总共读取的数据 //totalBytesExpectedToRead,预测的文件大小
+//        NSLog(@"totalBytesRead:%lld",totalBytesRead);
+//        NSLog(@"totalBytesExpectedToRead:%lld",totalBytesExpectedToRead);
+//    }];
+//    
+//    //上传时的UIProgressView
+//    UIProgressView *progressView = [[UIProgressView alloc] initWithProgressViewStyle:UIProgressViewStyleDefault];
+//    [progressView setProgressWithUploadProgressOfOperation:operation animated:YES];
+//    progressView.center = [UIApplication sharedApplication].keyWindow.center;
+//    [[UIApplication sharedApplication].keyWindow addSubview:progressView];
 }
 
 #pragma mark - JSON
 - (void)XMLData
 {
-    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     
     // 返回的数据格式是XML
     manager.responseSerializer = [AFXMLParserResponseSerializer serializer];
@@ -335,12 +319,12 @@ static RequestHelper *sharedInstance=nil;
     NSDictionary *dict = @{@"format": @"xml"};
     
     // 网络访问是异步的,回调是主线程的,因此程序员不用管在主线程更新UI的事情
-    [manager GET:@"http://localhost/videos.php" parameters:dict success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    [manager GET:@"http://localhost/videos.php" parameters:dict success:^(NSURLSessionDataTask *task, id responseObject) {
         
         // 如果结果是XML,同样需要使用6个代理方法解析,或者使用第三方库
         // 第三方库第三方框架,效率低,内存泄漏
         DLog(@"%@", responseObject);
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
         DLog(@"%@", error);
     }];
 }

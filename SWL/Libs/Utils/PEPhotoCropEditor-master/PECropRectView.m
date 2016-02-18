@@ -43,35 +43,35 @@
         [self addSubview:imageView];
         
         self.topLeftCornerView = [[PEResizeControl alloc] init];
-        self.topLeftCornerView.delegate = self;
+//        self.topLeftCornerView.delegate = self;
         [self addSubview:self.topLeftCornerView];
         
         self.topRightCornerView = [[PEResizeControl alloc] init];
-        self.topRightCornerView.delegate = self;
+//        self.topRightCornerView.delegate = self;
         [self addSubview:self.topRightCornerView];
         
         self.bottomLeftCornerView = [[PEResizeControl alloc] init];
-        self.bottomLeftCornerView.delegate = self;
+//        self.bottomLeftCornerView.delegate = self;
         [self addSubview:self.bottomLeftCornerView];
         
         self.bottomRightCornerView = [[PEResizeControl alloc] init];
-        self.bottomRightCornerView.delegate = self;
+//        self.bottomRightCornerView.delegate = self;
         [self addSubview:self.bottomRightCornerView];
         
         self.topEdgeView = [[PEResizeControl alloc] init];
-        self.topEdgeView.delegate = self;
+//        self.topEdgeView.delegate = self;
         [self addSubview:self.topEdgeView];
         
         self.leftEdgeView = [[PEResizeControl alloc] init];
-        self.leftEdgeView.delegate = self;
+//        self.leftEdgeView.delegate = self;
         [self addSubview:self.leftEdgeView];
         
         self.bottomEdgeView = [[PEResizeControl alloc] init];
-        self.bottomEdgeView.delegate = self;
+//        self.bottomEdgeView.delegate = self;
         [self addSubview:self.bottomEdgeView];
         
         self.rightEdgeView = [[PEResizeControl alloc] init];
-        self.rightEdgeView.delegate = self;
+//        self.rightEdgeView.delegate = self;
         [self addSubview:self.rightEdgeView];
     }
     
@@ -238,7 +238,7 @@
         
         if (self.keepingAspectRatio) {
             CGRect constrainedRect;
-            if (fabsf(resizeControlView.translation.x) < fabsf(resizeControlView.translation.y)) {
+            if (fabs(resizeControlView.translation.x) < fabs(resizeControlView.translation.y)) {
                 constrainedRect = [self constrainedRectWithRectBasisOfHeight:rect aspectRatio:self.fixedAspectRatio];
             } else {
                 constrainedRect = [self constrainedRectWithRectBasisOfWidth:rect aspectRatio:self.fixedAspectRatio];
@@ -254,7 +254,7 @@
                           CGRectGetHeight(self.initialRect) - resizeControlView.translation.y);
         
         if (self.keepingAspectRatio) {
-            if (fabsf(resizeControlView.translation.x) < fabsf(resizeControlView.translation.y)) {
+            if (fabs(resizeControlView.translation.x) < fabs(resizeControlView.translation.y)) {
                 rect = [self constrainedRectWithRectBasisOfHeight:rect aspectRatio:self.fixedAspectRatio];
             } else {
                 rect = [self constrainedRectWithRectBasisOfWidth:rect aspectRatio:self.fixedAspectRatio];
@@ -268,7 +268,7 @@
         
         if (self.keepingAspectRatio) {
             CGRect constrainedRect;
-            if (fabsf(resizeControlView.translation.x) < fabsf(resizeControlView.translation.y)) {
+            if (fabs(resizeControlView.translation.x) <fabs(resizeControlView.translation.y)) {
                 constrainedRect = [self constrainedRectWithRectBasisOfHeight:rect aspectRatio:self.fixedAspectRatio];
             } else {
                 constrainedRect = [self constrainedRectWithRectBasisOfWidth:rect aspectRatio:self.fixedAspectRatio];
@@ -283,7 +283,7 @@
                           CGRectGetHeight(self.initialRect) + resizeControlView.translation.y);
         
         if (self.keepingAspectRatio) {
-            if (fabsf(resizeControlView.translation.x) < fabsf(resizeControlView.translation.y)) {
+            if (fabs(resizeControlView.translation.x) < fabs(resizeControlView.translation.y)) {
                 rect = [self constrainedRectWithRectBasisOfHeight:rect aspectRatio:self.fixedAspectRatio];
             } else {
                 rect = [self constrainedRectWithRectBasisOfWidth:rect aspectRatio:self.fixedAspectRatio];

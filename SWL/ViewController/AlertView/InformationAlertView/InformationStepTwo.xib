@@ -21,6 +21,9 @@
                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                    <connections>
+                        <outlet property="delegate" destination="iN0-l3-epB" id="GMV-mu-Vcq"/>
+                    </connections>
                 </textField>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hih-WB-6o1">
                     <rect key="frame" x="144" y="289" width="162" height="33"/>
@@ -28,6 +31,9 @@
                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                    <connections>
+                        <outlet property="delegate" destination="iN0-l3-epB" id="pye-8X-pUZ"/>
+                    </connections>
                 </textField>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mqb-28-TrI">
                     <rect key="frame" x="144" y="241" width="162" height="32"/>
@@ -35,6 +41,9 @@
                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="iN0-l3-epB" id="apq-eo-bBN"/>
+                    </connections>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gm6-Nl-kj4">
                     <rect key="frame" x="334" y="472" width="121" height="44"/>
@@ -61,12 +70,19 @@
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EnG-2D-wDI">
                     <rect key="frame" x="144" y="341" width="81" height="33"/>
-                    <state key="normal" title="预留按键"/>
+                    <state key="normal">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CQI-mU-tUE">
                     <rect key="frame" x="242" y="342" width="208" height="33"/>
-                    <state key="normal" title="预留按键"/>
+                    <state key="normal">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
                 </button>
+                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P3a-vQ-edV">
+                    <rect key="frame" x="41" y="10" width="425" height="222.5"/>
+                </imageView>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
@@ -77,7 +93,10 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
+                <outlet property="bg_imageView" destination="P3a-vQ-edV" id="19Z-aL-dCu"/>
+                <outlet property="locationButton" destination="EnG-2D-wDI" id="hLX-7p-vN4"/>
                 <outlet property="nameTextfield" destination="mqb-28-TrI" id="XRJ-ec-HBs"/>
+                <outlet property="shopNameButton" destination="CQI-mU-tUE" id="yRF-hr-Fp4"/>
                 <outlet property="telTextfield" destination="Hih-WB-6o1" id="XU6-fs-UZG"/>
                 <outlet property="vipPhoneTextfield" destination="2UQ-6Z-txm" id="3fm-OJ-MxT"/>
             </connections>

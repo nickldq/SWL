@@ -10,9 +10,11 @@
 #import "FlowViewController.h"
 
 @interface InformationStepOne : UIControl<UITextFieldDelegate, UITextViewDelegate>
+@property(strong, nonatomic)UIImage *headerImage;
 @property(strong, nonatomic)JCAlertView *alert;
 @property(strong, nonatomic)FlowViewController *flowVC;
 - (IBAction)submitAction:(UIButton *)sender;
 - (IBAction)clearAction:(UIButton *)sender;
+@property (weak, nonatomic) IBOutlet UIImageView *showImage;
 
 @end

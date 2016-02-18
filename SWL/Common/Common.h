@@ -22,6 +22,8 @@
 //计算文本长度
 +(float)getNSStringWidth:(NSString*)str font:(UIFont*)theFont;
 
++  (int)convertToInt:(NSString*)strtemp;
+
 //拼接请求字符串
 +(NSString*)getURLParamstring:(NSString*)json;
 

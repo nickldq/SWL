@@ -15,4 +15,6 @@
 @property (nonatomic, strong) NSString *makeUpImgUrl;//头像图片
 
 @property (nonatomic, strong) NSString *tdCodeUrl;// 二维码地址
+
+-(void)fromDic:(NSDictionary *)dic;
 @end
