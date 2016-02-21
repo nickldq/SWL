@@ -239,6 +239,7 @@
 		DAED97D11C762FAF00E04E77 /* ShareAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAED97CF1C762FAF00E04E77 /* ShareAlertView.xib */; };
 		DAED97D51C76472200E04E77 /* PopoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = DAED97D41C76472200E04E77 /* PopoverView.m */; };
 		DAED97D81C76484200E04E77 /* GetCityShopService.m in Sources */ = {isa = PBXBuildFile; fileRef = DAED97D71C76484200E04E77 /* GetCityShopService.m */; };
+		DAF365F81C79CE2C005C5615 /* main_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = DAF365F71C79CE2C005C5615 /* main_bg.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -583,6 +584,7 @@
 		DAED97D41C76472200E04E77 /* PopoverView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopoverView.m; sourceTree = "<group>"; };
 		DAED97D61C76484200E04E77 /* GetCityShopService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetCityShopService.h; sourceTree = "<group>"; };
 		DAED97D71C76484200E04E77 /* GetCityShopService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetCityShopService.m; sourceTree = "<group>"; };
+		DAF365F71C79CE2C005C5615 /* main_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = main_bg.png; sourceTree = "<group>"; };
 		E0DFDD203F796AA6037365C8 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -1519,6 +1521,7 @@
 		DAA48CA91C6383D1008D5510 /* image */ = {
 			isa = PBXGroup;
 			children = (
+				DAF365F71C79CE2C005C5615 /* main_bg.png */,
 				DA7597701C639B8E00B77542 /* FlowImage */,
 				DA7597611C6392B700B77542 /* hand.gif */,
 				DA7596971C638FB200B77542 /* Main_Type_1 */,
@@ -1696,6 +1699,7 @@
 				DA7597181C638FB200B77542 /* 3-1.png in Resources */,
 				DA66F0A21C604AFF00B1E0E1 /* pick_bg@2x.png in Resources */,
 				DA7597411C638FB200B77542 /* 6-11.png in Resources */,
+				DAF365F81C79CE2C005C5615 /* main_bg.png in Resources */,
 				DA7597341C638FB200B77542 /* 5-12.png in Resources */,
 				DA75978B1C63A0AA00B77542 /* product2.png in Resources */,
 				DA7597351C638FB200B77542 /* 5-13.png in Resources */,

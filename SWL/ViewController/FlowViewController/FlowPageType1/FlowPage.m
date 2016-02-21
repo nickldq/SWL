@@ -35,7 +35,7 @@
     image100.alpha = 0;
     image200.alpha = 0;
     image300.alpha = 0;
-    CABasicAnimation *animation = [BasicAnimationUtils scale:[NSNumber numberWithFloat:1.0] orgin:[NSNumber numberWithFloat:0.0] durTimes:1 RepeatTimes:1];//缩放
+    CABasicAnimation *animation = [BasicAnimationUtils scale:[NSNumber numberWithFloat:1.0] orgin:[NSNumber numberWithFloat:0.0] durTimes:0.5 RepeatTimes:1];//缩放
     
     //透明度
     CABasicAnimation *opacityAnimation = [CABasicAnimation animationWithKeyPath:@"opacity"];
@@ -44,7 +44,7 @@
     
     //组合
     CAAnimationGroup *animationGroup = [CAAnimationGroup animation];
-    animationGroup.duration = 1.0f;
+    animationGroup.duration = 0.5f;
     animationGroup.repeatCount = 1;//HUGE_VALF;     //HUGE_VALF,源自math.h
     animationGroup.delegate = self;
     [animationGroup setAnimations:[NSArray arrayWithObjects:animation, opacityAnimation, nil]];//zu

@@ -68,15 +68,15 @@
                         <action selector="closeAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="zJL-TD-xhD"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EnG-2D-wDI">
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EnG-2D-wDI">
                     <rect key="frame" x="144" y="341" width="81" height="33"/>
-                    <state key="normal">
+                    <state key="normal" title="请选择">
                         <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CQI-mU-tUE">
                     <rect key="frame" x="242" y="342" width="208" height="33"/>
-                    <state key="normal">
+                    <state key="normal" title="请选择">
                         <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                 </button>

@@ -91,11 +91,11 @@
 - (IBAction)commitAction:(UIButton *)sender {
     if ([self checkShareUserInfo]) {
         UIImage *image = [UIImage imageWithData:_shareModel.imageFormKey];
-        image = [image watermarkImage:_shareModel.nickname textRect:CGRectMake(30, image.size.height/1.92233, 34*5 , 35.0f) textFont:34.0f];//名
+        image = [image watermarkImage:_shareModel.nickname textRect:CGRectMake(30, image.size.height/1.92233, 34*10 , 35.0f) textFont:34.0f];//名
         
-        image = [image watermarkImage:_shareModel.location textRect:CGRectMake(30*2+30*[Common convertToInt:_shareModel.nickname], image.size.height/1.92233+3, 34*4 , 34.0f) textFont:28.0f];//地点
+        image = [image watermarkImage:_shareModel.location textRect:CGRectMake(30*2+30*[Common convertToInt:_shareModel.nickname], image.size.height/1.92233+3, 34*10 , 35.0f) textFont:28.0f];//地点
         
-        image = [image watermarkImage:_shareModel.comment textRect:CGRectMake(30, image.size.height/1.92233+28*3, 30*10 , 32.0f) textFont:30.0f];//评论第一行
+        image = [image watermarkImage:_shareModel.comment textRect:CGRectMake(30, image.size.height/1.92233+28*3, 30*10 , 35.0f) textFont:30.0f];//评论第一行
         
         if (_shareModel.comment.length > 10) {
             NSString *strline2 = [_shareModel.comment substringWithRange:NSMakeRange(9, _shareModel.comment.length-10 )];

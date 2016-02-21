@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="mhy-5n-aAM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="mhy-5n-aAM">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -121,24 +121,31 @@
                                     <constraint firstAttribute="width" constant="646" id="yoh-Ms-mbw"/>
                                 </constraints>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="main_bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="SFi-83-3Bg">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WDP-UQ-p88">
-                                <rect key="frame" x="424" y="485.5" width="176" height="220"/>
+                                <rect key="frame" x="424" y="485.5" width="73" height="90"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="220" id="4st-iD-StY"/>
-                                    <constraint firstAttribute="width" constant="176" id="u5o-oG-jIg"/>
+                                    <constraint firstAttribute="height" constant="90" id="4st-iD-StY"/>
+                                    <constraint firstAttribute="width" constant="73" id="u5o-oG-jIg"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="SFi-83-3Bg" firstAttribute="leading" secondItem="yx4-OC-xLT" secondAttribute="leadingMargin" constant="-20" id="0Sg-b3-aPD"/>
                             <constraint firstItem="pFz-oy-qVW" firstAttribute="centerX" secondItem="yx4-OC-xLT" secondAttribute="centerX" id="2BL-Gl-u8h"/>
                             <constraint firstItem="pFz-oy-qVW" firstAttribute="top" secondItem="792-zZ-RDq" secondAttribute="bottom" constant="178" id="3Vg-CE-6Wq"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="SFi-83-3Bg" secondAttribute="trailing" constant="-20" id="Aeg-Ow-w6z"/>
                             <constraint firstAttribute="trailing" secondItem="ZyS-1C-Ty9" secondAttribute="trailing" id="ECd-cv-gwz"/>
                             <constraint firstItem="SQ2-e1-nBC" firstAttribute="top" secondItem="ZyS-1C-Ty9" secondAttribute="bottom" id="GUt-NN-kjV"/>
                             <constraint firstItem="WDP-UQ-p88" firstAttribute="top" secondItem="792-zZ-RDq" secondAttribute="bottom" constant="485.5" id="HLQ-Hu-QF6"/>
+                            <constraint firstItem="SFi-83-3Bg" firstAttribute="top" secondItem="792-zZ-RDq" secondAttribute="bottom" id="ImE-Q3-ZMP"/>
                             <constraint firstItem="ZyS-1C-Ty9" firstAttribute="top" secondItem="792-zZ-RDq" secondAttribute="bottom" id="Jjb-7F-kNk"/>
-                            <constraint firstItem="WDP-UQ-p88" firstAttribute="centerX" secondItem="yx4-OC-xLT" secondAttribute="centerX" id="b7Z-FL-s53"/>
+                            <constraint firstItem="WDP-UQ-p88" firstAttribute="centerX" secondItem="yx4-OC-xLT" secondAttribute="centerX" constant="-51.5" id="b7Z-FL-s53"/>
                             <constraint firstItem="ZyS-1C-Ty9" firstAttribute="leading" secondItem="yx4-OC-xLT" secondAttribute="leading" id="lin-Ou-IvF"/>
+                            <constraint firstItem="SQ2-e1-nBC" firstAttribute="top" secondItem="SFi-83-3Bg" secondAttribute="bottom" id="uzq-1T-vFk"/>
                         </constraints>
                         <connections>
                             <action selector="backgroundTouchUpInside:" destination="Urm-rC-1TB" eventType="touchUpInside" id="1DZ-aT-R5W"/>
@@ -160,6 +167,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="main_bg.png" width="2048" height="1536"/>
         <image name="首页横幅" width="646" height="120"/>
         <image name="首页横幅.png" width="616" height="95"/>
         <image name="首页点击.png" width="184" height="242"/>
