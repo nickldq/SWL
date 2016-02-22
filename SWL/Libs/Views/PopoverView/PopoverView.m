@@ -16,7 +16,7 @@
 #define kArrowHeight 10.f
 #define kArrowCurvature 6.f
 #define SPACE 2.f
-#define TITLE_FONT [UIFont systemFontOfSize:16]
+#define TITLE_FONT [BMFontLibrary defaultFont:16.0f]
 #define RGB(r, g, b)    [UIColor colorWithRed:(r)/255.f green:(g)/255.f blue:(b)/255.f alpha:1.f]
 
 @interface PopoverView ()<UITableViewDataSource, UITableViewDelegate>
@@ -243,7 +243,8 @@
         cell.imageView.image = [UIImage imageNamed:[_imageArray objectAtIndex:indexPath.row]];
     }
     cell.textLabel.textAlignment=NSTextAlignmentCenter;
-    cell.textLabel.font = [UIFont systemFontOfSize:16];
+    cell.textLabel.font = TITLE_FONT;
+    cell.textLabel.tintColor = [BMColor sharedInstance].titleColor;
     cell.textLabel.text = [_titleArray objectAtIndex:indexPath.row];
     
 //    if ([[UIDevice currentDevice].systemVersion floatValue] >= 7.0) {

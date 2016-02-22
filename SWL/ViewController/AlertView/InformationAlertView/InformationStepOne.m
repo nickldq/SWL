@@ -65,6 +65,7 @@
 }
 
 - (IBAction)submitAction:(UIButton *)sender {
+    [self createHeaderImage];
     if ([self checkShareUserInfo]) {
         InformationStepTwo *step2View = (InformationStepTwo *)[[[NSBundle mainBundle]loadNibNamed:@"InformationStepTwo" owner:self options:nil]firstObject];
         step2View.flowVC = _flowVC;
@@ -78,8 +79,8 @@
 -(BOOL)checkShareUserInfo{
     BOOL flag = YES;
     //检查昵称
-     if ([[Common checkNSNull:_shareModel.nickname] isEqualToString:@""] || [Common convertToInt:_shareModel.nickname]>5) {
-        [ProgressHUDUtils dismissProgressHUDErrorWithStatus:@"请填写昵称,5个字以内"];
+     if ([[Common checkNSNull:_shareModel.nickname] isEqualToString:@""] || [Common convertToInt:_shareModel.nickname]>10) {
+        [ProgressHUDUtils dismissProgressHUDErrorWithStatus:@"请填写昵称,10个字以内"];
         flag = NO;
     }else if ([[Common checkNSNull:_shareModel.comment] isEqualToString:@""]||[Common convertToInt:_shareModel.comment]>20){
         [ProgressHUDUtils dismissProgressHUDErrorWithStatus:@"请填写评论,20个字以内"];
@@ -109,7 +110,7 @@
 #pragma mark--TextFieldDelegate
 -(BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{
     if(textField == _nickNameTextField){
-        if ([Common convertToInt:textField.text]>=5&&![string isEqualToString:@""]) {
+        if ([Common convertToInt:textField.text]>=10&&![string isEqualToString:@""]) {
             return NO;
         }
     }
@@ -143,18 +144,8 @@
 - (void)cropViewController:(PECropViewController *)controller didFinishCroppingImage:(UIImage *)croppedImage transform:(CGAffineTransform)transform cropRect:(CGRect)cropRect
 {
     [controller dismissViewControllerAnimated:YES completion:NULL];
-    
-    UIImage *scaledImage = [ImageUtils scaleToSize:CGSizeMake(506.52073732719015, 445.0f) andImage:croppedImage];
-    [self.headerButton setImage:scaledImage forState:UIControlStateNormal];
-    
-    UIImage *bgImage = [UIImage imageNamed:@"share-bg"];
-    UIImage *cover_letter = [UIImage imageNamed:@"cover_letter"];
-    UIImage *scaledbgImage = [ImageUtils scaleToSize:CGSizeMake(850.0f, 445.0f) andImage:bgImage];
-//    _showImage.image = [ImageUtils addImage:scaledImage addRect:CGRectMake(171.0f, 0, 247.0f, 217.0f) toImage:scaledbgImage toRect:CGRectMake(0, 0, scaledbgImage.size.width, scaledbgImage.size.height)];
-    _showImage.image = [ImageUtils addImage:scaledbgImage addRect:CGRectMake(0, 0, scaledbgImage.size.width, scaledbgImage.size.height) toImage:scaledImage toRect:CGRectMake(343.47926267280985, 0, 506.52073732719015, 445.0f)];
-    _showImage.image = [ImageUtils addImage:_showImage.image addRect:CGRectMake(0, 0, scaledbgImage.size.width, scaledbgImage.size.height) toImage:cover_letter toRect:CGRectMake(-2.5, 0, 840, 148)];
-    _shareModel.imageFormKey = UIImageJPEGRepresentation(_showImage.image, 1.0);
-     
+    _headerImage = croppedImage;
+    [self.headerButton setImage:_headerImage forState:UIControlStateNormal];
 }
 
 - (void)cropViewControllerDidCancel:(PECropViewController *)controller
@@ -281,5 +272,17 @@
         [self openEditor:nil];
     }];
     //    }
+}
+
+-(void)createHeaderImage{
+    UIImage *scaledImage = [ImageUtils scaleToSize:CGSizeMake(506.52073732719015, 445.0f) andImage:_headerImage];
+    
+    UIImage *bgImage = [UIImage imageNamed:@"share-bg"];
+    UIImage *cover_letter = [UIImage imageNamed:@"cover_letter"];
+    UIImage *scaledbgImage = [ImageUtils scaleToSize:CGSizeMake(850.0f, 445.0f) andImage:bgImage];
+    //    _showImage.image = [ImageUtils addImage:scaledImage addRect:CGRectMake(171.0f, 0, 247.0f, 217.0f) toImage:scaledbgImage toRect:CGRectMake(0, 0, scaledbgImage.size.width, scaledbgImage.size.height)];
+    _showImage.image = [ImageUtils addImage:scaledbgImage addRect:CGRectMake(0, 0, scaledbgImage.size.width, scaledbgImage.size.height) toImage:scaledImage toRect:CGRectMake(343.47926267280985, 0, 506.52073732719015, 445.0f)];
+    _showImage.image = [ImageUtils addImage:_showImage.image addRect:CGRectMake(0, 0, scaledbgImage.size.width, scaledbgImage.size.height) toImage:cover_letter toRect:CGRectMake(-2.5, 0, 840, 148)];
+    _shareModel.imageFormKey = UIImageJPEGRepresentation(_showImage.image, 1.0);
 }
 @end

@@ -18,12 +18,17 @@
 #define GG_FONT_NAME_HELVETICA_NEUE_ULTRALIGHT  @"HelveticaNeue-UltraLight"
 #define GG_FONT_NAME_HELVETICA_NEUE_BOLD        @"HelveticaNeue-CondensedBold"
 #define GG_FONT_NAME_HELVETICA_NEUE_BLACK       @"HelveticaNeue-CondensedBlack"
+#define GG_FONT_NAME_FZZDXJW       @"FZZDXJW--GB1-0"
+#define GG_FONT_FamilyNAME_FZZhongDengXian @"FZZhongDengXian-Z07S"
+
+
+
 @implementation BMFontLibrary
 DEF_SINGLETON(BMFontLibrary)
 
 
 +(UIFont *)defaultFont:(CGFloat)aFontSize {
-    return [UIFont fontWithName:GG_FONT_NAME_HELVETICA_NEUE size:aFontSize];
+    return [UIFont fontWithName:GG_FONT_NAME_FZZDXJW size:aFontSize];
 }
 
 +(UIFont *)lightFont:(CGFloat)aFontSize {

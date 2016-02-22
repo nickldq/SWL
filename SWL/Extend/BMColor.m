@@ -59,7 +59,7 @@ DEF_SINGLETON(BMColor)
         
         _viewBackgroundColor=UIColorFromRGB(0xffffff);
         _tabbarBackgroundColor=UIColorFromRGB(0xf3f3f3);
-        _titleColor=UIColorFromRGB(0xa9a9a9);
+        _titleColor=UIColorFromRGB(0x424242);
     }
     
     return self;

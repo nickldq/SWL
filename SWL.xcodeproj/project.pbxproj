@@ -240,6 +240,7 @@
 		DAED97D51C76472200E04E77 /* PopoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = DAED97D41C76472200E04E77 /* PopoverView.m */; };
 		DAED97D81C76484200E04E77 /* GetCityShopService.m in Sources */ = {isa = PBXBuildFile; fileRef = DAED97D71C76484200E04E77 /* GetCityShopService.m */; };
 		DAF365F81C79CE2C005C5615 /* main_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = DAF365F71C79CE2C005C5615 /* main_bg.png */; };
+		DAF365FC1C7AB083005C5615 /* FZZDXJW.TTF in Resources */ = {isa = PBXBuildFile; fileRef = DAF365FB1C7AB083005C5615 /* FZZDXJW.TTF */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -585,6 +586,7 @@
 		DAED97D61C76484200E04E77 /* GetCityShopService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetCityShopService.h; sourceTree = "<group>"; };
 		DAED97D71C76484200E04E77 /* GetCityShopService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetCityShopService.m; sourceTree = "<group>"; };
 		DAF365F71C79CE2C005C5615 /* main_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = main_bg.png; sourceTree = "<group>"; };
+		DAF365FB1C7AB083005C5615 /* FZZDXJW.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = FZZDXJW.TTF; sourceTree = "<group>"; };
 		E0DFDD203F796AA6037365C8 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -1076,6 +1078,7 @@
 		DA66F13E1C6051F200B1E0E1 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				DAF365F91C7AACB0005C5615 /* Font */,
 				DAA48CA91C6383D1008D5510 /* image */,
 				DAA99F271C60572A00700049 /* DEXProject_iphone_UIDefine.h */,
 				DA66F13F1C6051F200B1E0E1 /* kConstants.h */,
@@ -1620,6 +1623,14 @@
 			path = PopoverView;
 			sourceTree = "<group>";
 		};
+		DAF365F91C7AACB0005C5615 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				DAF365FB1C7AB083005C5615 /* FZZDXJW.TTF */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1704,6 +1715,7 @@
 				DA75978B1C63A0AA00B77542 /* product2.png in Resources */,
 				DA7597351C638FB200B77542 /* 5-13.png in Resources */,
 				DA7597381C638FB200B77542 /* 5-3.png in Resources */,
+				DAF365FC1C7AB083005C5615 /* FZZDXJW.TTF in Resources */,
 				DA7597421C638FB200B77542 /* 6-12.png in Resources */,
 				DA7597061C638FB200B77542 /* 1-6.png in Resources */,
 				DA66F13C1C6051BD00B1E0E1 /* SVProgressHUD.bundle in Resources */,
@@ -2080,7 +2092,8 @@
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nick.SWL;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "新透白美肌";
+				TARGETED_DEVICE_FAMILY = 2;
 				VALID_ARCHS = "armv7 armv7s arm64 i386";
 			};
 			name = Debug;
@@ -2099,7 +2112,8 @@
 					"$(PROJECT_DIR)/SWL/Libs/Utils/QRCode/ZBarSDK",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.nick.SWL;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "新透白美肌";
+				TARGETED_DEVICE_FAMILY = 2;
 				VALID_ARCHS = "armv7 armv7s arm64 i386";
 			};
 			name = Release;

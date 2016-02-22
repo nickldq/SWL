@@ -39,7 +39,7 @@
     
     //文字的属性
     
-    NSDictionary *dic = @{ NSFontAttributeName:[UIFont systemFontOfSize:fontSize],
+    NSDictionary *dic = @{ NSFontAttributeName:[BMFontLibrary defaultFont:fontSize],
                           
                           NSParagraphStyleAttributeName:style,
                           
