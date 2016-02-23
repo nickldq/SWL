@@ -23,6 +23,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *vipPhoneTextfield;
 @property (weak, nonatomic) IBOutlet UIButton *shopNameButton;
 @property (weak, nonatomic) IBOutlet UIButton *locationButton;
+@property (nonatomic) BOOL network;
+@property (nonatomic) BOOL change;
 @property (strong, nonatomic) ShareUploadRequestService *uploadRequest;
 @end
 
@@ -34,6 +36,9 @@
 - (void)drawRect:(CGRect)rect {
     // Drawing code
     
+    _change = NO;
+    _network = NO;
+    [self checkNetwork];
     [DaiDodgeKeyboard removeRegisterTheViewNeedDodgeKeyboard];
     [DaiDodgeKeyboard addRegisterTheViewNeedDodgeKeyboard:self];
     [self addTarget:self action:@selector(backgroundTouchUpInside:) forControlEvents:UIControlEventTouchUpInside];
@@ -43,37 +48,48 @@
         __weak __typeof(self)weakSelf = self;
         [self addTarget:self action:@selector(backgroundTouchUpInside:) forControlEvents:UIControlEventTouchUpInside];
         [_locationButton handleControlEvent:UIControlEventTouchUpInside withBlock:^{
-            [[GetCityShopService sharedInstance] getAllCityRequestService:^(id responseObject) {
-                NSArray *cityArray = [[NSArray arrayWithObject:responseObject] firstObject] ;
-                PopoverView *pop = [[PopoverView alloc] initWithPoint:CGPointMake(435, 466) titles:cityArray images:nil];
-                pop.selectRowAtIndex = ^(NSInteger index){
-                    NSString *title1 = cityArray[index];
-                    [weakSelf.locationButton setTitle:title1 forState:UIControlStateNormal];
-                    [weakSelf.shopNameButton setTitle:@"" forState:UIControlStateNormal];
-                    _shareModel.location = title1;
-                    _shareModel.shopName = @"";
-                };
-                [pop show];
-            } failure:^(NSError *error) {
-                
-            }];
-        }];
-        [_shopNameButton handleControlEvent:UIControlEventTouchUpInside withBlock:^{
-            if ([[Common checkNSNull:_shareModel.location] isEqualToString:@""]){
-                [ProgressHUDUtils dismissProgressHUDErrorWithStatus:@"请选择地区!"];
-            }else{
-                [[GetCityShopService sharedInstance] getAllShopByCityRequestService:weakSelf.shareModel.location success:^(id responseObject) {
+            
+            if (self.network) {
+                [[GetCityShopService sharedInstance] getAllCityRequestService:^(id responseObject) {
                     NSArray *cityArray = [[NSArray arrayWithObject:responseObject] firstObject] ;
-                    PopoverView *pop = [[PopoverView alloc] initWithPoint:CGPointMake(596, 466) titles:cityArray images:nil];
+                    PopoverView *pop = [[PopoverView alloc] initWithPoint:CGPointMake(435, 466) titles:cityArray images:nil];
                     pop.selectRowAtIndex = ^(NSInteger index){
                         NSString *title1 = cityArray[index];
-                        [weakSelf.shopNameButton setTitle:title1 forState:UIControlStateNormal];
-                        _shareModel.shopName = title1;
+                        [weakSelf.locationButton setTitle:title1 forState:UIControlStateNormal];
+                        [weakSelf.shopNameButton setTitle:@"" forState:UIControlStateNormal];
+                        _shareModel.location = title1;
+                        _shareModel.shopName = @"";
                     };
                     [pop show];
                 } failure:^(NSError *error) {
                     
                 }];
+            }else{
+                [ProgressHUDUtils dismissProgressHUDErrorWithStatus:kProgressHubDisconnect];
+            }
+        }];
+        [_shopNameButton handleControlEvent:UIControlEventTouchUpInside withBlock:^{
+            if ([[Common checkNSNull:_shareModel.location] isEqualToString:@""]){
+                [ProgressHUDUtils dismissProgressHUDErrorWithStatus:@"请选择地区!"];
+            }else{
+                
+                if (self.network) {
+                    
+                    [[GetCityShopService sharedInstance] getAllShopByCityRequestService:weakSelf.shareModel.location success:^(id responseObject) {
+                        NSArray *cityArray = [[NSArray arrayWithObject:responseObject] firstObject] ;
+                        PopoverView *pop = [[PopoverView alloc] initWithPoint:CGPointMake(596, 466) titles:cityArray images:nil];
+                        pop.selectRowAtIndex = ^(NSInteger index){
+                            NSString *title1 = cityArray[index];
+                            [weakSelf.shopNameButton setTitle:title1 forState:UIControlStateNormal];
+                            _shareModel.shopName = title1;
+                        };
+                        [pop show];
+                    } failure:^(NSError *error) {
+                        
+                    }];
+                }else{
+                    [ProgressHUDUtils dismissProgressHUDErrorWithStatus:kProgressHubDisconnect];
+                }
             }
         }];
         
@@ -94,7 +110,7 @@
         _bg_imageView.image = [self createWatermarkImage];
         _shareModel.imageFormKey = UIImageJPEGRepresentation(_bg_imageView.image, 1.0);
         
-        if (![AFNetworkReachabilityManager sharedManager].isReachable) {
+        if (self.network) {
             
             [MBProgressHUD showHUDAddedTo:self animated:YES];
             [_uploadRequest shareUploadRequestServiceByShareModel:_shareModel success:^(ShareUserResultModel *shareUserResultModel) {
@@ -111,7 +127,7 @@
                 }
             } failure:^(NSError *error) {
                 [MBProgressHUD hideHUDForView:self animated:YES];
-            }];              
+            }];
         }else{
             [ProgressHUDUtils dismissProgressHUDErrorWithStatus:kProgressHubDisconnect];
         }
@@ -198,16 +214,57 @@
 
 -(UIImage *)createWatermarkImage{
     UIImage *image = [UIImage imageWithData:_shareModel.imageFormKey];
-    image = [image watermarkImage:_shareModel.nickname textRect:CGRectMake(30, image.size.height/1.92233, 34*10 , 35.0f) textFont:34.0f];//名
+    image = [image watermarkImage:_shareModel.nickname textRect:CGRectMake(image.size.width*0.0173333+3, image.size.height*0.33, 34*10 , 35.0f) textFont:34.0f];//名
     
-    image = [image watermarkImage:_shareModel.location textRect:CGRectMake(30, image.size.height/1.92233+3+35+12, 34*10 , 30.0f) textFont:28.0f];//地点
+    image = [image watermarkImage:_shareModel.location textRect:CGRectMake(image.size.width*0.0173333+1+3, image.size.height*0.41326531, 34*10 , 30.0f) textFont:28.0f];//地点
     
-    image = [image watermarkImage:_shareModel.comment textRect:CGRectMake(30, image.size.height/1.92233+3+35+28+14+15, 30*10 , 35.0f) textFont:30.0f];//评论第一行
+    image = [image watermarkImage:_shareModel.comment textRect:CGRectMake(image.size.width*0.0173333+3, image.size.height*0.57653061, 30*10 , 35.0f) textFont:30.0f];//评论第一行
     
     if (_shareModel.comment.length > 10) {
         NSString *strline2 = [_shareModel.comment substringWithRange:NSMakeRange(9, _shareModel.comment.length-10 )];
-        image = [image watermarkImage:strline2 textRect:CGRectMake(30, image.size.height/1.92233+3+35+28+14+15+30.0f+15, 30*10 , 32.0f) textFont:30.0f];//评论第2行
+        image = [image watermarkImage:strline2 textRect:CGRectMake(image.size.width*0.0173333+3, image.size.height*0.6556, 30*10 , 32.0f) textFont:30.0f];//评论第2行
     }
     return image;
+}
+
+
+- (void)checkNetwork
+{
+    // 如果要检测网络状态的变化,必须用检测管理器的单例的startMonitoring
+    [[AFNetworkReachabilityManager sharedManager] startMonitoring];
+    
+    
+    // 检测网络连接的单例,网络变化时的回调方法
+    [[AFNetworkReachabilityManager sharedManager] setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status)
+     {
+         switch (status) {
+             case AFNetworkReachabilityStatusNotReachable:
+             {
+                 NSLog(@"无网络");
+                 self.network = NO;
+                 self.change = YES;
+                 break;
+             }
+                 
+             case AFNetworkReachabilityStatusReachableViaWiFi:
+             {
+                 NSLog(@"WiFi网络");
+                 self.network = YES;
+                 self.change = YES;
+                 break;
+             }
+                 
+             case AFNetworkReachabilityStatusReachableViaWWAN:
+             {
+                 NSLog(@"无线网络");
+                 self.network = YES;
+                 self.change = YES;
+                 break;
+             }
+                 
+             default:
+                 break;
+         }
+     }];
 }
 @end

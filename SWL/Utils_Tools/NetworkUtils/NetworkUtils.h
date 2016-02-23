@@ -13,6 +13,7 @@
 
 }
 
++ (BOOL)reachNetworkStatus;
 /**
  *  @Author Liudongqi, 14-10-16 11:10:34
  *

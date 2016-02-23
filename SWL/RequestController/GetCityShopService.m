@@ -26,7 +26,6 @@ static GetCityShopService *sharedInstance = nil;
 #pragma mark 获取地区接口
 - (void)getAllCityRequestService:(void (^)(id responseObject))success failure:(void (^)(NSError *error))failure{
     
-    if (![AFNetworkReachabilityManager sharedManager].isReachable) {
         AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
         
         NSString *urlString = [NSString stringWithFormat:@"%@/%@",REQUEST_PATH , PHP_GetAllCity];
@@ -38,17 +37,11 @@ static GetCityShopService *sharedInstance = nil;
             NSLog(@"Error: %@", error);
             failure(error);
         }];
-    }else{
-        [ProgressHUDUtils dismissProgressHUDErrorWithStatus:kProgressHubDisconnect];
-    }
 }
 
 
 #pragma mark 获取门店名称接口
 - (void)getAllShopByCityRequestService:(NSString *)cityName success:(void (^)(id responseObject))success failure:(void (^)(NSError *error))failure{
-    
-    if (![AFNetworkReachabilityManager sharedManager].isReachable) {
-        
         
         AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
         
@@ -61,9 +54,6 @@ static GetCityShopService *sharedInstance = nil;
             NSLog(@"Error: %@", error);
             failure(error);
         }];
-    }else{
-        [ProgressHUDUtils dismissProgressHUDErrorWithStatus:kProgressHubDisconnect];
-    }
 }
 
 

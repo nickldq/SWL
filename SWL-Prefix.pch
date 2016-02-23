@@ -40,6 +40,9 @@
 #import "ColorUtils.h"
 #import "CommonMethodUtils.h"
 #import "ColorHelper.h"
+#define kNetworkNotReachability ([AFNetworkReachabilityManager sharedManager].networkReachabilityStatus <= 0)  //无网
+#define kAFAppDotNetAPIBaseURLString @"http://www.baidu.com/"
+#import "NetworkUtils.h"
 
 /*----- libs  -----*/
 #import "SDImageCache.h"

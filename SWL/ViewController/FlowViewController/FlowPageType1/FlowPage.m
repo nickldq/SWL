@@ -108,7 +108,7 @@
         
         NSString *flowImageName = [NSString stringWithFormat:@"flow%i-%i_%i.png", page+1,  x, i];
         [_flowImageArray addObject:flowImageName];
-        NSLog(flowImageName);
+//        NSLog(flowImageName);
     }
     
     [self playAnimation];

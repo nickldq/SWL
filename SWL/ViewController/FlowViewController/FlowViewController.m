@@ -12,6 +12,8 @@
 #import "BasicAnimationUtils.h"
 #import "FlowPage.h"
 
+#import"AFHTTPSessionManager.h"
+
 @interface FlowViewController ()
 
 @end
@@ -27,6 +29,7 @@
 {
     [super viewDidLoad];
     //configure carousel
+
     NSMutableArray *urlStringArray = [NSMutableArray array];
     
     for (int i = 1; i < 5; i++) {

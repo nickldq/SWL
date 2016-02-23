@@ -14,7 +14,60 @@
 #import <sys/sysctl.h>
 #import <ifaddrs.h>
 #import <arpa/inet.h>
+#import "AFHTTPSessionManager.h"
 @implementation NetworkUtils
+
+
++ (void)checkNetwork
+{
+    // 如果要检测网络状态的变化,必须用检测管理器的单例的startMonitoring
+    [[AFNetworkReachabilityManager sharedManager] startMonitoring];
+    __block   BOOL network =  network ;  //
+    __block   BOOL change =  change ;  //
+    change = NO;
+    network = NO;
+    
+    // 检测网络连接的单例,网络变化时的回调方法
+    [[AFNetworkReachabilityManager sharedManager] setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status)
+     {
+         switch (status) {
+             case AFNetworkReachabilityStatusNotReachable:
+             {
+                 NSLog(@"无网络");
+                 network = NO;
+                 change = YES;
+                 break;
+             }
+                 
+             case AFNetworkReachabilityStatusReachableViaWiFi:
+             {
+                 NSLog(@"WiFi网络");
+                 network = YES;
+                 change = YES;
+                 break;
+             }
+                 
+             case AFNetworkReachabilityStatusReachableViaWWAN:
+             {
+                 NSLog(@"无线网络");
+                 network = YES;
+                 change = YES;
+                 break;
+             }
+                 
+             default:
+                 break;
+         }
+     }];
+}
+
+
++ (BOOL)reachNetworkStatus {
+    
+    AFNetworkReachabilityManager *manager = [AFNetworkReachabilityManager sharedManager];
+    
+    return NO;
+}
 
 #pragma mark - MAC Address
 // Return the local MAC addy
