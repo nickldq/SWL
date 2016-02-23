@@ -17,7 +17,7 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="product4.png" translatesAutoresizingMaskIntoConstraints="NO" id="PTE-iC-0ZS">
                     <rect key="frame" x="881" y="489" width="110" height="208"/>
                 </imageView>
-                <imageView userInteractionEnabled="NO" tag="100" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="flow4-1.png" translatesAutoresizingMaskIntoConstraints="NO" id="Hmn-9M-RRu">
+                <imageView userInteractionEnabled="NO" alpha="0.0" tag="100" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hmn-9M-RRu">
                     <rect key="frame" x="33.5" y="150.5" width="402" height="298"/>
                 </imageView>
                 <button opaque="NO" tag="30" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ct-da-PuC">
@@ -30,10 +30,10 @@
                     <state key="normal" image="back.png"/>
                     <state key="highlighted" image="back_press.png"/>
                 </button>
-                <imageView userInteractionEnabled="NO" tag="200" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="flow4-2.png" translatesAutoresizingMaskIntoConstraints="NO" id="1f5-AP-GDy">
+                <imageView userInteractionEnabled="NO" alpha="0.0" tag="200" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1f5-AP-GDy">
                     <rect key="frame" x="465.5" y="151" width="526" height="212"/>
                 </imageView>
-                <imageView userInteractionEnabled="NO" tag="300" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="flow4-3.png" translatesAutoresizingMaskIntoConstraints="NO" id="Jg2-69-bsG">
+                <imageView userInteractionEnabled="NO" alpha="0.0" tag="300" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jg2-69-bsG">
                     <rect key="frame" x="225" y="400" width="570" height="206"/>
                 </imageView>
             </subviews>
@@ -53,9 +53,6 @@
         <image name="back_press.png" width="242" height="87"/>
         <image name="comment.png" width="242" height="87"/>
         <image name="comment_press.png" width="242" height="87"/>
-        <image name="flow4-1.png" width="966" height="684"/>
-        <image name="flow4-2.png" width="1096" height="487"/>
-        <image name="flow4-3.png" width="1187" height="416"/>
         <image name="flow_bg" width="1024" height="768"/>
         <image name="product4.png" width="245" height="333"/>
     </resources>

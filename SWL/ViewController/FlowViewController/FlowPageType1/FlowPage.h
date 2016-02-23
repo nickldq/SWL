@@ -10,7 +10,8 @@
 
 
 @interface FlowPage : UIView 
-
+@property(nonatomic, strong)NSMutableArray *flowImageArray;
 -(void)clearView;
 -(void)playAnimation;
+-(void)randomChangeFlowImagesWithCurrentPage:(int)page CustomerAmount:(int)customerAmount;
 @end

@@ -72,8 +72,16 @@
  
     _picScrollView = [DCPicScrollView picScrollViewWithFrame:self.view.frame WithView:urlStringArray isWebImage:NO];
     
+    __weak __typeof(self)weakSelf = self;
     [_picScrollView setImageViewDidTapAtIndex:^(NSInteger index) {
         printf("你点到我了😳index:%zd\n",index);
+        FlowPage *flowPage = weakSelf.picScrollView.viewData[weakSelf.picScrollView.currentIndex];
+        if (index==0||index==2) {
+            [flowPage randomChangeFlowImagesWithCurrentPage:(int)index CustomerAmount:7];
+        }else{
+            [flowPage randomChangeFlowImagesWithCurrentPage:(int)index CustomerAmount:6];
+        }
+        
     }];
     
     _picScrollView.delegate = self;
@@ -82,8 +90,16 @@
     [self.view addSubview:_picScrollView];
     [self.view bringSubviewToFront:_maskingView];
     
-    [_picScrollView.viewData[_picScrollView.currentIndex] performSelector:@selector(playAnimation)];
+}
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
     
+    FlowPage *flowPage = self.picScrollView.viewData[self.picScrollView.currentIndex];
+    if (self.picScrollView.currentIndex==0||self.picScrollView.currentIndex==2) {
+        [flowPage randomChangeFlowImagesWithCurrentPage:(int)self.picScrollView.currentIndex CustomerAmount:7];
+    }else{
+        [flowPage randomChangeFlowImagesWithCurrentPage:(int)self.picScrollView.currentIndex CustomerAmount:6];
+    }
 }
 
 #pragma mark -
@@ -94,10 +110,16 @@
 //    }else{
 //        [_picScrollView.viewData[_picScrollView.currentIndex] viewWithTag:30].hidden = YES;
 //    }
-    for (FlowPage *v in _picScrollView.viewData) {
-        [v clearView];
+    
+    FlowPage *flowPage = self.picScrollView.viewData[self.picScrollView.currentIndex];
+    if ([flowPage viewWithTag:100].alpha!=1) {
+        
+        if (self.picScrollView.currentIndex==0||self.picScrollView.currentIndex==2) {
+            [flowPage randomChangeFlowImagesWithCurrentPage:(int)self.picScrollView.currentIndex CustomerAmount:7];
+        }else{
+            [flowPage randomChangeFlowImagesWithCurrentPage:(int)self.picScrollView.currentIndex CustomerAmount:6];
+        }
     }
-    [_picScrollView.viewData[_picScrollView.currentIndex] performSelector:@selector(playAnimation)];
 }
 
 - (IBAction)backAction:(UIButton *)sender {
