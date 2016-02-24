@@ -30,7 +30,7 @@
                     </connections>
                 </button>
                 <textField opaque="NO" clipsSubviews="YES" tag="100" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mqb-28-TrI">
-                    <rect key="frame" x="107" y="187" width="186" height="32"/>
+                    <rect key="frame" x="112" y="187" width="181" height="32"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <color key="textColor" red="0.25882352939999997" green="0.25882352939999997" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" name="FZZDXJW--GB1-0" family="FZZhongDengXian-Z07S" pointSize="14"/>
@@ -40,7 +40,7 @@
                     </connections>
                 </textField>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="200" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="g1B-f1-TxS">
-                    <rect key="frame" x="66" y="294" width="389" height="58"/>
+                    <rect key="frame" x="71" y="294" width="384" height="58"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <color key="textColor" red="0.25882352939999997" green="0.25882352939999997" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" name="FZZDXJW--GB1-0" family="FZZhongDengXian-Z07S" pointSize="14"/>

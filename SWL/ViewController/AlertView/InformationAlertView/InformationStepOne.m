@@ -76,6 +76,7 @@
     }
 }
 
+#pragma mark 检查填写信息
 -(BOOL)checkShareUserInfo{
     BOOL flag = YES;
     //检查昵称
@@ -85,10 +86,11 @@
     }else if ([[Common checkNSNull:_shareModel.comment] isEqualToString:@""]||[Common convertToInt:_shareModel.comment]>20){
         [ProgressHUDUtils dismissProgressHUDErrorWithStatus:@"请填写评论,20个字以内"];
         flag = NO;
-    }else if ([[Common checkNSNull:_shareModel.imageFormKey] isEqualToString:@""]) {
-        [ProgressHUDUtils dismissProgressHUDErrorWithStatus:@"请拍照!"];
-        flag = NO;
     }
+//    else if ([[Common checkNSNull:_shareModel.imageFormKey] isEqualToString:@""]) {
+//        [ProgressHUDUtils dismissProgressHUDErrorWithStatus:@"请拍照!"];
+//        flag = NO;
+//    }
     return flag;
 }
 
@@ -274,15 +276,20 @@
     //    }
 }
 
+#pragma  mark 创建上传图片(没有拍照仅创建背景图)
 -(void)createHeaderImage{
-    UIImage *scaledImage = [ImageUtils scaleToSize:CGSizeMake(506.52073732719015, 445.0f) andImage:_headerImage];
-    
     UIImage *bgImage = [UIImage imageNamed:@"share-bg"];
-//    UIImage *cover_letter = [UIImage imageNamed:@"cover_letter"];
-    UIImage *scaledbgImage = [ImageUtils scaleToSize:CGSizeMake(850.0f, 445.0f) andImage:bgImage];
-    //    _showImage.image = [ImageUtils addImage:scaledImage addRect:CGRectMake(171.0f, 0, 247.0f, 217.0f) toImage:scaledbgImage toRect:CGRectMake(0, 0, scaledbgImage.size.width, scaledbgImage.size.height)];
-    _showImage.image = [ImageUtils addImage:scaledbgImage addRect:CGRectMake(0, 0, scaledbgImage.size.width, scaledbgImage.size.height) toImage:scaledImage toRect:CGRectMake(343.47926267280985, 0, 506.52073732719015, 445.0f)];
-//    _showImage.image = [ImageUtils addImage:_showImage.image addRect:CGRectMake(0, 0, scaledbgImage.size.width, scaledbgImage.size.height) toImage:cover_letter toRect:CGRectMake(-2.5, 0, 840, 148)];
-    _shareModel.imageFormKey = UIImageJPEGRepresentation(_showImage.image, 1.0);
+    if (_headerImage) {
+        UIImage *scaledImage = [ImageUtils scaleToSize:CGSizeMake(506.52073732719015, 445.0f) andImage:_headerImage];
+        
+        //    UIImage *cover_letter = [UIImage imageNamed:@"cover_letter"];
+        UIImage *scaledbgImage = [ImageUtils scaleToSize:CGSizeMake(850.0f, 445.0f) andImage:bgImage];
+        //    _showImage.image = [ImageUtils addImage:scaledImage addRect:CGRectMake(171.0f, 0, 247.0f, 217.0f) toImage:scaledbgImage toRect:CGRectMake(0, 0, scaledbgImage.size.width, scaledbgImage.size.height)];
+        _showImage.image = [ImageUtils addImage:scaledbgImage addRect:CGRectMake(0, 0, scaledbgImage.size.width, scaledbgImage.size.height) toImage:scaledImage toRect:CGRectMake(343.47926267280985, 0, 506.52073732719015, 445.0f)];
+        //    _showImage.image = [ImageUtils addImage:_showImage.image addRect:CGRectMake(0, 0, scaledbgImage.size.width, scaledbgImage.size.height) toImage:cover_letter toRect:CGRectMake(-2.5, 0, 840, 148)];
+        _shareModel.imageFormKey = UIImageJPEGRepresentation(_showImage.image, 1.0);
+    }else{
+        _shareModel.imageFormKey = UIImageJPEGRepresentation(bgImage, 1.0);
+    }
 }
 @end

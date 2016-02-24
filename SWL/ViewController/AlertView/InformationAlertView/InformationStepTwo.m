@@ -52,13 +52,30 @@
             if (self.network) {
                 [[GetCityShopService sharedInstance] getAllCityRequestService:^(id responseObject) {
                     NSArray *cityArray = [[NSArray arrayWithObject:responseObject] firstObject] ;
-                    PopoverView *pop = [[PopoverView alloc] initWithPoint:CGPointMake(435, 466) titles:cityArray images:nil];
+                    PopoverView *pop = [[PopoverView alloc] initWithPoint:CGPointMake(435-13, 466) titles:cityArray images:nil];
                     pop.selectRowAtIndex = ^(NSInteger index){
+                        //点击block
                         NSString *title1 = cityArray[index];
-                        [weakSelf.locationButton setTitle:title1 forState:UIControlStateNormal];
-                        [weakSelf.shopNameButton setTitle:@"" forState:UIControlStateNormal];
-                        _shareModel.location = title1;
-                        _shareModel.shopName = @"";
+                        if (![title1 isEqualToString:weakSelf.locationButton.titleLabel.text]) {
+                            [weakSelf.locationButton setTitle:title1 forState:UIControlStateNormal];
+                            [weakSelf.shopNameButton setTitle:@"" forState:UIControlStateNormal];
+                            _shareModel.location = title1;
+                            
+                            //默认选商店第一个
+                            if (self.network) {
+                                
+                                [[GetCityShopService sharedInstance] getAllShopByCityRequestService:weakSelf.shareModel.location success:^(id responseObject) {
+                                    NSArray *cityArray = [[NSArray arrayWithObject:responseObject] firstObject] ;
+                                    NSString *title1 = cityArray[0];
+                                    [weakSelf.shopNameButton setTitle:title1 forState:UIControlStateNormal];
+                                    _shareModel.shopName = title1;
+                                } failure:^(NSError *error) {
+                                    
+                                }];
+                            }else{
+                                [ProgressHUDUtils dismissProgressHUDErrorWithStatus:kProgressHubDisconnect];
+                            }
+                        }
                     };
                     [pop show];
                 } failure:^(NSError *error) {
@@ -77,7 +94,7 @@
                     
                     [[GetCityShopService sharedInstance] getAllShopByCityRequestService:weakSelf.shareModel.location success:^(id responseObject) {
                         NSArray *cityArray = [[NSArray arrayWithObject:responseObject] firstObject] ;
-                        PopoverView *pop = [[PopoverView alloc] initWithPoint:CGPointMake(596, 466) titles:cityArray images:nil];
+                        PopoverView *pop = [[PopoverView alloc] initWithPoint:CGPointMake(596-13, 466) titles:cityArray images:nil];
                         pop.selectRowAtIndex = ^(NSInteger index){
                             NSString *title1 = cityArray[index];
                             [weakSelf.shopNameButton setTitle:title1 forState:UIControlStateNormal];
@@ -212,17 +229,18 @@
     return flag;
 }
 
+#pragma mark 合成图加上水印
 -(UIImage *)createWatermarkImage{
     UIImage *image = [UIImage imageWithData:_shareModel.imageFormKey];
-    image = [image watermarkImage:_shareModel.nickname textRect:CGRectMake(image.size.width*0.0173333+3, image.size.height*0.33, 34*10 , 35.0f) textFont:34.0f];//名
+    image = [image watermarkImage:_shareModel.nickname textRect:CGRectMake(image.size.width*0.0173333+3, image.size.height*0.33+66, 34*10 , 35.0f) textFont:33.0f];//昵称:Rect x,y,width,height
     
-    image = [image watermarkImage:_shareModel.location textRect:CGRectMake(image.size.width*0.0173333+1+3, image.size.height*0.41326531, 34*10 , 30.0f) textFont:28.0f];//地点
+    image = [image watermarkImage:_shareModel.location textRect:CGRectMake(image.size.width*0.0173333+1+3, image.size.height*0.41326531+2+66, 34*10 , 30.0f) textFont:28.0f];//地点
     
-    image = [image watermarkImage:_shareModel.comment textRect:CGRectMake(image.size.width*0.0173333+3, image.size.height*0.57653061, 30*10 , 35.0f) textFont:30.0f];//评论第一行
+    image = [image watermarkImage:_shareModel.comment textRect:CGRectMake(image.size.width*0.0173333+3, image.size.height*0.57653061+66, 30*10 , 35.0f) textFont:28.0f];//评论第一行
     
     if (_shareModel.comment.length > 10) {
         NSString *strline2 = [_shareModel.comment substringWithRange:NSMakeRange(9, _shareModel.comment.length-10 )];
-        image = [image watermarkImage:strline2 textRect:CGRectMake(image.size.width*0.0173333+3, image.size.height*0.6556, 30*10 , 32.0f) textFont:30.0f];//评论第2行
+        image = [image watermarkImage:strline2 textRect:CGRectMake(image.size.width*0.0173333+3, image.size.height*0.6556+66, 30*10 , 32.0f) textFont:28.0f];//评论第2行
     }
     return image;
 }

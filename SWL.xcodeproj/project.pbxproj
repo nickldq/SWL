@@ -419,7 +419,7 @@
 		DA5595941C61A563006E3E5D /* DCPicScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCPicScrollView.m; sourceTree = "<group>"; };
 		DA5595951C61A563006E3E5D /* DCWebImageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCWebImageManager.h; sourceTree = "<group>"; };
 		DA5595961C61A563006E3E5D /* DCWebImageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCWebImageManager.m; sourceTree = "<group>"; };
-		DA66F0141C60477F00B1E0E1 /* SWL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = SWL.app; path = "新透白美肌.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA66F0141C60477F00B1E0E1 /* 新透白美肌.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "新透白美肌.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA66F0181C60477F00B1E0E1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DA66F01A1C60477F00B1E0E1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DA66F01B1C60477F00B1E0E1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -916,7 +916,7 @@
 		DA66F0151C60477F00B1E0E1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DA66F0141C60477F00B1E0E1 /* SWL.app */,
+				DA66F0141C60477F00B1E0E1 /* 新透白美肌.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1892,7 +1892,7 @@
 			);
 			name = SWL;
 			productName = SWL;
-			productReference = DA66F0141C60477F00B1E0E1 /* SWL.app */;
+			productReference = DA66F0141C60477F00B1E0E1 /* 新透白美肌.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */

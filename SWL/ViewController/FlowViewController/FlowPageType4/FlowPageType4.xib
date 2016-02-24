@@ -17,9 +17,6 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="product4.png" translatesAutoresizingMaskIntoConstraints="NO" id="PTE-iC-0ZS">
                     <rect key="frame" x="881" y="489" width="110" height="208"/>
                 </imageView>
-                <imageView userInteractionEnabled="NO" alpha="0.0" tag="100" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hmn-9M-RRu">
-                    <rect key="frame" x="33.5" y="150.5" width="402" height="298"/>
-                </imageView>
                 <button opaque="NO" tag="30" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ct-da-PuC">
                     <rect key="frame" x="740" y="698" width="121" height="43"/>
                     <state key="normal" image="comment.png"/>
@@ -31,10 +28,13 @@
                     <state key="highlighted" image="back_press.png"/>
                 </button>
                 <imageView userInteractionEnabled="NO" alpha="0.0" tag="200" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1f5-AP-GDy">
-                    <rect key="frame" x="465.5" y="151" width="526" height="212"/>
+                    <rect key="frame" x="500.5" y="170" width="475.5" height="194.5"/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" alpha="0.0" tag="300" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jg2-69-bsG">
-                    <rect key="frame" x="225" y="400" width="570" height="206"/>
+                    <rect key="frame" x="154.5" y="410.5" width="579" height="193.5"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" alpha="0.0" tag="100" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hmn-9M-RRu">
+                    <rect key="frame" x="47.5" y="170" width="394.5" height="278.5"/>
                 </imageView>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
