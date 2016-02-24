@@ -10,8 +10,8 @@
 
 @interface ShareUserUploadModel : NSObject
 
-
-@property (nonatomic, strong) NSData *imageFormKey ;// 图片
+@property (nonatomic, strong) NSData *imageFormKey; //合成图
+@property (nonatomic, strong) NSData *photo_data ;// 原图片
 @property (nonatomic, strong) NSString *nickname;// 昵称，必填，10个字以内
 @property (nonatomic, strong) NSString *comment;// 评论文字，必填，20个字以内
 @property (nonatomic, strong) NSString *realName;// 真实姓名，必填，10个字以内

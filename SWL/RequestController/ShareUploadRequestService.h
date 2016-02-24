@@ -47,4 +47,9 @@
 - (void)shareUploadRequestServiceByShareModel:(ShareUserUploadModel *)shareModel
                           success:(void (^)(ShareUserResultModel *shareUserResultModel))success
                           failure:(void (^)(NSError *error))failure;
+
+#pragma mark 分享内容上传模块 - 官方api
+- (void)shareUploadRequestRestApiServiceByShareModel:(ShareUserUploadModel *)shareModel
+                                      success:(void (^)(ShareUserResultModel *shareUserResultModel))success
+                                      failure:(void (^)(NSError *error))failure;
 @end

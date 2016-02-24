@@ -175,6 +175,9 @@
 
 #define REQUEST_PATH @"http://swl.d2c-china.cn" //正式服务
 
+#define REQUEST_PATH_RestApi_TEST  @"http://swl.geekernel.com"//测试服务
+#define REQUEST_PATH_RestApi  @"http://whitening.shiseido.com.cn"//正式服务
+#define Api_Certs_Create @"api/certs/create" //上传接口
 
 #define PHP_UPLOAD @"php/upload.php" //上传接口
 #define PHP_GetAllCity @"php/getAllCity.php" //获取地区接口

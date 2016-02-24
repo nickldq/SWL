@@ -13,35 +13,36 @@
 
 -(NSMutableDictionary *)toDictionary{
     NSMutableDictionary *dic = [NSMutableDictionary dictionary];
-//    if (_imageFormKey) {
-//        [dic setObject:_imageFormKey forKey:@"imageFormKey"];
-//    }
+    
+    if (_photo_data) {
+        [dic setObject:_photo_data forKey:@"photo_data"];
+    }
     if (_nickname) {
-        [dic setObject:_nickname forKey:@"nickName"];
+        [dic setObject:_nickname forKey:@"nickname"];
     }
     if (_comment) {
-        [dic setObject:_comment forKey:@"comment"];
+        [dic setObject:_comment forKey:@"content"];
     }
-    if (_realName) {
-        [dic setObject:_realName forKey:@"realName"];
-    }
-    if (_sex) {
-        [dic setObject:_sex forKey:@"sex"];
-    }else{
-        [dic setObject:@"0" forKey:@"sex"];
-    }
-    if (_phone) {
-        [dic setObject:_phone forKey:@"phone"];
-    }
+//    if (_realName) {
+//        [dic setObject:_realName forKey:@"realName"];
+//    }
+//    if (_sex) {
+//        [dic setObject:_sex forKey:@"sex"];
+//    }else{
+//        [dic setObject:@"0" forKey:@"sex"];
+//    }
+//    if (_phone) {
+//        [dic setObject:_phone forKey:@"phone"];
+//    }
     if (_location) {
-        [dic setObject:_location forKey:@"location"];
+        [dic setObject:_location forKey:@"region"];
     }
-    if (_shopName) {
-        [dic setObject:_shopName forKey:@"shopName"];
-    }
-    if (_VIPPhone) {
-        [dic setObject:_VIPPhone forKey:@"VIPPhone"];
-    }
+//    if (_shopName) {
+//        [dic setObject:_shopName forKey:@"shopName"];
+//    }
+//    if (_VIPPhone) {
+//        [dic setObject:_VIPPhone forKey:@"VIPPhone"];
+//    }
     
     return dic;
 }

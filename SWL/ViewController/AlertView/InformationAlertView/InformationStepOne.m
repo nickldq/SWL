@@ -83,8 +83,8 @@
      if ([[Common checkNSNull:_shareModel.nickname] isEqualToString:@""] || [Common convertToInt:_shareModel.nickname]>10) {
         [ProgressHUDUtils dismissProgressHUDErrorWithStatus:@"请填写昵称,10个字以内"];
         flag = NO;
-    }else if ([[Common checkNSNull:_shareModel.comment] isEqualToString:@""]||[Common convertToInt:_shareModel.comment]>20){
-        [ProgressHUDUtils dismissProgressHUDErrorWithStatus:@"请填写评论,20个字以内"];
+    }else if ([[Common checkNSNull:_shareModel.comment] isEqualToString:@""]||(5>=[Common convertToInt:_shareModel.comment]&&[Common convertToInt:_shareModel.comment]>20)){
+        [ProgressHUDUtils dismissProgressHUDErrorWithStatus:@"请填写评论,5-20个字!"];
         flag = NO;
     }
 //    else if ([[Common checkNSNull:_shareModel.imageFormKey] isEqualToString:@""]) {

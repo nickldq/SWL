@@ -11,6 +11,7 @@
 @interface ShareUserResultModel : NSObject
 
 @property (nonatomic, strong) NSString *result;//jieguo
+@property (nonatomic, strong) NSString *status;//200表示成功，body是Json格式的证言数据（你们大概只用关心返回码）status非200表示失败
 
 @property (nonatomic, strong) NSString *makeUpImgUrl;//头像图片
 
