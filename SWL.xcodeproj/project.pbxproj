@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		9A5D0A05ABA213689E58C914 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FA3B88DB9227316947E3A82 /* libPods.a */; };
+		DA11CDE71C7E0117001F71B5 /* HPGrowingTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA11CDE41C7E0117001F71B5 /* HPGrowingTextView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		DA11CDE81C7E0117001F71B5 /* HPTextViewInternal.m in Sources */ = {isa = PBXBuildFile; fileRef = DA11CDE61C7E0117001F71B5 /* HPTextViewInternal.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		DA2FAD5A1C7C91E3002DF369 /* flow1-1_1.png in Resources */ = {isa = PBXBuildFile; fileRef = DA2FAD0C1C7C91E3002DF369 /* flow1-1_1.png */; };
 		DA2FAD5B1C7C91E3002DF369 /* flow1-1_2.png in Resources */ = {isa = PBXBuildFile; fileRef = DA2FAD0D1C7C91E3002DF369 /* flow1-1_2.png */; };
 		DA2FAD5C1C7C91E3002DF369 /* flow1-1_3.png in Resources */ = {isa = PBXBuildFile; fileRef = DA2FAD0E1C7C91E3002DF369 /* flow1-1_3.png */; };
@@ -324,6 +326,10 @@
 /* Begin PBXFileReference section */
 		3498578DEC9100F686787A7D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		7FA3B88DB9227316947E3A82 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA11CDE31C7E0117001F71B5 /* HPGrowingTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPGrowingTextView.h; sourceTree = "<group>"; };
+		DA11CDE41C7E0117001F71B5 /* HPGrowingTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPGrowingTextView.m; sourceTree = "<group>"; };
+		DA11CDE51C7E0117001F71B5 /* HPTextViewInternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPTextViewInternal.h; sourceTree = "<group>"; };
+		DA11CDE61C7E0117001F71B5 /* HPTextViewInternal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPTextViewInternal.m; sourceTree = "<group>"; };
 		DA2FAD0C1C7C91E3002DF369 /* flow1-1_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flow1-1_1.png"; sourceTree = "<group>"; };
 		DA2FAD0D1C7C91E3002DF369 /* flow1-1_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flow1-1_2.png"; sourceTree = "<group>"; };
 		DA2FAD0E1C7C91E3002DF369 /* flow1-1_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flow1-1_3.png"; sourceTree = "<group>"; };
@@ -777,6 +783,17 @@
 				E0DFDD203F796AA6037365C8 /* Pods.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		DA11CDE21C7E0117001F71B5 /* HUITextView */ = {
+			isa = PBXGroup;
+			children = (
+				DA11CDE31C7E0117001F71B5 /* HPGrowingTextView.h */,
+				DA11CDE41C7E0117001F71B5 /* HPGrowingTextView.m */,
+				DA11CDE51C7E0117001F71B5 /* HPTextViewInternal.h */,
+				DA11CDE61C7E0117001F71B5 /* HPTextViewInternal.m */,
+			);
+			path = HUITextView;
 			sourceTree = "<group>";
 		};
 		DA2FAD0B1C7C91E3002DF369 /* flow-pics */ = {
@@ -1274,6 +1291,7 @@
 		DA66F10F1C6051BD00B1E0E1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				DA11CDE21C7E0117001F71B5 /* HUITextView */,
 				DAED97D21C76472200E04E77 /* PopoverView */,
 				DA7597EA1C6474E800B77542 /* UIVIew+Category */,
 				DA7597DA1C64711C00B77542 /* DaiDodgeKeyboard */,
@@ -2217,6 +2235,7 @@
 				DA7597B01C64647D00B77542 /* InformationStepTwo.m in Sources */,
 				DA3E62C01C741EB600042D64 /* UIImage+PECrop.m in Sources */,
 				DA66F0941C604AFF00B1E0E1 /* NetworkUtils.m in Sources */,
+				DA11CDE81C7E0117001F71B5 /* HPTextViewInternal.m in Sources */,
 				DA7597E81C64711C00B77542 /* DaiDodgeKeyboardObjects.m in Sources */,
 				DA66F13D1C6051BD00B1E0E1 /* SVProgressHUD.m in Sources */,
 				DA66F13B1C6051BD00B1E0E1 /* ProgressHUD.m in Sources */,
@@ -2280,6 +2299,7 @@
 				DA66F1521C60539C00B1E0E1 /* BMUtil.m in Sources */,
 				DA66F1511C60539C00B1E0E1 /* BMParseError.m in Sources */,
 				DA66F0A71C604AFF00B1E0E1 /* TimeDateUtils.m in Sources */,
+				DA11CDE71C7E0117001F71B5 /* HPGrowingTextView.m in Sources */,
 				DAED97C91C761C0200E04E77 /* AFSecurityPolicy.m in Sources */,
 				DAED97C81C761C0200E04E77 /* AFNetworkReachabilityManager.m in Sources */,
 				DA66F0931C604AFF00B1E0E1 /* ImageUtils.m in Sources */,

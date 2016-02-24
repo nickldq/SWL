@@ -50,7 +50,9 @@
         [_locationButton handleControlEvent:UIControlEventTouchUpInside withBlock:^{
             
             if (self.network) {
+                [MBProgressHUD showHUDAddedTo:self animated:YES];
                 [[GetCityShopService sharedInstance] getAllCityRequestService:^(id responseObject) {
+                    [MBProgressHUD hideHUDForView:self animated:YES];
                     NSArray *cityArray = [[NSArray arrayWithObject:responseObject] firstObject] ;
                     PopoverView *pop = [[PopoverView alloc] initWithPoint:CGPointMake(435-13, 466) titles:cityArray images:nil];
                     pop.selectRowAtIndex = ^(NSInteger index){
@@ -63,22 +65,28 @@
                             
                             //默认选商店第一个
                             if (self.network) {
-                                
+                                [MBProgressHUD showHUDAddedTo:self animated:YES];
                                 [[GetCityShopService sharedInstance] getAllShopByCityRequestService:weakSelf.shareModel.location success:^(id responseObject) {
+                                    [MBProgressHUD hideHUDForView:self animated:YES];
                                     NSArray *cityArray = [[NSArray arrayWithObject:responseObject] firstObject] ;
                                     NSString *title1 = cityArray[0];
                                     [weakSelf.shopNameButton setTitle:title1 forState:UIControlStateNormal];
                                     _shareModel.shopName = title1;
                                 } failure:^(NSError *error) {
+                                    [MBProgressHUD hideHUDForView:self animated:YES];
+                                    [ProgressHUDUtils dismissProgressHUDErrorWithStatus:kProgressHubDisconnect];
                                     
                                 }];
                             }else{
+                                
                                 [ProgressHUDUtils dismissProgressHUDErrorWithStatus:kProgressHubDisconnect];
                             }
                         }
                     };
                     [pop show];
                 } failure:^(NSError *error) {
+                    [MBProgressHUD hideHUDForView:self animated:YES];
+                    [ProgressHUDUtils dismissProgressHUDErrorWithStatus:kProgressHubDisconnect];
                     
                 }];
             }else{
@@ -92,7 +100,9 @@
                 
                 if (self.network) {
                     
+                    [MBProgressHUD showHUDAddedTo:self animated:YES];
                     [[GetCityShopService sharedInstance] getAllShopByCityRequestService:weakSelf.shareModel.location success:^(id responseObject) {
+                        [MBProgressHUD hideHUDForView:self animated:YES];
                         NSArray *cityArray = [[NSArray arrayWithObject:responseObject] firstObject] ;
                         PopoverView *pop = [[PopoverView alloc] initWithPoint:CGPointMake(596-13, 466) titles:cityArray images:nil];
                         pop.selectRowAtIndex = ^(NSInteger index){
@@ -102,6 +112,8 @@
                         };
                         [pop show];
                     } failure:^(NSError *error) {
+                        [MBProgressHUD hideHUDForView:self animated:YES];
+                        [ProgressHUDUtils dismissProgressHUDErrorWithStatus:kProgressHubDisconnect];
                         
                     }];
                 }else{
@@ -130,20 +142,28 @@
         if (self.network) {
             
             [MBProgressHUD showHUDAddedTo:self animated:YES];
-            [_uploadRequest shareUploadRequestServiceByShareModel:_shareModel success:^(ShareUserResultModel *shareUserResultModel) {
-                [MBProgressHUD hideHUDForView:self animated:YES];
-                if ([shareUserResultModel.result isEqualToString:@"1"]) {
-                    [_infoStepOne removeFromSuperview];
-                    _flowVC.maskingView.hidden = YES;
-                    ShareAlertView *shareAlertView = [[[NSBundle mainBundle] loadNibNamed:@"ShareAlertView" owner:self options:nil] firstObject];
-                    JCAlertView *customAlert = [[JCAlertView alloc] initWithCustomView:shareAlertView dismissWhenTouchedBackground:NO];
-                    shareAlertView.alert = customAlert;
-                    shareAlertView.flowVC = _flowVC;
-                    shareAlertView.shareUserResultModel = shareUserResultModel;
-                    [customAlert show];
-                }
+            [_uploadRequest shareUploadRequestServiceByShareModel:_shareModel success:^(ShareUserResultModel *shareUserResultModel) {//我们接口
+                
+                [_uploadRequest shareUploadRequestRestApiServiceByShareModel:_shareModel success:^(ShareUserResultModel *shareUserResultModel) {//官方接口
+                    [MBProgressHUD hideHUDForView:self animated:YES];
+                    if ([shareUserResultModel.result isEqualToString:@"1"]) {
+                        [_infoStepOne removeFromSuperview];
+                        _flowVC.maskingView.hidden = YES;
+                        ShareAlertView *shareAlertView = [[[NSBundle mainBundle] loadNibNamed:@"ShareAlertView" owner:self options:nil] firstObject];
+                        JCAlertView *customAlert = [[JCAlertView alloc] initWithCustomView:shareAlertView dismissWhenTouchedBackground:NO];
+                        shareAlertView.alert = customAlert;
+                        shareAlertView.flowVC = _flowVC;
+                        shareAlertView.shareUserResultModel = shareUserResultModel;
+                        [customAlert show];
+                    }
+                } failure:^(NSError *error) {
+                    [MBProgressHUD hideHUDForView:self animated:YES];
+                    [ProgressHUDUtils dismissProgressHUDErrorWithStatus:kProgressHubUpdateFail];
+                }];
+
             } failure:^(NSError *error) {
                 [MBProgressHUD hideHUDForView:self animated:YES];
+                [ProgressHUDUtils dismissProgressHUDErrorWithStatus:kProgressHubUpdateFail];
             }];
         }else{
             [ProgressHUDUtils dismissProgressHUDErrorWithStatus:kProgressHubDisconnect];

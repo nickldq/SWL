@@ -29,7 +29,7 @@
                         <action selector="submitAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="pKq-Ro-fe0"/>
                     </connections>
                 </button>
-                <textField opaque="NO" clipsSubviews="YES" tag="100" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mqb-28-TrI">
+                <textField opaque="NO" clipsSubviews="YES" tag="100" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="15字以内" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mqb-28-TrI">
                     <rect key="frame" x="112" y="187" width="181" height="32"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <color key="textColor" red="0.25882352939999997" green="0.25882352939999997" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
@@ -39,7 +39,7 @@
                         <outlet property="delegate" destination="iN0-l3-epB" id="Jeg-DP-y6Y"/>
                     </connections>
                 </textField>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="200" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="g1B-f1-TxS">
+                <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" tag="200" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="g1B-f1-TxS">
                     <rect key="frame" x="71" y="294" width="384" height="58"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <color key="textColor" red="0.25882352939999997" green="0.25882352939999997" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
@@ -73,6 +73,10 @@
                 <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Sj-zT-tbY">
                     <rect key="frame" x="32" y="31" width="418" height="217"/>
                 </imageView>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="twL-Jw-xUC" customClass="HPGrowingTextView">
+                    <rect key="frame" x="71" y="295" width="384" height="56"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
@@ -85,6 +89,7 @@
             <connections>
                 <outlet property="evaluationTextView" destination="g1B-f1-TxS" id="PD3-i4-nrF"/>
                 <outlet property="headerButton" destination="WOY-wZ-PO5" id="i6A-cY-0xG"/>
+                <outlet property="m_textView" destination="twL-Jw-xUC" id="ixu-AO-wH3"/>
                 <outlet property="nickNameTextField" destination="mqb-28-TrI" id="QNs-yC-dcH"/>
                 <outlet property="showImage" destination="6Sj-zT-tbY" id="E9A-03-nfI"/>
             </connections>

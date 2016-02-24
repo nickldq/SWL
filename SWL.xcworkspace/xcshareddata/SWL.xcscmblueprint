@@ -1,0 +1,32 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "A66393E704D60FA26B943214569946B5B7633B22",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+    "46c4e6d9-6440-dc4c-9a80-562e567fe58f++8593" : {
+
+    }
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "46c4e6d9-6440-dc4c-9a80-562e567fe58f++8593" : 0,
+    "A66393E704D60FA26B943214569946B5B7633B22" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "F6CB7D06-32A5-4656-A2F5-70ED14A88377",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "46c4e6d9-6440-dc4c-9a80-562e567fe58f++8593" : "SWL\/SWL\/Libs\/Views\/HUITextView\/",
+    "A66393E704D60FA26B943214569946B5B7633B22" : "SWL"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "SWL",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "SWL.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "http:\/\/192.168.2.251:81\/svn\/cTrainIOS2",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "46c4e6d9-6440-dc4c-9a80-562e567fe58f++8593"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/nickldq\/SWL.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "A66393E704D60FA26B943214569946B5B7633B22"
+    }
+  ]
+}

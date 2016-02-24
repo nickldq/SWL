@@ -54,15 +54,17 @@ static ShareUploadRequestService *sharedInstance = nil;
 
 #pragma mark 分享内容上传模块 - 客户api
 - (void)shareUploadRequestRestApiServiceByShareModel:(ShareUserUploadModel *)shareModel \
-success:(void (^)(ShareUserResultModel *shareUserResultModel))success \
-failure:(void (^)(NSError *error))failure{
+            success:(void (^)(ShareUserResultModel *shareUserResultModel))success \
+            failure:(void (^)(NSError *error))failure{
     
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     NSDictionary *parameters = [shareModel toDictionary];
     
-    NSString *urlString = [NSString stringWithFormat:@"%@/%@",REQUEST_PATH_RestApi_TEST , REQUEST_PATH_RestApi];
+    NSString *urlString = [NSString stringWithFormat:@"%@/%@",REQUEST_PATH_RestApi_TEST , Api_Certs_Create];
 //    NSString *urlString = [NSString stringWithFormat:@"%@/%@",REQUEST_PATH_RestApi , REQUEST_PATH_RestApi];//正式
     
+    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
     [manager POST:urlString parameters:parameters\
         success:^(NSURLSessionDataTask *task, id responseObject) {
             NSLog(@"Success: %@", responseObject);

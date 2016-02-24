@@ -112,6 +112,8 @@
 #define kProgressHubLoading @"加载中......"
 #define kProgressHubFail @"加载失败.."
 #define kProgressHubDisconnect @"网络连接失败！请重试！"
+#define kProgressHubUpdateFail @"上传数据失败！请重试！"
+
 
 /*------------宏-------------*/
 #define IOS7_OR_LATER   ( [[[UIDevice currentDevice] systemVersion] compare:@"7.0"] != NSOrderedAscending )//#ifdef __IPHONE_7_0  #endif

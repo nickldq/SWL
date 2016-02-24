@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "FlowViewController.h"
+#import "HPGrowingTextView.h"
 
 @interface InformationStepOne : UIControl<UITextFieldDelegate, UITextViewDelegate>
 @property(strong, nonatomic)UIImage *headerImage;
@@ -16,5 +17,6 @@
 - (IBAction)submitAction:(UIButton *)sender;
 - (IBAction)clearAction:(UIButton *)sender;
 @property (weak, nonatomic) IBOutlet UIImageView *showImage;
+@property (weak, nonatomic) IBOutlet HPGrowingTextView *m_textView;
 
 @end

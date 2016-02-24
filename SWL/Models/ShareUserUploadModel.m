@@ -15,7 +15,9 @@
     NSMutableDictionary *dic = [NSMutableDictionary dictionary];
     
     if (_photo_data) {
-        [dic setObject:_photo_data forKey:@"photo_data"];
+        
+        NSString *_encodedImageStr = [_photo_data base64Encoding];
+        [dic setObject:_encodedImageStr forKey:@"photo_data"];
     }
     if (_nickname) {
         [dic setObject:_nickname forKey:@"nickname"];
