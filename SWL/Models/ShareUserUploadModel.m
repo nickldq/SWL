@@ -18,9 +18,8 @@
         
         NSString *_encodedImageStr = [_photo_data base64Encoding];
         [dic setObject:_encodedImageStr forKey:@"photo_data"];
-    }else{
-        [dic setObject:@"iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAh1BMVEXqEBDqFRXrHx/rICDrISHrIiLrJibsLS3uQkLuQ0PuRUXuSEjvU1PwXFzwXV3wXl7xaWnya2vycHDydnbzeHjzenr1kZH1lpb3paX3qan3rKz4t7f5vr75w8P5xMT60dH70tL729v83t784OD84eH96en98PD98fH++Pj++vr++/v+/f3////JH9mkAAAAZElEQVR4Ad3JxxUCIQAE0AGDmBVzDroBmP7r27d3pgH+9aNIg+O/fqzyN67YO2dzxva0fZL77LoJgBs/kDZMRp198a1u+mVaiztERi9uSf4chEW4jyANoV2auTwT6CHtrhal6gB59QcOPXQhHwAAAABJRU5ErkJggg==" forKey:@"photo_data"];
     }
+    
     if (_nickname) {
         [dic setObject:_nickname forKey:@"nickname"];
     }

@@ -123,8 +123,10 @@ static inline NSString *PELocalizedString(NSString *key, NSString *comment)
     
     self.keepingCropAspectRatio = self.keepingCropAspectRatio;
     
+    CGFloat ratio = 506.52073732719015f / 445.0f;
     
-    CGFloat ratio = 247.0f / 217.0f;
+//    CGFloat ratio = 4.0f / 3.0f;
+    
     CGRect cropRect = self.cropView.cropRect;
     CGFloat width = CGRectGetWidth(cropRect);
     cropRect.size = CGSizeMake(width, width / ratio);
