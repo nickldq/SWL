@@ -78,7 +78,7 @@ static ShareUploadRequestService *sharedInstance = nil;
               DLog(@"StatusCode:%d" ,(int)[r statusCode]);
                     ShareUserResultModel *shareUserResultModel = [ShareUserResultModel new];
                     [shareUserResultModel fromRestApiDic:(NSDictionary *)responseObject];
-              shareUserResultModel.status = [NSString stringWithFormat:@"d", (int)[r statusCode]];
+              shareUserResultModel.status = [NSString stringWithFormat:@"%d", (int)[r statusCode]];
                     success(shareUserResultModel);
                 }\
           failure:^(NSURLSessionDataTask *task, NSError *error) {

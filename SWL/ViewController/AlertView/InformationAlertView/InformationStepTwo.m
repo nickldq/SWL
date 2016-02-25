@@ -146,14 +146,14 @@
                 
                 [_uploadRequest shareUploadRequestRestApiServiceByShareModel:_shareModel success:^(ShareUserResultModel *shareUserResultRestApiModel) {//官方接口
                     [MBProgressHUD hideHUDForView:self animated:YES];
-                    if ([shareUserResultRestApiModel.result isEqualToString:@"200"]) {
+                    if ([shareUserResultRestApiModel.status isEqualToString:@"200"]) {
                         [_infoStepOne removeFromSuperview];
                         _flowVC.maskingView.hidden = YES;
                         ShareAlertView *shareAlertView = [[[NSBundle mainBundle] loadNibNamed:@"ShareAlertView" owner:self options:nil] firstObject];
                         JCAlertView *customAlert = [[JCAlertView alloc] initWithCustomView:shareAlertView dismissWhenTouchedBackground:NO];
                         shareAlertView.alert = customAlert;
                         shareAlertView.flowVC = _flowVC;
-                        shareAlertView.shareUserResultModel = shareUserResultRestApiModel;
+                        shareAlertView.shareUserResultModel = shareUserResultModel;
                         [customAlert show];
                     }else{
                         [ProgressHUDUtils dismissProgressHUDErrorWithStatus:kProgressHubUpdateFail];
