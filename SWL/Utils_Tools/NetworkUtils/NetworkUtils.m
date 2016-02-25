@@ -33,7 +33,7 @@
          switch (status) {
              case AFNetworkReachabilityStatusNotReachable:
              {
-                 NSLog(@"无网络");
+                 DLog(@"无网络");
                  network = NO;
                  change = YES;
                  break;
@@ -41,7 +41,7 @@
                  
              case AFNetworkReachabilityStatusReachableViaWiFi:
              {
-                 NSLog(@"WiFi网络");
+                 DLog(@"WiFi网络");
                  network = YES;
                  change = YES;
                  break;
@@ -49,7 +49,7 @@
                  
              case AFNetworkReachabilityStatusReachableViaWWAN:
              {
-                 NSLog(@"无线网络");
+                 DLog(@"无线网络");
                  network = YES;
                  change = YES;
                  break;

@@ -33,7 +33,7 @@
 -(void)playAnimation{
     [self clearView];
     
-    [UIView animateWithDuration:1.0 animations:^{
+    [UIView animateWithDuration:0.8 animations:^{
         
         UIImageView *image100 = [self viewWithTag:100];
         UIImageView *image200 = [self viewWithTag:200];

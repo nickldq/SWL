@@ -413,7 +413,7 @@
     //self.itemmn = (itemmn *)[itemmn lastItemInContext:self.cde usingPredicate:[NSPredicate predicateWithFormat:@"name==9"]];
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
         CoreDataEnvir *db = [CoreDataEnvir instance];
-        NSLog(@"delete %@", db.context);
+        DLog(@"delete %@", db.context);
         NSArray *items = [Column itemsInContext:db ];
         [db deleteDataItems:items];
         [db saveDataBase];
@@ -421,7 +421,7 @@
     });
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
         CoreDataEnvir *db = [CoreDataEnvir instance];
-        NSLog(@"delete %@", db.context);
+        DLog(@"delete %@", db.context);
         NSArray *items = [Article itemsInContext:db ];
         [db deleteDataItems:items];
         [db saveDataBase];

@@ -96,11 +96,11 @@
     }else if ([[Common checkNSNull:_shareModel.comment] isEqualToString:@""]||(5>[Common convertToInt:_shareModel.comment]||[Common convertToInt:_shareModel.comment]>20)){
         [ProgressHUDUtils dismissProgressHUDErrorWithStatus:@"请填写评论,5-20个字!"];
         flag = NO;
+    }\
+    else if ([[Common checkNSNull:_shareModel.photo_data] isEqualToString:@""]) {
+        [ProgressHUDUtils dismissProgressHUDErrorWithStatus:@"请拍照!"];
+        flag = NO;
     }
-//    else if ([[Common checkNSNull:_shareModel.imageFormKey] isEqualToString:@""]) {
-//        [ProgressHUDUtils dismissProgressHUDErrorWithStatus:@"请拍照!"];
-//        flag = NO;
-//    }
     return flag;
 }
 
@@ -315,7 +315,7 @@
         //    UIImage *cover_letter = [UIImage imageNamed:@"cover_letter"];
         UIImage *scaledbgImage = [ImageUtils scaleToSize:CGSizeMake(850.0f, 445.0f) andImage:bgImage];
         //    _showImage.image = [ImageUtils addImage:scaledImage addRect:CGRectMake(171.0f, 0, 247.0f, 217.0f) toImage:scaledbgImage toRect:CGRectMake(0, 0, scaledbgImage.size.width, scaledbgImage.size.height)];
-        _showImage.image = [ImageUtils addImage:scaledbgImage addRect:CGRectMake(0, 0, scaledbgImage.size.width, scaledbgImage.size.height) toImage:scaledImage toRect:CGRectMake(343.47926267280985, 0, 506.52073732719015, 445.0f)];
+        _showImage.image = [ImageUtils addImage:scaledbgImage addRect:CGRectMake(0, 0, scaledbgImage.size.width, scaledbgImage.size.height) toImage:scaledImage toRect:CGRectMake(344.47926267280985, 0, 506.52073732719015, 445.0f)];
         //    _showImage.image = [ImageUtils addImage:_showImage.image addRect:CGRectMake(0, 0, scaledbgImage.size.width, scaledbgImage.size.height) toImage:cover_letter toRect:CGRectMake(-2.5, 0, 840, 148)];
         _shareModel.imageFormKey = UIImageJPEGRepresentation(_showImage.image, 1.0);
         _shareModel.photo_data = UIImageJPEGRepresentation(_headerImage, 1.0);

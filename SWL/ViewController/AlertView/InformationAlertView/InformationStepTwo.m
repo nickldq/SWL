@@ -144,17 +144,19 @@
             [MBProgressHUD showHUDAddedTo:self animated:YES];
             [_uploadRequest shareUploadRequestServiceByShareModel:_shareModel success:^(ShareUserResultModel *shareUserResultModel) {//我们接口
                 
-                [_uploadRequest shareUploadRequestRestApiServiceByShareModel:_shareModel success:^(ShareUserResultModel *shareUserResultModel) {//官方接口
+                [_uploadRequest shareUploadRequestRestApiServiceByShareModel:_shareModel success:^(ShareUserResultModel *shareUserResultRestApiModel) {//官方接口
                     [MBProgressHUD hideHUDForView:self animated:YES];
-                    if ([shareUserResultModel.result isEqualToString:@"1"]) {
+                    if ([shareUserResultRestApiModel.result isEqualToString:@"200"]) {
                         [_infoStepOne removeFromSuperview];
                         _flowVC.maskingView.hidden = YES;
                         ShareAlertView *shareAlertView = [[[NSBundle mainBundle] loadNibNamed:@"ShareAlertView" owner:self options:nil] firstObject];
                         JCAlertView *customAlert = [[JCAlertView alloc] initWithCustomView:shareAlertView dismissWhenTouchedBackground:NO];
                         shareAlertView.alert = customAlert;
                         shareAlertView.flowVC = _flowVC;
-                        shareAlertView.shareUserResultModel = shareUserResultModel;
+                        shareAlertView.shareUserResultModel = shareUserResultRestApiModel;
                         [customAlert show];
+                    }else{
+                        [ProgressHUDUtils dismissProgressHUDErrorWithStatus:kProgressHubUpdateFail];
                     }
                 } failure:^(NSError *error) {
                     [MBProgressHUD hideHUDForView:self animated:YES];
@@ -278,7 +280,7 @@
          switch (status) {
              case AFNetworkReachabilityStatusNotReachable:
              {
-                 NSLog(@"无网络");
+                 DLog(@"无网络");
                  self.network = NO;
                  self.change = YES;
                  break;
@@ -286,7 +288,7 @@
                  
              case AFNetworkReachabilityStatusReachableViaWiFi:
              {
-                 NSLog(@"WiFi网络");
+                 DLog(@"WiFi网络");
                  self.network = YES;
                  self.change = YES;
                  break;
@@ -294,7 +296,7 @@
                  
              case AFNetworkReachabilityStatusReachableViaWWAN:
              {
-                 NSLog(@"无线网络");
+                 DLog(@"无线网络");
                  self.network = YES;
                  self.change = YES;
                  break;

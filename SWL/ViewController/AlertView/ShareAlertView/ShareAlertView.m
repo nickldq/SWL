@@ -22,7 +22,7 @@
 // An empty implementation adversely affects performance during animation.
 - (void)drawRect:(CGRect)rect {
     // Drawing code
-    [self createQrcodeImage:_shareUserResultModel.tdCodeUrl];
+    [self createQrcodeImage:_shareUserResultModel.photoUrl];
     [_headerImageView setImageURL:_shareUserResultModel.makeUpImgUrl];
     
 }

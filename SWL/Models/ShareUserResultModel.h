@@ -16,6 +16,11 @@
 @property (nonatomic, strong) NSString *makeUpImgUrl;//头像图片
 
 @property (nonatomic, strong) NSString *tdCodeUrl;// 二维码地址
+@property (nonatomic, strong) NSString *photoUrl;// 二维码地址
+@property (nonatomic, strong) NSString *nickname;// 昵称
+@property (nonatomic, strong) NSString *content;// 评论
 
 -(void)fromDic:(NSDictionary *)dic;
+
+-(void)fromRestApiDic:(NSDictionary *)dic;
 @end

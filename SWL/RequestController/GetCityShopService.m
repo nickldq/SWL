@@ -31,10 +31,10 @@ static GetCityShopService *sharedInstance = nil;
         NSString *urlString = [NSString stringWithFormat:@"%@/%@",REQUEST_PATH , PHP_GetAllCity];
         
         [manager POST:urlString parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
-            NSLog(@"Success: %@", responseObject);
+            DLog(@"Success: %@", responseObject);
             success(responseObject);
         } failure:^(NSURLSessionDataTask *task, NSError *error) {
-            NSLog(@"Error: %@", error);
+            DLog(@"Error: %@", error);
             failure(error);
         }];
 }
@@ -48,10 +48,10 @@ static GetCityShopService *sharedInstance = nil;
         NSString *urlString = [[NSString stringWithFormat:@"%@/%@%@",REQUEST_PATH , PHP_GetAllShopByCity, cityName] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
         
         [manager POST:urlString parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
-            NSLog(@"Success: %@", responseObject);
+            DLog(@"Success: %@", responseObject);
             success(responseObject);
         } failure:^(NSURLSessionDataTask *task, NSError *error) {
-            NSLog(@"Error: %@", error);
+            DLog(@"Error: %@", error);
             failure(error);
         }];
 }

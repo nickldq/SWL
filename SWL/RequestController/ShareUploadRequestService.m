@@ -41,12 +41,12 @@ static ShareUploadRequestService *sharedInstance = nil;
     [manager POST:urlString parameters:parameters constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
         [formData appendPartWithFileData:shareModel.imageFormKey name:@"imageFormKey" fileName:[NSString stringWithFormat:@"%@.jpg", locationString] mimeType:@"image/jpeg"];
     } success:^(NSURLSessionDataTask *task, id responseObject) {
-        NSLog(@"Success: %@", responseObject);
+        DLog(@"Success: %@", responseObject);
         ShareUserResultModel *shareUserResultModel = [ShareUserResultModel new];
         [shareUserResultModel fromDic:(NSDictionary *)responseObject];
         success(shareUserResultModel);
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
-        NSLog(@"Error: %@", error);
+        DLog(@"Error: %@", error);
         failure(error);
     }];
     
@@ -63,18 +63,28 @@ static ShareUploadRequestService *sharedInstance = nil;
     NSString *urlString = [NSString stringWithFormat:@"%@/%@",REQUEST_PATH_RestApi_TEST , Api_Certs_Create];
 //    NSString *urlString = [NSString stringWithFormat:@"%@/%@",REQUEST_PATH_RestApi , REQUEST_PATH_RestApi];//正式
     
-    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    manager.responseSerializer = [AFJSONResponseSerializer serializer];
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
-    [manager POST:urlString parameters:parameters\
-        success:^(NSURLSessionDataTask *task, id responseObject) {
-            NSLog(@"Success: %@", responseObject);
-            ShareUserResultModel *shareUserResultModel = [ShareUserResultModel new];
-            [shareUserResultModel fromDic:(NSDictionary *)responseObject];
-            success(shareUserResultModel);
-    }   failure:^(NSURLSessionDataTask *task, NSError *error) {
-            NSLog(@"Error: %@", error);
-            failure(error);
-    }];
+                
+    [manager POST:urlString\
+        parameters:parameters \
+        constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+                    
+                }\
+         progress:nil\
+          success:^(NSURLSessionDataTask *task, id responseObject) {
+              DLog(@"Success: %@", responseObject);
+              NSHTTPURLResponse *r = (NSHTTPURLResponse *)task.response;
+              DLog(@"StatusCode:%d" ,(int)[r statusCode]);
+                    ShareUserResultModel *shareUserResultModel = [ShareUserResultModel new];
+                    [shareUserResultModel fromRestApiDic:(NSDictionary *)responseObject];
+              shareUserResultModel.status = [NSString stringWithFormat:@"d", (int)[r statusCode]];
+                    success(shareUserResultModel);
+                }\
+          failure:^(NSURLSessionDataTask *task, NSError *error) {
+                    DLog(@"Error: %@", error);
+                    failure(error);
+                }];
     
 }
 
