@@ -12,6 +12,7 @@
 
 @interface InformationStepOne : UIControl<UITextFieldDelegate, UITextViewDelegate>
 @property(strong, nonatomic)UIImage *headerImage;
+@property(strong, nonatomic)UIImage *tempImage;
 @property(strong, nonatomic)JCAlertView *alert;
 @property(strong, nonatomic)FlowViewController *flowVC;
 - (IBAction)submitAction:(UIButton *)sender;

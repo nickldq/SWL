@@ -36,6 +36,8 @@
     NSMutableParagraphStyle *style = [[NSMutableParagraphStyle defaultParagraphStyle] mutableCopy];
     
     style.alignment = NSTextAlignmentLeft;
+    style.lineBreakMode = NSLineBreakByWordWrapping;
+    style.lineSpacing = 4.0f;
     
     //文字的属性
     

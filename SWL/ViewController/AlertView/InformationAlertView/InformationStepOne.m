@@ -11,12 +11,15 @@
 #import "DaiDodgeKeyboard.h"
 #import "PECropViewController.h"
 #import "ShareUserUploadModel.h"
+#import "ImageUtil.h"
+#import "ColorMatrix.h"
+#import "ZYQAssetPickerController.h"
 
 #define NickNameTag 100
 #define CommentTag 200
 
 
-@interface InformationStepOne()<UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIActionSheetDelegate, PECropViewControllerDelegate, UITextFieldDelegate, UITextViewDelegate,  HPGrowingTextViewDelegate>
+@interface InformationStepOne()<UIImagePickerControllerDelegate, ZYQAssetPickerControllerDelegate,UINavigationControllerDelegate,UIScrollViewDelegate, UIActionSheetDelegate, PECropViewControllerDelegate, UITextFieldDelegate, UITextViewDelegate,  HPGrowingTextViewDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *nickNameTextField;
 @property (weak, nonatomic) IBOutlet UIButton *headerButton;
 @property (weak, nonatomic) IBOutlet UITextView *evaluationTextView;
@@ -57,21 +60,11 @@
 }
 
 - (IBAction)headerImageAction:(id)sender {
-    
-    if (_headerButton.imageView.image) {
-        
-        UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"编辑", nil];
-        if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
-            [actionSheet addButtonWithTitle:@"照相"];
-        }
-    //        if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
-    //            [actionSheet showFromBarButtonItem:self.cameraButton animated:YES];
-    //        } else {
+    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"相册", nil];
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+        [actionSheet addButtonWithTitle:@"照相"];
+    } 
     [actionSheet showInView:self];
-    //        }
-    }else{
-        [self showCamera];
-    }
 }
 
 - (IBAction)submitAction:(UIButton *)sender {
@@ -97,7 +90,7 @@
         [ProgressHUDUtils dismissProgressHUDErrorWithStatus:@"请填写评论,5-20个字!"];
         flag = NO;
     }\
-    else if ([[Common checkNSNull:_shareModel.photo_data] isEqualToString:@""]) {
+    else if ([[Common checkNSNull:_headerImage] isEqualToString:@""] && [[Common checkNSNull:_shareModel.photo_data] isEqualToString:@""]) {
         [ProgressHUDUtils dismissProgressHUDErrorWithStatus:@"请拍照!"];
         flag = NO;
     }
@@ -175,6 +168,7 @@
     [controller dismissViewControllerAnimated:YES completion:NULL];
     
     UIImage *scaledImage = [ImageUtils scaleToSize:CGSizeMake(506.52073732719015, 445.0f) andImage:croppedImage];
+    
     _headerImage = scaledImage;
     
     [self.headerButton setImage:_headerImage forState:UIControlStateNormal];
@@ -187,6 +181,7 @@
     }
     
     [controller dismissViewControllerAnimated:YES completion:NULL];
+    _tempImage = nil;
 }
 
 #pragma mark - Action methods
@@ -195,9 +190,9 @@
 {
     PECropViewController *controller = [[PECropViewController alloc] init];
     controller.delegate = self;
-    controller.image = self.headerButton.imageView.image;
+    controller.image = _tempImage;
     
-    UIImage *image = self.headerButton.imageView.image;
+    UIImage *image = _tempImage;
     CGFloat width = image.size.width;
     CGFloat height = image.size.height;
     CGFloat length = MIN(width, height);
@@ -214,6 +209,30 @@
     
     [_flowVC presentViewController:navigationController animated:YES completion:NULL];
 }
+
+
+
+#pragma mark - ZYQAssetPickerController Delegate
+-(void)assetPickerController:(ZYQAssetPickerController *)picker didFinishPickingAssets:(NSArray *)assets{
+    
+        ALAsset *asset=[assets firstObject];
+        UIImage *tempImg=[UIImage imageWithCGImage:asset.defaultRepresentation.fullScreenImage];
+        UIImage *matrixImage = [ImageUtil imageWithImage:tempImg withColorMatrix:colormatrix_danya];//colormatrix_langman
+        
+    _tempImage = matrixImage;
+    
+        //    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+        //        if (self.popover.isPopoverVisible) {
+        //            [self.popover dismissPopoverAnimated:NO];
+        //        }
+        //
+        //        [self openEditor:nil];
+        //    } else {
+        [picker dismissViewControllerAnimated:YES completion:^{
+            [self openEditor:nil];
+        }];
+}
+
 
 #pragma mark - Private methods
 
@@ -248,23 +267,24 @@
 
 - (void)openPhotoAlbum
 {
-    UIImagePickerController *controller = [[UIImagePickerController alloc] init];
-    controller.delegate = self;
-    controller.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
     
-    //    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
-    //        if (self.popover.isPopoverVisible) {
-    //            [self.popover dismissPopoverAnimated:NO];
-    //        }
-    //
-    //        self.popover = [[UIPopoverController alloc] initWithContentViewController:controller];
-    //        [self.popover presentPopoverFromBarButtonItem:self.cameraButton
-    //                             permittedArrowDirections:UIPopoverArrowDirectionAny
-    //                                             animated:YES];
-    //    } else {
     
-    [_flowVC presentViewController:controller animated:YES completion:NULL];
-    //    }
+    ZYQAssetPickerController *picker = [[ZYQAssetPickerController alloc] init];
+    picker.maximumNumberOfSelection = 1;
+    picker.assetsFilter = [ALAssetsFilter allPhotos];
+    picker.showEmptyGroups=YES;
+    picker.delegate=self;
+    picker.selectionFilter = [NSPredicate predicateWithBlock:^BOOL(id evaluatedObject, NSDictionary *bindings) {
+        if ([[(ALAsset*)evaluatedObject valueForProperty:ALAssetPropertyType] isEqual:ALAssetTypeVideo]) {
+            NSTimeInterval duration = [[(ALAsset*)evaluatedObject valueForProperty:ALAssetPropertyDuration] doubleValue];
+            return duration >= 5;
+        } else {
+            return YES;
+        }
+    }];
+    
+    [_flowVC presentViewController:picker animated:YES completion:NULL];
+
 }
 
 #pragma mark - UIActionSheetDelegate methods
@@ -275,8 +295,9 @@
 - (void)actionSheet:(UIActionSheet *)actionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex
 {
     NSString *buttonTitle = [actionSheet buttonTitleAtIndex:buttonIndex];
-    if ([buttonTitle isEqualToString:@"编辑"]) {
-        [self openEditor:nil];
+    if ([buttonTitle isEqualToString:@"相册"]) {
+//        [self openEditor:nil];
+         [self openPhotoAlbum];
     } else if ([buttonTitle isEqualToString:@"照相"]) {
         [self showCamera];
     }
@@ -291,7 +312,11 @@
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
     UIImage *image = info[UIImagePickerControllerOriginalImage];
-    [self.headerButton setImage:image forState:UIControlStateNormal];
+    
+    UIImage *matrixImage = [ImageUtil imageWithImage:image withColorMatrix:colormatrix_danya];//colormatrix_langman
+     
+    [self.headerButton setImage:matrixImage forState:UIControlStateNormal];
+    _tempImage = matrixImage;
     
     //    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
     //        if (self.popover.isPopoverVisible) {

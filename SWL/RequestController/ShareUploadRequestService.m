@@ -60,8 +60,8 @@ static ShareUploadRequestService *sharedInstance = nil;
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     NSDictionary *parameters = [shareModel toDictionary];
     
-    NSString *urlString = [NSString stringWithFormat:@"%@/%@",REQUEST_PATH_RestApi_TEST , Api_Certs_Create];
-//    NSString *urlString = [NSString stringWithFormat:@"%@/%@",REQUEST_PATH_RestApi , REQUEST_PATH_RestApi];//正式
+    //NSString *urlString = [NSString stringWithFormat:@"%@/%@",REQUEST_PATH_RestApi_TEST , Api_Certs_Create];
+    NSString *urlString = [NSString stringWithFormat:@"%@/%@",REQUEST_PATH_RestApi , Api_Certs_Create];//正式
     
     manager.responseSerializer = [AFJSONResponseSerializer serializer];
     manager.requestSerializer = [AFJSONRequestSerializer serializer];

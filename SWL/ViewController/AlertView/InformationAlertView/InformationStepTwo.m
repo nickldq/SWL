@@ -258,12 +258,19 @@
     
     image = [image watermarkImage:_shareModel.location textRect:CGRectMake(image.size.width*0.0173333+1+3, image.size.height*0.41326531+2+66, 34*10 , 30.0f) textFont:28.0f];//地点
     
-    image = [image watermarkImage:_shareModel.comment textRect:CGRectMake(image.size.width*0.0173333+3, image.size.height*0.57653061+66, 30*10 , 35.0f) textFont:28.0f];//评论第一行
+    //image = [image watermarkImage:_shareModel.comment textRect:CGRectMake(image.size.width*0.0173333+3, image.size.height*0.57653061+66, 30*10 , 35.0f) textFont:28.0f];//评论第一行
     
+    
+    image = [image watermarkImage:_shareModel.comment textRect:CGRectMake(image.size.width*0.0173333+3, image.size.height*0.57653061+66, 30*10 , 70.0f) textFont:28.0f];//评论第一行
+    
+
+    
+    /*
     if (_shareModel.comment.length > 10) {
-        NSString *strline2 = [_shareModel.comment substringWithRange:NSMakeRange(9, _shareModel.comment.length-10 )];
+        NSString *strline2 = [_shareModel.comment substringWithRange:NSMakeRange(10, _shareModel.comment.length-10 )];
         image = [image watermarkImage:strline2 textRect:CGRectMake(image.size.width*0.0173333+3, image.size.height*0.6556+66, 30*10 , 32.0f) textFont:28.0f];//评论第2行
     }
+    */
     return image;
 }
 

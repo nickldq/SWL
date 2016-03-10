@@ -47,6 +47,8 @@
 //        [dic setObject:_VIPPhone forKey:@"VIPPhone"];
 //    }
     
+    [dic setObject:@"counter" forKey:@"channel"];
+    
     return dic;
 }
 

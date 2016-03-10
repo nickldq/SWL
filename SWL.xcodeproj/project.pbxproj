@@ -190,6 +190,7 @@
 		DAA48CA01C637927008D5510 /* MainType2TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAA48C9A1C637927008D5510 /* MainType2TableViewCell.xib */; };
 		DAA48CA21C637927008D5510 /* MainType3TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAA48C9E1C637927008D5510 /* MainType3TableViewCell.xib */; };
 		DAA48CA81C637945008D5510 /* MainType4TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAA48CA61C637945008D5510 /* MainType4TableViewCell.xib */; };
+		DAA912FD1C86FC6A00E71B0D /* ImageUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA912FC1C86FC6A00E71B0D /* ImageUtil.m */; };
 		DAA99F251C60563C00700049 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA99F241C60563C00700049 /* BaseViewController.m */; };
 		DAA99F321C605A0100700049 /* remind_noimage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DAA99F2A1C605A0100700049 /* remind_noimage@2x.png */; };
 		DAA99F331C605A0100700049 /* SDWebImage-Category.textClipping in Resources */ = {isa = PBXBuildFile; fileRef = DAA99F2B1C605A0100700049 /* SDWebImage-Category.textClipping */; };
@@ -212,6 +213,9 @@
 		DAED97D81C76484200E04E77 /* GetCityShopService.m in Sources */ = {isa = PBXBuildFile; fileRef = DAED97D71C76484200E04E77 /* GetCityShopService.m */; };
 		DAF365F81C79CE2C005C5615 /* main_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = DAF365F71C79CE2C005C5615 /* main_bg.png */; };
 		DAF365FC1C7AB083005C5615 /* FZZDXJW.TTF in Resources */ = {isa = PBXBuildFile; fileRef = DAF365FB1C7AB083005C5615 /* FZZDXJW.TTF */; };
+		DAFC82611C905F98009EA08B /* ZYQAssetPicker.Bundle in Resources */ = {isa = PBXBuildFile; fileRef = DAFC825E1C905F98009EA08B /* ZYQAssetPicker.Bundle */; };
+		DAFC82621C905F98009EA08B /* ZYQAssetPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAFC82601C905F98009EA08B /* ZYQAssetPickerController.m */; };
+		DAFC82641C906002009EA08B /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAFC82631C906002009EA08B /* AssetsLibrary.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -487,6 +491,9 @@
 		DAA48C9A1C637927008D5510 /* MainType2TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainType2TableViewCell.xib; sourceTree = "<group>"; };
 		DAA48C9E1C637927008D5510 /* MainType3TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainType3TableViewCell.xib; sourceTree = "<group>"; };
 		DAA48CA61C637945008D5510 /* MainType4TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainType4TableViewCell.xib; sourceTree = "<group>"; };
+		DAA912FA1C86FC6A00E71B0D /* ColorMatrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorMatrix.h; sourceTree = "<group>"; };
+		DAA912FB1C86FC6A00E71B0D /* ImageUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageUtil.h; sourceTree = "<group>"; };
+		DAA912FC1C86FC6A00E71B0D /* ImageUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageUtil.m; sourceTree = "<group>"; };
 		DAA99F231C60563C00700049 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		DAA99F241C60563C00700049 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		DAA99F261C6056A800700049 /* SWL-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SWL-Prefix.pch"; sourceTree = "<group>"; };
@@ -530,6 +537,10 @@
 		DAED97D71C76484200E04E77 /* GetCityShopService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetCityShopService.m; sourceTree = "<group>"; };
 		DAF365F71C79CE2C005C5615 /* main_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = main_bg.png; sourceTree = "<group>"; };
 		DAF365FB1C7AB083005C5615 /* FZZDXJW.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = FZZDXJW.TTF; sourceTree = "<group>"; };
+		DAFC825E1C905F98009EA08B /* ZYQAssetPicker.Bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ZYQAssetPicker.Bundle; sourceTree = "<group>"; };
+		DAFC825F1C905F98009EA08B /* ZYQAssetPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYQAssetPickerController.h; sourceTree = "<group>"; };
+		DAFC82601C905F98009EA08B /* ZYQAssetPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYQAssetPickerController.m; sourceTree = "<group>"; };
+		DAFC82631C906002009EA08B /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		E0DFDD203F796AA6037365C8 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -538,6 +549,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAFC82641C906002009EA08B /* AssetsLibrary.framework in Frameworks */,
 				DA7597F21C65942200B77542 /* QuartzCore.framework in Frameworks */,
 				9A5D0A05ABA213689E58C914 /* libPods.a in Frameworks */,
 			);
@@ -549,6 +561,7 @@
 		056614EB2CBB0194C429C748 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DAFC82631C906002009EA08B /* AssetsLibrary.framework */,
 				DA7597F11C65942200B77542 /* QuartzCore.framework */,
 				DA9150AD1C6061B0006C641D /* MobileCoreServices.framework */,
 				DA9150AB1C6061A8006C641D /* SystemConfiguration.framework */,
@@ -1071,6 +1084,7 @@
 		DA66F10F1C6051BD00B1E0E1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				DAFC825D1C905F98009EA08B /* ZYQAssetPickerController */,
 				DA11CDE21C7E0117001F71B5 /* HUITextView */,
 				DAED97D21C76472200E04E77 /* PopoverView */,
 				DA7597EA1C6474E800B77542 /* UIVIew+Category */,
@@ -1250,6 +1264,9 @@
 		DA7597A01C63AAB700B77542 /* InformationAlertView */ = {
 			isa = PBXGroup;
 			children = (
+				DAA912FA1C86FC6A00E71B0D /* ColorMatrix.h */,
+				DAA912FB1C86FC6A00E71B0D /* ImageUtil.h */,
+				DAA912FC1C86FC6A00E71B0D /* ImageUtil.m */,
 				DA7597A81C645BFA00B77542 /* InformationStepOne.h */,
 				DA7597A91C645BFA00B77542 /* InformationStepOne.m */,
 				DA7597AB1C64605700B77542 /* InformationStepOne.xib */,
@@ -1498,6 +1515,16 @@
 			path = Font;
 			sourceTree = "<group>";
 		};
+		DAFC825D1C905F98009EA08B /* ZYQAssetPickerController */ = {
+			isa = PBXGroup;
+			children = (
+				DAFC825E1C905F98009EA08B /* ZYQAssetPicker.Bundle */,
+				DAFC825F1C905F98009EA08B /* ZYQAssetPickerController.h */,
+				DAFC82601C905F98009EA08B /* ZYQAssetPickerController.m */,
+			);
+			path = ZYQAssetPickerController;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1530,6 +1557,7 @@
 				TargetAttributes = {
 					DA66F0131C60477F00B1E0E1 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = KGR6NVLCSM;
 					};
 				};
 			};
@@ -1603,6 +1631,7 @@
 				DA2FAD9A1C7C91E3002DF369 /* flow4-2_2.png in Resources */,
 				DA2FAD891C7C91E3002DF369 /* flow3-3_3.png in Resources */,
 				DA2FAD6B1C7C91E3002DF369 /* flow1-6_3.png in Resources */,
+				DAFC82611C905F98009EA08B /* ZYQAssetPicker.Bundle in Resources */,
 				DA2FAD611C7C91E3002DF369 /* flow1-3_2.png in Resources */,
 				DA2FADA31C7C91E3002DF369 /* flow4-5_2.png in Resources */,
 				DA7597791C639B9C00B77542 /* back_press.png in Resources */,
@@ -1738,6 +1767,7 @@
 				DA66F13D1C6051BD00B1E0E1 /* SVProgressHUD.m in Sources */,
 				DA66F13B1C6051BD00B1E0E1 /* ProgressHUD.m in Sources */,
 				DA66F0A41C604AFF00B1E0E1 /* ScreenShotUtils.m in Sources */,
+				DAFC82621C905F98009EA08B /* ZYQAssetPickerController.m in Sources */,
 				DA66F1501C60539C00B1E0E1 /* BMImageLibrary.m in Sources */,
 				DA66F0981C604AFF00B1E0E1 /* UtilRequestService.m in Sources */,
 				DA7597E91C64711C00B77542 /* UIView+FirstResponderNotify.m in Sources */,
@@ -1770,6 +1800,7 @@
 				DA66F1661C6053AA00B1E0E1 /* Check.m in Sources */,
 				DA66F16B1C6053AA00B1E0E1 /* SaveUserInfo.m in Sources */,
 				DA66F1261C6051BD00B1E0E1 /* split.c in Sources */,
+				DAA912FD1C86FC6A00E71B0D /* ImageUtil.m in Sources */,
 				DA66F16A1C6053AA00B1E0E1 /* NSString+ZY.m in Sources */,
 				DAED97C71C761C0200E04E77 /* AFHTTPSessionManager.m in Sources */,
 				DA9150F01C60ACBA006C641D /* HomePageViewController.m in Sources */,
@@ -1846,6 +1877,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -1869,6 +1901,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "armv7 armv7s arm64 i386";
@@ -1892,6 +1925,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -1908,6 +1942,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = NO;
@@ -1920,6 +1955,7 @@
 			baseConfigurationReference = 3498578DEC9100F686787A7D /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				ENABLE_ON_DEMAND_RESOURCES = NO;
 				INFOPLIST_FILE = SWL/Info.plist;
@@ -1931,6 +1967,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nick.SWL;
 				PRODUCT_NAME = "新透白美肌";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 2;
 				VALID_ARCHS = "armv7 armv7s arm64 i386";
 			};
@@ -1941,6 +1978,7 @@
 			baseConfigurationReference = E0DFDD203F796AA6037365C8 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				ENABLE_ON_DEMAND_RESOURCES = NO;
 				INFOPLIST_FILE = SWL/Info.plist;
@@ -1951,6 +1989,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.nick.SWL;
 				PRODUCT_NAME = "新透白美肌";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 2;
 				VALID_ARCHS = "armv7 armv7s arm64 i386";
 			};
